@@ -1,323 +1,565 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Bolna
+    </title>
+    <meta name="description" content="Simple landind page" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
 
+    <!-- Include Splide CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/themes/splide-default.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        }
+                    }                    
+                },
+            },
+        };
+    </script>
+    <style>
+      .navbar {
+      background-color: #ecedee;
+      padding: 1rem;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+      .wave-container {
+      position: relative;
+      background-color: #8f72ca;
+      overflow: hidden;
+      }
+      .waves {
+      width: 100%;
+      height: 20%;
+      position: relative;
+      bottom: 0;
+      animation: waveAnimation 55s linear infinite; /* Adjust animation duration */
+    }
+    
+
+    .hero {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3; /* Ensure text is on top */
+      margin-top: -170px; /* Adjust this value to move the content up */
+    }
+      /* Add custom styles here if needed */
+      .scroll-container {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .logos {
+            display: flex;
+            animation: scroll 30s linear infinite; /* Adjust the duration as needed */
+        }
+
+        .logo {
+            flex: 0 0 auto;
+            margin-right: 16px; /* Adjust the spacing between logos as needed */
+        }
+        
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        @keyframes waveAnimation {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+      
+    }
+  </style>
+  </head>
+<body>
     <!-- component -->
 <header class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02">
+  <div class="navbar">
     <!-- logo -->
     <h1 class="w-3/12">
         <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="./img/logo.svg" class="h-8" alt="Bolna Logo" />
+            <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Bolna</span>
         </a>
     </h1>
-
+  </div>
     <!-- navigation -->
     <nav class="nav font-semibold text-lg">
-        <ul class="flex items-center">
-            <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
-              <a href="">Home</a>
-            </li>
-            <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
-              <a href="">Product</a>
-            </li>
-            <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
-              <a href="">Docs</a>
-            </li>
-            <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
-                <a href="">Contact Us</a>
-              </li>
-        </ul>
-    </nav>    
-</header>
+      <ul class="flex items-center">
+          <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+              <a href="#home">Home</a>
+          </li>
+          <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+              <a href="#product">Product</a>
+          </li>
+          <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+              <a href="#docs">Docs</a>
+          </li>
+          <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+              <a href="#contact">Contact Us</a>
+          </li>
+      </ul>
+  </nav>
+  
+  
+  </header>
 
-<!-- Hero -->
-<main>
-  <div
-    class="relative pt-16 pb-32 flex content-center items-center justify-center"
-    style="min-height: 75vh;"
-  >
-    <div
-      class="absolute top-0 w-full h-full bg-center bg-cover"
-      style='background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80");'
-    >
-      <span
-        id="blackOverlay"
-        class="w-full h-full absolute opacity-75 bg-black"
-      ></span>
+  <section class="hero ">
+    <div class="wave-container">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(177, 156, 217,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(177, 156, 217,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(177, 156, 217,0.1)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+      </svg>
     </div>
-    <div class="container relative mx-auto">
-      <div class="items-center flex flex-wrap">
-        <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-          <div class="pr-12">
-            <h1 class="text-white font-semibold text-5xl">
-              Your story starts with us.
-            </h1>
-            <p class="mt-4 text-lg text-gray-300">
-              This is a simple example of a Landing Page you can build using
-              Tailwind Starter Kit. It features multiple CSS components
-              based on the Tailwindcss design system.
-            </p>
+
+    <div class="container mx-auto hero-content">
+      <h1 class="text-6xl font-semibold relative text-black px-10 ">Create Voice based 
+        <span class="font-bold">AI</span> agents</h1> 
+      <p class="text-4xl text-gray-900 max-w-3xl text-lg mt-4 px-10">An end to end platform to build, monitor and deploy<br> voice based AI agents</p>
+    </div>
+  </section>
+
+<section class="main py-24 px-10">
+  <div class="container mx-auto">
+    <h3 class="text-2xl font-semibold relative text-black">Send or receive millions of phone calls per day, using programmable voice agents that sound and feel human.</h3> 
+  </div>
+</section>
+
+<!--waves-->
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+  </g>
+</svg>
+
+
+<!--logos-->
+<section class="bg-white dark:bg-gray-900">
+  <div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+        <li>
+            <img src="./images/facebook.svg" alt="Facebook" />
+        </li>
+        <li>
+            <img src="./images/disney.svg" alt="Disney" />
+        </li>
+        <li>
+            <img src="./images/airbnb.svg" alt="Airbnb" />
+        </li>
+        <li>
+            <img src="./images/apple.svg" alt="Apple" />
+        </li>
+        <li>
+            <img src="./images/spark.svg" alt="Spark" />
+        </li>
+        <li>
+            <img src="./images/samsung.svg" alt="Samsung" />
+        </li>
+        <li>
+            <img src="./images/quora.svg" alt="Quora" />
+        </li>
+        <li>
+            <img src="./images/sass.svg" alt="Sass" />
+        </li>
+    </ul>
+    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+        <li>
+            <img src="./images/facebook.svg" alt="Facebook" />
+        </li>
+        <li>
+            <img src="./images/disney.svg" alt="Disney" />
+        </li>
+        <li>
+            <img src="./images/airbnb.svg" alt="Airbnb" />
+        </li>
+        <li>
+            <img src="./images/apple.svg" alt="Apple" />
+        </li>
+        <li>
+            <img src="./images/spark.svg" alt="Spark" />
+        </li>
+        <li>
+            <img src="./images/samsung.svg" alt="Samsung" />
+        </li>
+        <li>
+            <img src="./images/quora.svg" alt="Quora" />
+        </li>
+        <li>
+            <img src="./images/sass.svg" alt="Sass" />
+        </li>
+    </ul>
+</div>
+</section>
+
+<!--cards-->>
+
+<section class="relative  bg-blueGray-50">
+  <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+    <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
+      <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+        <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </div>
+  <section class="pb-10 bg-blueGray-200 -mt-24">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap">
+        <!-- Card 1 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Awarded Agency</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Divide details about your product or agency work into parts.
+                A paragraph describing a feature will be enough.
+              </p>
+            </div>
           </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
+                <i class="fas fa-retweet"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Free Revisions</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Keep you user engaged by providing meaningful information.
+                Remember that by this time, the user is curious.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
+                <i class="fas fa-fingerprint"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Verified Company</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Write a few lines about each one. A paragraph describing a
+                feature will be enough. Keep you user engaged!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Awarded Agency</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Divide details about your product or agency work into parts.
+                A paragraph describing a feature will be enough.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Awarded Agency</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Divide details about your product or agency work into parts.
+                A paragraph describing a feature will be enough.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Awarded Agency</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Divide details about your product or agency work into parts.
+                A paragraph describing a feature will be enough.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <div
-          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-          style="height: 70px;"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-gray-300 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-      </div>
+  </section>
+</section>
 
-      <section class="relative py-20">
-        <div
-          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-          style="height: 80px;"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-white fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-        <div class="container mx-auto px-4">
-          <div class="items-center flex flex-wrap">
-            <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
-              <img
-                alt="..."
-                class="max-w-full rounded-lg shadow-lg"
-                src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
-              />
-            </div>
-            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-              <div class="md:pr-12">
-                <div
-                  class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300"
-                >
-                  <i class="fas fa-rocket text-xl"></i>
+
+
+<!--use cases part-->>
+<!--Send automated phone calls
+and have real human conversations at scale-->
+<section class="main py-24 px-10">
+  <div class="container mx-auto">
+    <h3 class="text-2xl font-semibold relative text-black">Send automated phone calls<br>
+      and have real human conversations at scale</h3> 
+  </div>
+</section>
+
+<!--audio carousel-->
+<div class="container mx-auto my-8 max-w-md">
+  <div id="audio-carousel" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+
+        <!-- Audio Slide 1 -->
+        <li class="splide__slide">
+          <div class="relative">
+
+            <!-- component -->
+            <div class="bg-gray-100 p-4 flex justify-center items-center h-screen">
+              <div class="bg-white p-8 rounded-lg shadow-md w-80">
+                <!-- Album Cover -->
+                <img src="./images/c1.png" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <!-- Song Title -->
+                <h2 class="text-xl font-semibold text-center">idk</h2>
+                <!-- Artist Name -->
+                <p class="text-gray-600 text-sm text-center">Highvyn, Taylor Shin</p>
+                <!-- Music Controls -->
+                <div class="mt-6 flex justify-center items-center">
+                  <button class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" class="w-4 h-4 text-gray-600" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path d="M16.6598 14.6474C18.4467 13.4935 18.4467 10.5065 16.6598 9.35258L5.87083 2.38548C4.13419 1.26402 2 2.72368 2 5.0329V18.9671C2 21.2763 4.13419 22.736 5.87083 21.6145L16.6598 14.6474Z" fill="#000000"></path>
+                        <path d="M22.75 5C22.75 4.58579 22.4142 4.25 22 4.25C21.5858 4.25 21.25 4.58579 21.25 5V19C21.25 19.4142 21.5858 19.75 22 19.75C22.4142 19.75 22.75 19.4142 22.75 19V5Z" fill="#000000"></path>
+                      </g>
+                    </svg>
+                  </button>
+                  <button class="p-4 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none mx-4">
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" class="w-6 h-6 text-gray-600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path d="M2 6C2 4.11438 2 3.17157 2.58579 2.58579C3.17157 2 4.11438 2 6 2C7.88562 2 8.82843 2 9.41421 2.58579C10 3.17157 10 4.11438 10 6V18C10 19.8856 10 20.8284 9.41421 21.4142C8.82843 22 7.88562 22 6 22C4.11438 22 3.17157 22 2.58579 21.4142C2 20.8284 2 19.8856 2 18V6Z" fill="#000000"></path>
+                        <path d="M14 6C14 4.11438 14 3.17157 14.5858 2.58579C15.1716 2 16.1144 2 18 2C19.8856 2 20.8284 2 21.4142 2.58579C22 3.17157 22 4.11438 22 6V18C22 19.8856 22 20.8284 21.4142 21.4142C20.8284 22 19.8856 22 18 22C16.1144 22 15.1716 22 14.5858 21.4142C14 20.8284 14 19.8856 14 18V6Z" fill="#000000"></path>
+                      </g>
+                    </svg>
+                  </button>
+                  <button class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" class="w-4 h-4 text-gray-600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path d="M16.6598 14.6474C18.4467 13.4935 18.4467 10.5065 16.6598 9.35258L5.87083 2.38548C4.13419 1.26402 2 2.72368 2 5.0329V18.9671C2 21.2763 4.13419 22.736 5.87083 21.6145L16.6598 14.6474Z" fill="#000000"></path>
+                        <path d="M22.75 5C22.75 4.58579 22.4142 4.25 22 4.25C21.5858 4.25 21.25 4.58579 21.25 5V19C21.25 19.4142 21.5858 19.75 22 19.75C22.4142 19.75 22.75 19.4142 22.75 19V5Z" fill="#000000"></path>
+                      </g>
+                    </svg>
+                  </button>
                 </div>
-                <h3 class="text-3xl font-semibold">A growing company</h3>
-                <p class="mt-4 text-lg leading-relaxed text-gray-600">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
-                </p>
-                <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
-                          ><i class="fas fa-fingerprint"></i
-                        ></span>
-                      </div>
-                      <div>
-                        <h4 class="text-gray-600">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
-                          ><i class="fab fa-html5"></i
-                        ></span>
-                      </div>
-                      <div>
-                        <h4 class="text-gray-600">Amazing page examples</h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
-                          ><i class="far fa-paper-plane"></i
-                        ></span>
-                      </div>
-                      <div>
-                        <h4 class="text-gray-600">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
+                <!-- Progress Bar -->
+                <div class="mt-6 bg-gray-200 h-2 rounded-full">
+                  <div class="bg-teal-500 h-2 rounded-full w-1/2"></div>
+                </div>
+                <!-- Time Information -->
+                <div class="flex justify-between mt-2 text-sm text-gray-600">
+                  <span>1:57</span>
+                  <span>3:53</span>
+                </div>
+              </div>
+            </div>
+            <audio controls class="absolute top-0 left-0 w-full h-full">
+              <source src="audio2.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </li>
+
+        <!-- Audio Slide 2 -->
+        <li class="splide__slide">
+          <div class="relative">
+            <img src="./src/images/c2.png" alt="Image 2" class="w-full h-32 object-cover">
+            <audio controls class="absolute top-0 left-0 w-full h-full">
+              <source src="audio2.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </li>
+
+        <!-- Audio Slide 3 -->
+        <li class="splide__slide">
+          <div class="relative">
+            <img src="./src/images/c3.png" alt="Image 3" class="w-full h-32 object-cover">
+            <audio controls class="absolute top-0 left-0 w-full h-full">
+              <source src="audio2.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </li>
+
+        <!-- Audio Slide 4 -->
+        <li class="splide__slide">
+          <div class="relative">
+            <img src="./src/images/c4.png" alt="Image 4" class="w-full h-32 object-cover">
+            <audio controls class="absolute top-0 left-0 w-full h-full">
+              <source src="audio2.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </li>
+
+        <!-- Audio Slide 5 -->
+        <li class="splide__slide">
+          <div class="relative">
+            <img src="./src/images/c5.png" alt="Image 5" class="w-full h-32 object-cover">
+            <audio controls class="absolute top-0 left-0 w-full h-full">
+              <source src="audio2.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </li>
+
+
+        <!-- Add more audio slides as needed -->
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#audio-carousel', {
+      type       : 'fade',
+      heightRatio: 0.5,
+      pagination : false,
+      cover      : true,
+      breakpoints: {
+        600: {
+          heightRatio: 0.3,
+        },
+      },
+    }).mount();
+  });
+</script>
+
+
+<!--footer-->
+
+<footer class="bg-white dark:bg-gray-900">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+            <a href="#" class="flex items-center">
+              <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Bolna</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Bolna</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Tailwind CSS</a>
+                    </li>
                 </ul>
-              </div>
             </div>
-          </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline ">Github</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Discord</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </section>
-
-      section class="pb-20 relative block bg-gray-900">
-        <div
-          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-          style="height: 80px;"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-gray-900 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
-          <div class="flex flex-wrap text-center justify-center">
-            <div class="w-full lg:w-6/12 px-4">
-              <h2 class="text-4xl font-semibold text-white">Build something</h2>
-              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                Put the potentially record low maximum sea ice extent tihs year
-                down to low ice. According to the National Oceanic and
-                Atmospheric Administration, Ted, Scambos.
-              </p>
-            </div>
-          </div>
-          <div class="flex flex-wrap mt-12 justify-center">
-            <div class="w-full lg:w-3/12 px-4 text-center">
-              <div
-                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-              >
-                <i class="fas fa-medal text-xl"></i>
-              </div>
-              <h6 class="text-xl mt-5 font-semibold text-white">
-                Excelent Services
-              </h6>
-              <p class="mt-2 mb-4 text-gray-500">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-            <div class="w-full lg:w-3/12 px-4 text-center">
-              <div
-                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-              >
-                <i class="fas fa-poll text-xl"></i>
-              </div>
-              <h5 class="text-xl mt-5 font-semibold text-white">
-                Grow your market
-              </h5>
-              <p class="mt-2 mb-4 text-gray-500">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-            <div class="w-full lg:w-3/12 px-4 text-center">
-              <div
-                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-              >
-                <i class="fas fa-lightbulb text-xl"></i>
-              </div>
-              <h5 class="text-xl mt-5 font-semibold text-white">Launch time</h5>
-              <p class="mt-2 mb-4 text-gray-500">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="relative block py-24 lg:pt-0 bg-gray-900">
-        <div class="container mx-auto px-4">
-          <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-            <div class="w-full lg:w-6/12 px-4">
-              <div
-                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300"
-              >
-                <div class="flex-auto p-5 lg:p-10">
-                  <h4 class="text-2xl font-semibold">Want to work with us?</h4>
-                  <p class="leading-relaxed mt-1 mb-4 text-gray-600">
-                    Complete this form and we will get back to you in 24 hours.
-                  </p>
-                  <div class="relative w-full mb-3 mt-8">
-                    <label
-                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      for="full-name"
-                      >Full Name</label
-                    ><input
-                      type="text"
-                      class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                      placeholder="Full Name"
-                      style="transition: all 0.15s ease 0s;"
-                    />
-                  </div>
-                  <div class="relative w-full mb-3">
-                    <label
-                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      for="email"
-                      >Email</label
-                    ><input
-                      type="email"
-                      class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                      placeholder="Email"
-                      style="transition: all 0.15s ease 0s;"
-                    />
-                  </div>
-                  <div class="relative w-full mb-3">
-                    <label
-                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      for="message"
-                      >Message</label
-                    ><textarea
-                      rows="4"
-                      cols="80"
-                      class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                      placeholder="Type a message..."
-                    ></textarea>
-                  </div>
-                  <div class="text-center mt-6">
-                    <button
-                      class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                      style="transition: all 0.15s ease 0s;"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Bolna</a>. All Rights Reserved.
+        </span>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
