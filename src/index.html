@@ -39,12 +39,24 @@
                 },
             },
         };
+
+        document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#audio-carousel', {
+      type       : 'fade',
+      heightRatio: 0.5,
+      pagination : false,
+      cover      : true,
+      breakpoints: {
+        600: {
+          heightRatio: 0.3,
+        },
+      },
+    }).mount();
+  });
     </script>
     <style>
       .navbar {
-      background-color: #ecedee;
-      padding: 1rem;
-      color: #fff;
+      background-color: #ffffff;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -54,13 +66,12 @@
       background-color: #8f72ca;
       overflow: hidden;
       }
-      .waves {
+      /*.waves {
       width: 100%;
       height: 20%;
       position: relative;
       bottom: 0;
-      animation: waveAnimation 55s linear infinite; /* Adjust animation duration */
-    }
+      animation: waveAnimation 55s linear infinite; /* Adjust animation duration}*/
     
 
     .hero {
@@ -71,7 +82,7 @@
     .hero-content {
       position: relative;
       z-index: 3; /* Ensure text is on top */
-      margin-top: -170px; /* Adjust this value to move the content up */
+      margin-top: -200px; /* Adjust this value to move the content up */
     }
       /* Add custom styles here if needed */
       .scroll-container {
@@ -111,56 +122,63 @@
   </head>
 <body>
     <!-- component -->
-<header class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02">
-  <div class="navbar">
-    <!-- logo -->
-    <h1 class="w-3/12">
-        <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Bolna</span>
-        </a>
-    </h1>
-  </div>
-    <!-- navigation -->
-    <nav class="nav font-semibold text-lg">
-      <ul class="flex items-center">
-          <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
-              <a href="#home">Home</a>
-          </li>
-          <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
-              <a href="#product">Product</a>
-          </li>
-          <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
-              <a href="#docs">Docs</a>
-          </li>
-          <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
-              <a href="#contact">Contact Us</a>
-          </li>
-      </ul>
-  </nav>
-  
-  
-  </header>
-
+    <header class="header sticky top-0 bg-white px-4 py-01">
+      <div class="navbar">
+        <!-- logo and navigation -->
+        <div class="navbar flex items-center justify-between w-full">
+          <!-- logo -->
+          <h1 class="w-1/6">
+            <a href="" class="flex items-center space-x-3">
+              <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
+              <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-black">Bolna</span>
+            </a>
+          </h1>
+    
+          <!-- navigation -->
+          <nav class="nav font-semibold text-lg mx-2 ">
+            <ul class="flex items-center justify-end">
+              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                <a href="#home">Home</a>
+              </li>
+              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                <a href="#product">Product</a>
+              </li>
+              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                <a href="#docs">Docs</a>
+              </li>
+              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                <a href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <!--heading section-->
   <section class="hero ">
     <div class="wave-container">
       <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
           <defs>
+
               <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
           </defs>
           <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(177, 156, 217,0.5)" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(177, 156, 217,0.3)" />
-              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(177, 156, 217,0.1)" />
-              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(177, 156, 217,0.9)" />
+              <use xlink:href="#gentle-wave" x="40" y="1" fill="rgba(177, 156, 217,0.7)" />
+              <use xlink:href="#gentle-wave" x="60" y="3" fill="rgba(177, 156, 217,0.5)" />
+              <use xlink:href="#gentle-wave" x="50" y="1" fill="rgba(177, 156, 217,0.3)" />
+              <use xlink:href="#gentle-wave" x="78" y="5" fill="rgba(177, 156, 217,0.2)" />
+              <use xlink:href="#gentle-wave" x="8" y="7" fill="rgba(177, 156, 217,0.1)" />
+              <use xlink:href="#gentle-wave" x="48" y="4" fill="#fff" />
           </g>
       </svg>
     </div>
 
     <div class="container mx-auto hero-content">
-      <h1 class="text-6xl font-semibold relative text-black px-10 ">Create Voice based 
+      <h1 class="text-7xl font-semibold relative text-black px-10 ">Create Voice based 
         <span class="font-bold">AI</span> agents</h1> 
-      <p class="text-4xl text-gray-900 max-w-3xl text-lg mt-4 px-10">An end to end platform to build, monitor and deploy<br> voice based AI agents</p>
+      <h1 class="text-7xl font-semibold text-gray-900 max-w-4xl text-lg mt-4 px-10">An end to end platform to build, monitor and deploy<br> voice based AI agents</h1>
     </div>
   </section>
 
@@ -185,7 +203,7 @@
 
 
 <!--logos-->
-<section class="bg-white dark:bg-gray-900">
+<section class="bg-white dark:bg-violet-300">
   <div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
     <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
         <li>
@@ -256,7 +274,7 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap">
         <!-- Card 1 -->
-        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
               <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
@@ -272,7 +290,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
               <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
@@ -288,7 +306,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
               <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
@@ -304,7 +322,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
               <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
@@ -320,7 +338,7 @@
         </div>
 
         <!-- Card 5 -->
-        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
               <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
@@ -336,7 +354,7 @@
         </div>
 
         <!-- Card 6 -->
-        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center">
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
               <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
@@ -357,8 +375,36 @@
 </section>
 
 
+<!--code show part-->
+<section class="relative py-4">
+  <div class="container mx-auto">
+    <div class="rounded-xl shadow-2xl border flex divide-x">
+      <div class="py-8 flex grow">
+        <h2>
+          Explain code<br>
+        </h2>
+        <p>
+          Based on API choosed
+        </p>
+        <h3>
+          Paste your code below
+        </h3>
+        <code>
+          function HelloWorld(text){
+            echo || "Hello World"
+          }
+        </code>
+      </div> 
+      <div class="py-8 flex grow">
+        Test
+      </div>
+    </div>
+  </div>
+</section>
 
-<!--use cases part-->>
+
+
+<!--use cases part-->
 <!--Send automated phone calls
 and have real human conversations at scale-->
 <section class="main py-24 px-10">
@@ -489,27 +535,11 @@ and have real human conversations at scale-->
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#audio-carousel', {
-      type       : 'fade',
-      heightRatio: 0.5,
-      pagination : false,
-      cover      : true,
-      breakpoints: {
-        600: {
-          heightRatio: 0.3,
-        },
-      },
-    }).mount();
-  });
-</script>
-
 
 <!--footer-->
 
 <footer class="bg-white dark:bg-gray-900">
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+  <div class="mx-5 w-full max-w-screen-xl p-4 py-4 lg:py-58">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="#" class="flex items-center">
