@@ -17,7 +17,8 @@
     <!-- Include Splide CSS and JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/themes/splide-default.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script>
@@ -66,6 +67,41 @@
       background-color: #8f72ca;
       overflow: hidden;
       }
+      .waves {
+        position:relative;
+        width: 100%;
+        height:50%;
+        margin-bottom:-7px; /*Fix for safari gap*/
+        min-height:200px;
+        max-height:500px;
+        }
+        .parallax > use {
+animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+animation-delay: -2s;
+animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+animation-delay: -3s;
+animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+animation-delay: -4s;
+animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+animation-delay: -5s;
+animation-duration: 20s;
+}
+@keyframes move-forever {
+0% {
+transform: translate3d(-90px,0,0);
+}
+100% {
+transform: translate3d(85px,0,0);
+}
+}
       /*.waves {
       width: 100%;
       height: 20%;
@@ -84,11 +120,16 @@
       z-index: 3; /* Ensure text is on top */
       margin-top: -200px; /* Adjust this value to move the content up */
     }
+    
+    .main-content {
+      text-align: center;
+    }
       /* Add custom styles here if needed */
       .scroll-container {
             display: flex;
             overflow: hidden;
         }
+        
 
         .logos {
             display: flex;
@@ -157,13 +198,14 @@
     
     <!--heading section-->
   <section class="hero ">
-    <div class="wave-container">
+    <div class="wave-container py-58">
       <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
           <defs>
 
               <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
           </defs>
           <g class="parallax">
+             
               <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(177, 156, 217,0.9)" />
               <use xlink:href="#gentle-wave" x="40" y="1" fill="rgba(177, 156, 217,0.7)" />
               <use xlink:href="#gentle-wave" x="60" y="3" fill="rgba(177, 156, 217,0.5)" />
@@ -171,78 +213,28 @@
               <use xlink:href="#gentle-wave" x="78" y="5" fill="rgba(177, 156, 217,0.2)" />
               <use xlink:href="#gentle-wave" x="8" y="7" fill="rgba(177, 156, 217,0.1)" />
               <use xlink:href="#gentle-wave" x="48" y="4" fill="#fff" />
+              <text x="10%" y="120%" dominant-baseline="middle" text-anchor="left" fill="#000" font-size="5" font-weight="600">
+                Create Voice based AI agents
+              </text>
+              <text x="10%" y="140%" dominant-baseline="middle" text-anchor="left" fill="#000" font-size="3" font-weight="300">
+                An end to end
+                <tspan x="10%" dy="4">platform to build, monitor and deploy</tspan>
+                <tspan x="10%" dy="4">voice-based AI agents</tspan>
+              </text>
+              
           </g>
       </svg>
     </div>
-
-    <div class="container mx-auto hero-content">
-      <h1 class="text-7xl font-semibold relative text-black px-10 ">Create Voice based 
-        <span class="font-bold">AI</span> agents</h1> 
-      <h1 class="text-7xl font-semibold text-gray-900 max-w-4xl text-lg mt-4 px-10">An end to end platform to build, monitor and deploy<br> voice based AI agents</h1>
-    </div>
   </section>
 
-<section class="main py-24 px-10">
-  <div class="container mx-auto">
-    <h3 class="text-2xl font-semibold relative text-black">Send or receive millions of phone calls per day, using programmable voice agents that sound and feel human.</h3> 
+<section class="main py-24 px-10 ">
+  <div class="container mx-auto main-content py-24">
+    <h3 class="text-4xl font-bold text-black">Send or receive millions of<br> phone calls per day, using <br>programmable voice agents <br>that sound and feel human.</h3> 
   </div>
 </section>
-
-
-<!--code show part-->
-<section class="relative py-4">
-  <div class="container mx-auto px-10">
-    <div class="rounded-xl shadow-2xl border flex divide-x">
-      <div class="py-8 flex-1">
-          <div class="flex px-5">
-              <svg xmlns="http://www.w3.org/2000/svg"
-               fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
-               class="w-12 h-12 mr-4">
-                <path stroke-linecap="round" 
-                stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-              </svg>
-          </div>
-        <h2 class="text-4xl font-medium px-5 mt-2">
-          Explain code
-        </h2>
-        <p class="text-gray-600 text-lg px-5 mt-2">
-          Based on API choosed
-        </p>
-        <h3 class="mt-6 text-lg font-bold px-5">
-          Paste your code below:
-        </h3>
-        <div class="bg-gray-100 p-4 rounded-md mx auto mt-2 px-5 h-36">
-          <code>
-            function HelloWorld(text){
-              echo || "Hello World"
-            }
-          </code>
-        </div>
-        
-      </div> 
-      <div class="py-8 flex-1">
-        <div class="flex px-5">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
-          class="w-12 h-12">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
-          </svg>         
-          
-      </div>
-    <h2 class="text-4xl px-5 mt-1">
-      Customize
-    </h2>
-    <p class="text-gray-600 text-lg px-5 mt-2">
-      Without any code
-    </p>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <!--logos-->
-<section class="bg-white dark:bg-violet-300">
+<section class="bg-white dark:bg-violet-300 mt-1">
   <div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
     <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
         <li>
@@ -417,65 +409,33 @@
 <!--use cases part-->
 <!--Send automated phone calls
 and have real human conversations at scale-->
-<section class="main py-24 px-10">
-  <div class="container mx-auto">
-    <h3 class="text-2xl font-semibold relative text-black">Send automated phone calls<br>
-      and have real human conversations at scale</h3> 
-  </div>
-</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#audio-carousel', {
+      type       : 'fade',
+      heightRatio: 0.5, // Adjust the height ratio as needed
+    }).mount();
+  });
+</script>
 
 <!--audio carousel-->
-<div class="container mx-auto my-8 max-w-md">
+<div class="container mx-auto my-8  w-full">
   <div id="audio-carousel" class="splide">
     <div class="splide__track">
       <ul class="splide__list">
-
         <!-- Audio Slide 1 -->
         <li class="splide__slide">
-          <div class="relative">
-
+          <div class="relative h-full">
             <!-- component -->
-            <div class="bg-gray-100 p-4 flex justify-center items-center h-screen">
-              <div class="bg-white p-8 rounded-lg shadow-md w-80">
+            <div class="bg-gray-100 p-4 w-full h-full flex justify-center items-center transition-transform transform hover:scale-105">
+              <div class="bg-white p-8 rounded-md shadow-md w-100 text-center">
                 <!-- Album Cover -->
-                <img src="./images/c1.png" alt="idk - Highvyn, Taylor Shin" class="w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <img src="./images/c1.png" alt="idk - Highvyn, Taylor Shin" class="w-full h-full object-cover rounded-lg mb-4 shadow-lg shadow-teal-50">
                 <!-- Song Title -->
-                <h2 class="text-xl font-semibold text-center">idk</h2>
+                <h2 class="text-xl font-semibold">Customer service</h2>
                 <!-- Artist Name -->
-                <p class="text-gray-600 text-sm text-center">Highvyn, Taylor Shin</p>
-                <!-- Music Controls -->
-                <div class="mt-6 flex justify-center items-center">
-                  <button class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
-                    <svg width="64px" height="64px" viewBox="0 0 24 24" class="w-4 h-4 text-gray-600" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path d="M16.6598 14.6474C18.4467 13.4935 18.4467 10.5065 16.6598 9.35258L5.87083 2.38548C4.13419 1.26402 2 2.72368 2 5.0329V18.9671C2 21.2763 4.13419 22.736 5.87083 21.6145L16.6598 14.6474Z" fill="#000000"></path>
-                        <path d="M22.75 5C22.75 4.58579 22.4142 4.25 22 4.25C21.5858 4.25 21.25 4.58579 21.25 5V19C21.25 19.4142 21.5858 19.75 22 19.75C22.4142 19.75 22.75 19.4142 22.75 19V5Z" fill="#000000"></path>
-                      </g>
-                    </svg>
-                  </button>
-                  <button class="p-4 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none mx-4">
-                    <svg width="64px" height="64px" viewBox="0 0 24 24" class="w-6 h-6 text-gray-600" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path d="M2 6C2 4.11438 2 3.17157 2.58579 2.58579C3.17157 2 4.11438 2 6 2C7.88562 2 8.82843 2 9.41421 2.58579C10 3.17157 10 4.11438 10 6V18C10 19.8856 10 20.8284 9.41421 21.4142C8.82843 22 7.88562 22 6 22C4.11438 22 3.17157 22 2.58579 21.4142C2 20.8284 2 19.8856 2 18V6Z" fill="#000000"></path>
-                        <path d="M14 6C14 4.11438 14 3.17157 14.5858 2.58579C15.1716 2 16.1144 2 18 2C19.8856 2 20.8284 2 21.4142 2.58579C22 3.17157 22 4.11438 22 6V18C22 19.8856 22 20.8284 21.4142 21.4142C20.8284 22 19.8856 22 18 22C16.1144 22 15.1716 22 14.5858 21.4142C14 20.8284 14 19.8856 14 18V6Z" fill="#000000"></path>
-                      </g>
-                    </svg>
-                  </button>
-                  <button class="p-3 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
-                    <svg width="64px" height="64px" viewBox="0 0 24 24" class="w-4 h-4 text-gray-600" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path d="M16.6598 14.6474C18.4467 13.4935 18.4467 10.5065 16.6598 9.35258L5.87083 2.38548C4.13419 1.26402 2 2.72368 2 5.0329V18.9671C2 21.2763 4.13419 22.736 5.87083 21.6145L16.6598 14.6474Z" fill="#000000"></path>
-                        <path d="M22.75 5C22.75 4.58579 22.4142 4.25 22 4.25C21.5858 4.25 21.25 4.58579 21.25 5V19C21.25 19.4142 21.5858 19.75 22 19.75C22.4142 19.75 22.75 19.4142 22.75 19V5Z" fill="#000000"></path>
-                      </g>
-                    </svg>
-                  </button>
-                </div>
+                <p class="text-gray-600 text-sm">Tap to play</p>
                 <!-- Progress Bar -->
                 <div class="mt-6 bg-gray-200 h-2 rounded-full">
                   <div class="bg-teal-500 h-2 rounded-full w-1/2"></div>
@@ -487,18 +447,36 @@ and have real human conversations at scale-->
                 </div>
               </div>
             </div>
-            <audio controls class="absolute top-0 left-0 w-full h-full">
+            <audio controls class="justify-center top-0 left-0  h-full">
               <source src="audio2.mp3" type="audio/mp3">
               Your browser does not support the audio element.
             </audio>
           </div>
         </li>
-
-        <!-- Audio Slide 2 -->
+        <!--audio2-->
         <li class="splide__slide">
-          <div class="relative">
-            <img src="./src/images/c2.png" alt="Image 2" class="w-full h-32 object-cover">
-            <audio controls class="absolute top-0 left-0 w-full h-full">
+          <div class="relative h-full">
+            <!-- component -->
+            <div class="bg-gray-100 p-4 w-full h-full flex justify-center items-center transition-transform transform hover:scale-105">
+              <div class="bg-white p-8 rounded-lg shadow-md w-100 text-center">
+                <!-- Album Cover -->
+                <img src="./images/c2.png" alt="idk" class="w-full h-full object-cover rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <!-- Song Title -->
+                <h2 class="text-xl font-semibold">idk</h2>
+                <!-- Artist Name -->
+                <p class="text-gray-600 text-sm">Tap to play</p>
+                <!-- Progress Bar -->
+                <div class="mt-6 bg-gray-200 h-2 rounded-full">
+                  <div class="bg-teal-500 h-2 rounded-full w-1/2"></div>
+                </div>
+                <!-- Time Information -->
+                <div class="flex justify-between mt-2 text-sm text-gray-600">
+                  <span>1:57</span>
+                  <span>3:53</span>
+                </div>
+              </div>
+            </div>
+            <audio controls class="justify-center top-0 left-0  h-full">
               <source src="audio2.mp3" type="audio/mp3">
               Your browser does not support the audio element.
             </audio>
@@ -507,9 +485,28 @@ and have real human conversations at scale-->
 
         <!-- Audio Slide 3 -->
         <li class="splide__slide">
-          <div class="relative">
-            <img src="./src/images/c3.png" alt="Image 3" class="w-full h-32 object-cover">
-            <audio controls class="absolute top-0 left-0 w-full h-full">
+          <div class="relative h-full">
+            <!-- component -->
+            <div class="bg-gray-100 p-4 w-full h-full flex justify-center items-center transition-transform transform hover:scale-105">
+              <div class="bg-white p-8 rounded-lg shadow-md w-100 text-center">
+                <!-- Album Cover -->
+                <img src="./images/c3.png" alt="idk" class="w-full h-full object-cover rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <!-- Song Title -->
+                <h2 class="text-xl font-semibold">idk</h2>
+                <!-- Artist Name -->
+                <p class="text-gray-600 text-sm">Tap to play</p>
+                <!-- Progress Bar -->
+                <div class="mt-6 bg-gray-200 h-2 rounded-full">
+                  <div class="bg-teal-500 h-2 rounded-full w-1/2"></div>
+                </div>
+                <!-- Time Information -->
+                <div class="flex justify-between mt-2 text-sm text-gray-600">
+                  <span>1:57</span>
+                  <span>3:53</span>
+                </div>
+              </div>
+            </div>
+            <audio controls class="justify-center top-0 left-0  h-full">
               <source src="audio2.mp3" type="audio/mp3">
               Your browser does not support the audio element.
             </audio>
@@ -518,9 +515,28 @@ and have real human conversations at scale-->
 
         <!-- Audio Slide 4 -->
         <li class="splide__slide">
-          <div class="relative">
-            <img src="./src/images/c4.png" alt="Image 4" class="w-full h-32 object-cover">
-            <audio controls class="absolute top-0 left-0 w-full h-full">
+          <div class="relative h-full">
+            <!-- component -->
+            <div class="bg-gray-100 p-4 w-full h-full flex justify-center items-center transition-transform transform hover:scale-105">
+              <div class="bg-white p-8 rounded-lg shadow-md w-100 text-center">
+                <!-- Album Cover -->
+                <img src="./images/c4.png" alt="idk" class="w-full h-full object-cover rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <!-- Song Title -->
+                <h2 class="text-xl font-semibold">idk</h2>
+                <!-- Artist Name -->
+                <p class="text-gray-600 text-sm">Tap to play</p>
+                <!-- Progress Bar -->
+                <div class="mt-6 bg-gray-200 h-2 rounded-full">
+                  <div class="bg-teal-500 h-2 rounded-full w-1/2"></div>
+                </div>
+                <!-- Time Information -->
+                <div class="flex justify-between mt-2 text-sm text-gray-600">
+                  <span>1:57</span>
+                  <span>3:53</span>
+                </div>
+              </div>
+            </div>
+            <audio controls class="justify-center top-0 left-0  h-full">
               <source src="audio2.mp3" type="audio/mp3">
               Your browser does not support the audio element.
             </audio>
@@ -529,9 +545,28 @@ and have real human conversations at scale-->
 
         <!-- Audio Slide 5 -->
         <li class="splide__slide">
-          <div class="relative">
-            <img src="./src/images/c5.png" alt="Image 5" class="w-full h-32 object-cover">
-            <audio controls class="absolute top-0 left-0 w-full h-full">
+          <div class="relative h-full">
+            <!-- component -->
+            <div class="bg-gray-100 p-4 w-full h-full flex justify-center items-center transition-transform transform hover:scale-105">
+              <div class="bg-white p-8 rounded-lg shadow-md w-100 text-center">
+                <!-- Album Cover -->
+                <img src="./images/c5.png" alt="idk" class="w-full h-full object-cover rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <!-- Song Title -->
+                <h2 class="text-xl font-semibold">idk</h2>
+                <!-- Artist Name -->
+                <p class="text-gray-600 text-sm">Tap to play</p>
+                <!-- Progress Bar -->
+                <div class="mt-6 bg-gray-200 h-2 rounded-full">
+                  <div class="bg-teal-500 h-2 rounded-full w-1/2"></div>
+                </div>
+                <!-- Time Information -->
+                <div class="flex justify-between mt-2 text-sm text-gray-600">
+                  <span>1:57</span>
+                  <span>3:53</span>
+                </div>
+              </div>
+            </div>
+            <audio controls class="justify-center top-0 left-0  h-full">
               <source src="audio2.mp3" type="audio/mp3">
               Your browser does not support the audio element.
             </audio>
@@ -546,10 +581,77 @@ and have real human conversations at scale-->
 </div>
 
 
+
+<!--code show part-->
+<section class="relative py-20">
+  <div class="container mx-auto px-10">
+    <div class="rounded-xl shadow-2xl border flex divide-x">
+      <div class="py-8 flex-1">
+          <div class="flex px-5">
+              <svg xmlns="http://www.w3.org/2000/svg"
+               fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+               class="w-12 h-12 mr-4">
+                <path stroke-linecap="round" 
+                stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+              </svg>
+          </div>
+        <h2 class="text-4xl font-medium px-5 mt-2">
+          Explain code
+        </h2>
+        <p class="text-gray-600 text-lg px-5 mt-2">
+          Based on API choosed
+        </p>
+        <h3 class="mt-6 text-lg font-bold px-5">
+          Paste your code below:
+        </h3>
+          <div class="bg-gray-100 p-4 rounded-md mx-auto mt-2 px-4 w-50 h-36">
+          <code>
+            function HelloWorld(text){
+              echo || "Hello World"
+            }
+          </code>
+        </div>
+        
+      </div> 
+      <div class="py-8 flex-1">
+        <div class="flex px-5">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+          class="w-12 h-12">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+          </svg>         
+          
+      </div>
+    <h2 class="text-4xl px-5 mt-1">
+      Customize
+    </h2>
+    <p class="text-gray-600 text-lg px-5 mt-2">
+      Without any code
+    </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--grow business-->
+<section>
+  <div class="container mx-auto main-content mt-10">
+    <h1 class="text-5xl font-semibold relative text-black px-10 mt-6">Are you ready to grow your business with us?</h1> 
+    <h1 class="text-3xl font-semibold relative text-gray-900 mt-6">Set up a call, we will take care of the rest</h1>
+    <button class="bg-violet-500 hover:bg-violet-300 active:bg-violet-600 focus:outline-none focus:ring focus:ring-violet-300 text-white font-semibold px-4 py-2 rounded-full mt-4">
+      Contact Us
+    </button>
+     
+  </div>
+</section>
+
+
+
 <!--footer-->
 
-<footer class="bg-white dark:bg-gray-900">
-  <div class="mx-5 w-full max-w-screen-xl p-4 py-4 lg:py-58">
+<footer class="bg-white dark:bg-gray-900 mt-10">
+  <div class="mx-4 w-full max-w-screen-xl p-4 py-4 lg:py-58">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="#" class="flex items-center">
