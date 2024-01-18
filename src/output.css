@@ -1334,6 +1334,18 @@ right: 4px; /* Adjust the right distance */
   z-index: 10;
 }
 
+/* Remove link underline and set custom color */
+a.navbar-brand {
+  text-decoration: none;
+  color: #333; /* Set the desired text color */
+}
+
+a.navbar-brand:hover {
+  text-decoration: none;
+  color: #555; /* Set the desired hover text color */
+}
+
+
 
      .wave-container {
      position: relative;
@@ -1392,5 +1404,11 @@ right: 4px; /* Adjust the right distance */
       100% {
         transform: translateX(-100%);
       }
-      
     }
+    .audio-carousel {
+      width: 70%; /* Adjust the width as needed */
+      margin: auto;
+    }
+/* Ensure there are no styles making anchor elements look like hyperlinks */
+
+    
