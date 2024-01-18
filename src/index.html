@@ -10,7 +10,10 @@
     <meta name="description" content="Simple landind page" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link rel="stylesheet" href="/src/output.css"/>
+    <!--icon-->
+    <link rel="icon" type="image/svg+xml" href="/src/images/favicon.svg">
+    <link rel="icon" type="image/png" href="/src/images/favicon.png">
     <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
 
@@ -21,180 +24,36 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                    animation: {
-                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
-                    },
-                    keyframes: {
-                        'infinite-scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        }
-                    }                    
-                },
-            },
-        };
-
-        document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#audio-carousel', {
-      type       : 'fade',
-      heightRatio: 0.5,
-      pagination : false,
-      cover      : true,
-      breakpoints: {
-        600: {
-          heightRatio: 0.3,
-        },
-      },
-    }).mount();
-  });
-    </script>
-    <style>
-      .navbar {
-      background-color: #ffffff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-      .wave-container {
-      position: relative;
-      background-color: #8f72ca;
-      overflow: hidden;
-      }
-      .waves {
-        position:relative;
-        width: 100%;
-        height:50%;
-        margin-bottom:-7px; /*Fix for safari gap*/
-        min-height:200px;
-        max-height:500px;
-        }
-        .parallax > use {
-          animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
-          }
-          .parallax > use:nth-child(1) {
-          animation-delay: -2s;
-          animation-duration: 7s;
-          }
-          .parallax > use:nth-child(2) {
-          animation-delay: -3s;
-          animation-duration: 10s;
-          }
-          .parallax > use:nth-child(3) {
-          animation-delay: -4s;
-          animation-duration: 13s;
-          }
-          .parallax > use:nth-child(4) {
-          animation-delay: -5s;
-          animation-duration: 20s;
-          }
-@keyframes move-forever {
-0% {
-transform: translate3d(-90px,0,0);
-}
-100% {
-transform: translate3d(85px,0,0);
-}
-}
-    
-
-    .hero {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3; /* Ensure text is on top */
-      margin-top: -200px; /* Adjust this value to move the content up */
-    }
-    
-    .main-content {
-      text-align: center;
-    }
-      /* Add custom styles here if needed */
-      .scroll-container {
-            display: flex;
-            overflow: hidden;
-        }
-        
-
-        .logos {
-            display: flex;
-            animation: scroll 30s linear infinite; /* Adjust the duration as needed */
-        }
-
-        .logo {
-            flex: 0 0 auto;
-            margin-right: 16px; /* Adjust the spacing between logos as needed */
-        }
-    .splide__arrow {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .splide__arrow--prev {
-    left: 2px; /* Adjust the left distance */
-  }
-
-  .splide__arrow--next {
-    right: 4px; /* Adjust the right distance */
-  }
-
-        @keyframes scroll {
-            from {
-                transform: translateX(0%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-        @keyframes waveAnimation {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-      
-    }
-
-
-  </style>
+    <script defer src="/src/main.js"></script>
   </head>
 <body>
     <!-- component -->
-    <header class="header sticky top-0 bg-white px-4 py-01">
-      <div class="navbar bg-white sticky">
+    <header class="header sticky top-0 bg-white">
+      <!-- Sticky Navbar -->
+      <div class="navbar bg-white sticky top-0 w-full h-15 shadow-md">
         <!-- logo and navigation -->
-        <div class="navbar flex items-center justify-between w-full">
+        <div class="navbar flex  sticky items-center h-12 justify-between w-full">
           <!-- logo -->
           <h1 class="w-1/6">
             <a href="" class="flex items-center space-x-3">
               <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
-              <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-black">Bolna</span>
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Bolna</span>
             </a>
           </h1>
     
           <!-- navigation -->
-          <nav class="nav font-semibold text-lg mx-2 bg-white">
+          <nav class="nav font-semibold h-12 text-lg mx-2 bg-white">
             <ul class="flex items-center justify-end">
-              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+              <li class="p-2 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
                 <a href="#home">Home</a>
               </li>
-              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+              <li class="p-2 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
                 <a href="#product">Product</a>
               </li>
-              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+              <li class="p-2 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
                 <a href="#docs">Docs</a>
               </li>
-              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+              <li class="p-2 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
                 <a href="#contact">Contact Us</a>
               </li>
             </ul>
@@ -216,27 +75,29 @@ transform: translate3d(85px,0,0);
               <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(177, 156, 217,0.9)" />
               <use xlink:href="#gentle-wave" x="40" y="1" fill="rgba(177, 156, 217,0.7)" />
               <use xlink:href="#gentle-wave" x="60" y="3" fill="rgba(177, 156, 217,0.5)" />
-              <use xlink:href="#gentle-wave" x="50" y="1" fill="rgba(177, 156, 217,0.3)" />
+              <use xlink:href="#gentle-wave" x="50" y="1" fill="rgba(204,174,219,0.3)" />
               <use xlink:href="#gentle-wave" x="78" y="5" fill="rgba(177, 156, 217,0.2)" />
-              <use xlink:href="#gentle-wave" x="8" y="7" fill="rgba(177, 156, 217,0.1)" />
+              <use xlink:href="#gentle-wave" x="8" y="7" fill="rgba(231,208,245,0.1)" />
               <use xlink:href="#gentle-wave" x="48" y="4" fill="#fff" />
-              <text x="10%" y="120%" dominant-baseline="middle" text-anchor="left" fill="#000" font-size="5" font-weight="600">
+
+              
+              <text x="10%" y="120%" dominant-baseline="middle" text-anchor="left" fill="#000" font-size="5" font-weight="700">
                 Create Voice based AI agents
-              </text>
-              <text x="10%" y="140%" dominant-baseline="middle" text-anchor="left" fill="#000" font-size="3" font-weight="300">
+            </text>
+            <text x="10%" y="140%" dominant-baseline="middle" text-anchor="left" fill="#000" font-size="3" font-weight="400">
                 An end to end
                 <tspan x="10%" dy="4">platform to build, monitor and deploy</tspan>
                 <tspan x="10%" dy="4">voice-based AI agents</tspan>
-              </text>
-              
+            </text>
+            
           </g>
       </svg>
     </div>
   </section>
 
-<section class="main py-24 px-10 ">
+<section class="main py-10 px-10 ">
   <div class="container mx-auto main-content py-24">
-    <h3 class="text-4xl font-bold text-black">Send or receive millions of<br> phone calls per day, using <br>programmable voice agents <br>that sound and feel human.</h3> 
+    <h3 class="text-4xl font-bold  text-black text-center">Send or receive millions of<br> phone calls per day, using <br>programmable voice agents <br>that sound and feel human.</h3> 
   </div>
 </section>
 
@@ -417,15 +278,6 @@ transform: translate3d(85px,0,0);
 <!--Send automated phone calls
 and have real human conversations at scale-->
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#audio-carousel', {
-      type       : 'fade',
-      heightRatio: 0.5, // Adjust the height ratio as needed
-    }).mount();
-  });
-</script>
-
 <!--audio carousel-->
 
 <div class="container mx-auto my-8  w-full bg-white">
@@ -449,9 +301,11 @@ and have real human conversations at scale-->
           <div class="relative h-full">
             <!-- component -->
             <div class="bg-gray-100 p-4 w-full h-full flex justify-center items-center transition-transform transform hover:scale-105">
-              <div class="bg-white p-8 rounded-md shadow-md w-100 text-center">
+              <div class="bg-white p-8 rounded-md shadow-md w-100 text-center relative">
                 <!-- Album Cover -->
                 <img src="./images/c1.png" alt="idk - Highvyn, Taylor Shin" class="w-full h-full object-cover rounded-lg mb-4 shadow-lg shadow-teal-50">
+                <!-- Play Button SVG -->
+                             
                 <!-- Song Title -->
                 <h2 class="text-xl font-semibold">Customer service</h2>
                 <!-- Artist Name -->
@@ -467,6 +321,7 @@ and have real human conversations at scale-->
                 </div>
               </div>
             </div>
+            
             <audio controls class="justify-center top-0 left-0  h-full">
               <source src="audio2.mp3" type="audio/mp3">
               Your browser does not support the audio element.
@@ -603,7 +458,7 @@ and have real human conversations at scale-->
 
 
 <!--code show part-->
-<section class="relative py-4 mt-10 bg-white sticky">
+<section class="relative py-4 mt- bg-white sticky">
   <div class="container mx-auto px-10">
     <div class="rounded-xl shadow-2xl border flex divide-x bg-white">
       <div class="py-8 flex-1">
@@ -644,7 +499,7 @@ and have real human conversations at scale-->
           </svg>         
           
       </div>
-    <h2 class="text-4xl px-5 mt-1">
+    <h2 class="text-5xl px-5 mt-1">
       Customize
     </h2>
     <p class="text-gray-600 text-lg px-5 mt-2">
@@ -657,22 +512,19 @@ and have real human conversations at scale-->
 
 
 <!--grow business-->
-<section>
-  <div class="container mx-auto main-content mt-10">
-    <h1 class="text-5xl font-semibold relative text-black px-10 mt-6">Are you ready to grow your business with us?</h1> 
-    <h1 class="text-3xl font-semibold relative text-gray-900 mt-6">Set up a call, we will take care of the rest</h1>
-    <button class="bg-violet-500 hover:bg-violet-300 active:bg-violet-600 focus:outline-none focus:ring focus:ring-violet-300 text-white font-semibold px-4 py-2 rounded-full mt-4">
+<section class="flex items-center justify-center mt-10 py-10">
+  <div class="container mx-auto main-content text-center">
+    <h1 class="text-4xl font-semibold text-black px-10 mt-4">Are you ready to grow your business with us?</h1>
+    <h1 class="text-2xl font-medium text-gray-900 mt-4">Set up a call, we will take care of the rest</h1>
+    <button class="bg-violet-500 hover:bg-violet-300 active:bg-violet-600 focus:outline-none focus:ring focus:ring-violet-300 text-white font-semibold px-4 py-2 rounded-full mt-2">
       Contact Us
     </button>
-     
   </div>
 </section>
 
 
-
 <!--footer-->
-
-<footer class="bg-white dark:bg-gray-900 mt-10">
+<footer class="bg-white dark:bg-gray-900 mt-20">
   <div class="mx-4 w-full max-w-screen-xl p-4 py-4 lg:py-58">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
