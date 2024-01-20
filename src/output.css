@@ -1454,7 +1454,245 @@ a.navbar-brand:hover {
       width: 70%; /* Adjust the width as needed */
       margin: auto;
     }
-/* Ensure there are no styles making anchor elements look like hyperlinks */
 
+    @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
+
+:root {
+	--br-blobby: 50%;
+	--br-blobby-before: 50%;
+	--br-blobby-after: 50%;
+}
+
+
+
+.box {
+	animation: rotate 5s linear infinite;
+	background-color: #000;
+	border-radius: var(--br-blobby);
+	position: relative;
+	height: 250px;
+	width: 250px;
+	transition: 0.3s linear;
+}
+
+.box::after {
+	content: '';
+	background-color: #000;
+	border-radius: var(--br-blobby-after);
+	position: absolute;
+	opacity: 0.5;
+	top: -2%;
+	left: -2%;
+	height: 104%;
+	width: 104%;
+	transition: 0.3s linear;
+}
+
+.box::before {
+	content: '';
+	background-color: #000000;
+	border-radius: var(--br-blobby-before);
+	position: absolute;
+	opacity: 0.5;
+	top: -4%;
+	left: -4%;
+	height: 108%;
+	width: 108%;
+	transition: 0.3s linear;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Card slider */
+.peer-checked:not(:checked) ~ div {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:not(:checked) ~ div:nth-child(2) {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.peer-checked:nth-child(2):checked ~ div {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(2):checked ~ div:nth-child(3) {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.peer-checked:nth-child(3):checked ~ div {
+  transform: translateX(-200%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(3):checked ~ div:nth-child(4) {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.peer-checked:nth-child(4):checked ~ div {
+  transform: translateX(-300%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(4):checked ~ div:nth-child(5) {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.peer-checked:nth-child(5):checked ~ div {
+  transform: translateX(-400%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(5):checked ~ div:nth-child(1) {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.peer-checked:nth-child(1):checked ~ div {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.peer-checked:nth-child(1):checked ~ div:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(2):checked ~ div:nth-child(1) {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(3):checked ~ div:nth-child(1) {
+  transform: translateX(-200%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(4):checked ~ div:nth-child(1) {
+  transform: translateX(-300%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(5):checked ~ div:nth-child(1) {
+  transform: translateX(-400%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(1):checked ~ div:nth-child(3) {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(2):checked ~ div:nth-child(4) {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(3):checked ~ div:nth-child(5) {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(4):checked ~ div:nth-child(1) {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(5):checked ~ div:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(1):checked ~ div:nth-child(4) {
+  transform: translateX(-200%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(2):checked ~ div:nth-child(5) {
+  transform: translateX(-200%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(3):checked ~ div:nth-child(1) {
+  transform: translateX(200%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(4):checked ~ div:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(5):checked ~ div:nth-child(3) {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(1):checked ~ div:nth-child(5) {
+  transform: translateX(-300%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.peer-checked:nth-child(2):checked ~ div:nth-child(1) {
+  transform: translateX(300%);
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Add your existing styles here */
+
+.top-right-blob-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 50px; /* Adjust the margin as needed */
+  margin-right: 80px; /* Adjust the margin as needed */
+  z-index: 2;
+}
+
+/* Add any other styles for the top-right container */
 
     

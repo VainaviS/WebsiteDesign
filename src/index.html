@@ -8,8 +8,7 @@
       Bolna
     </title>
     <meta name="description" content="Simple landind page" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+
     <link rel="stylesheet" href="/src/output.css"/>
     <!--icon-->
     <link rel="icon" type="image/svg+xml" href="/src/images/favicon.svg">
@@ -22,6 +21,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
     <!--audio part-->
+
+    
     
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -63,40 +64,53 @@
       </div>
     </header>
     
-    <!--heading section-->
-  <section class="hero ">
-    <div class="wave-container py-58">
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-          <defs>
+    <!--blob-->    
+    <section class=" flex-col items-center justify-center h-screen mt-10 top-right-blob-container">
+      <div>
+        <h1 class="text-4xl font-bold text-white text-center  py-50">
+          Bolna
+        </h1>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672Zm-7.518-.267A8.25 8.25 0 1 1 20.25 10.5M8.288 14.212A5.25 5.25 0 1 1 17.25 10.5" />
+        </svg>
+      </div>
+      <div class="box mx-auto flex items-center justify-center">
+        <!-- Additional content goes here -->
+      </div>
+    </section>
+    <!--hero waves-->
+    <section class="hero ">
+      <div class="wave-container py-58">
+        <h3 class="text-5xl font-bold  text-black text-left px-10 py-20">
+          Create Voice based AI agents
+        </h3>
+        <h3 class="text-4xl font-regular  text-black text-left px-10 ">
+          An end to end
+          <br>platform to build, monitor and deploy<br>voice-based AI agents
+        </h3>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+  
+                <path id="gentle-wave" d="M-160 44c30 0 50-18 88-18s 50 18 88 18 50-18 88-18 50 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+               
+                <use xlink:href="#gentle-wave" x="48" y="10" fill="rgba(177, 156, 217,0.9)" />
+                <use xlink:href="#gentle-wave" x="40" y="11" fill="rgba(177, 156, 217,0.7)" />
+                <use xlink:href="#gentle-wave" x="60" y="13" fill="rgba(177, 156, 217,0.5)" />
+                <use xlink:href="#gentle-wave" x="50" y="11" fill="rgba(204,174,219,0.3)" />
+                <use xlink:href="#gentle-wave" x="78" y="15" fill="rgba(177, 156, 217,0.2)" />
+                <use xlink:href="#gentle-wave" x="8" y="17" fill="rgba(231,208,245,0.1)" />
+                <use xlink:href="#gentle-wave" x="48" y="1" fill="#fff" />
+               
+            </g>
+        </svg>
+      </div>
+    </section>  
 
-              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-          </defs>
-          <g class="parallax">
-             
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(177, 156, 217,0.9)" />
-              <use xlink:href="#gentle-wave" x="40" y="1" fill="rgba(177, 156, 217,0.7)" />
-              <use xlink:href="#gentle-wave" x="60" y="3" fill="rgba(177, 156, 217,0.5)" />
-              <use xlink:href="#gentle-wave" x="50" y="1" fill="rgba(204,174,219,0.3)" />
-              <use xlink:href="#gentle-wave" x="78" y="5" fill="rgba(177, 156, 217,0.2)" />
-              <use xlink:href="#gentle-wave" x="8" y="7" fill="rgba(231,208,245,0.1)" />
-              <use xlink:href="#gentle-wave" x="48" y="4" fill="#fff" />
+   
 
-              
-              <text x="10%" y="120%" dominant-baseline="middle" text-anchor="left" fill="#000" font-size="5" font-weight="700">
-                Create Voice based AI agents
-            </text>
-            <text x="10%" y="140%" dominant-baseline="middle" text-anchor="left" fill="#000" font-size="3" font-weight="400">
-                An end to end
-                <tspan x="10%" dy="4">platform to build, monitor and deploy</tspan>
-                <tspan x="10%" dy="4">voice-based AI agents</tspan>
-            </text>
-            
-          </g>
-      </svg>
-    </div>
-  </section>
-
-<section class="main py-10 px-10 ">
+<section class="main py-01 px-10 ">
   <div class="container mx-auto main-content py-24">
     <h3 class="text-4xl font-bold  text-black text-center">Send or receive millions of<br> phone calls per day, using <br>programmable voice agents <br>that sound and feel human.</h3> 
   </div>
@@ -279,141 +293,253 @@
 <!--Send automated phone calls
 and have real human conversations at scale-->
 <!--audio carousel-->
+<div class="relative font-inter antialiased ">
+  <main class="relative min-h-screen flex flex-col justify-center bg-gray-200 overflow-hidden">
+      <div class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24">
 
-<section>
-  <div style="background-color:#f7d7fd1f!important;padding:20px">
-    <div class="container" style="background-color:unset">
-      <div class="pricing-header px-50 py-3 mt-3 mx-auto text-center flex items-center justify-center">
-        <h3 class="text-4xl font-bold text-black text-center">
-          Send automated phone calls and <br>have real human conversations at scale
-        </h3>
+          <!-- Card slider -->
+          <section class="px-12">
+              <div class="max-w-lg mx-auto relative">
+  
+                  <input id="article-01" type="radio" name="slider" class="sr-only peer/01">
+                  <input id="article-02" type="radio" name="slider" class="sr-only peer/02">
+                  <input id="article-03" type="radio" name="slider" class="sr-only peer/03" checked>
+                  <input id="article-04" type="radio" name="slider" class="sr-only peer/04">
+                  <input id="article-05" type="radio" name="slider" class="sr-only peer/05">
+  
+                  <div class="
+                      absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                      peer-focus-visible/01:[&_article]:ring
+                      peer-focus-visible/01:[&_article]:ring-indigo-300
+                      peer-checked/01:relative
+                      peer-checked/01:z-50
+                      peer-checked/01:translate-x-0
+                      peer-checked/01:scale-100
+                      peer-checked/01:[&>label]:pointer-events-none
+                      peer-checked/02:-translate-x-20
+                      peer-checked/02:scale-[83.75%]
+                      peer-checked/02:z-40
+                      peer-checked/03:-translate-x-40
+                      peer-checked/03:z-30
+                      peer-checked/04:-translate-x-40                    
+                      peer-checked/04:opacity-0
+                      peer-checked/05:-translate-x-40
+                  ">
+                      <label class="absolute inset-0" for="article-01"><span class="sr-only">Focus on the big picture</span></label>
+                      <article class="bg-white p-6 rounded-lg shadow-2xl">
+                          <header class="mb-2">
+                              <img class="inline-flex rounded-full shadow mb-3" src="./images/certificate_3135763.png" width="44" height="44" alt="Icon" />
+                               <!-- Add audio element here -->
+                      <audio controls class="w-full mt-4">
+                          <source src="your-audio-file.mp3" type="audio/mp3">
+                          Your browser does not support the audio element.
+                      </audio>
+                              <h1 class="text-xl font-bold text-slate-900">Focus on the big picture</h1>
+                          </header>
+                          <div class="text-sm leading-relaxed text-slate-500 space-y-4 mb-2">
+                              <p>
+                                  Many desktop publishing packages and web page editors now use Pinky as their default model text, and a search for more variants will uncover many web sites still in their infancy.
+                              </p>
+                              <p>
+                                  All the generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                              </p>
+                          </div>
+                          <footer class="text-right">
+                              <a class="text-sm font-medium text-indigo-500 hover:underline" href="#0">Read more -></a>
+                          </footer>
+                      </article>
+                  </div>
+  
+                  <div class="
+                      absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                      peer-focus-visible/02:[&_article]:ring
+                      peer-focus-visible/02:[&_article]:ring-indigo-300                        
+                      peer-checked/01:translate-x-20
+                      peer-checked/01:scale-[83.75%]
+                      peer-checked/01:z-40
+                      peer-checked/02:relative
+                      peer-checked/02:z-50
+                      peer-checked/02:translate-x-0
+                      peer-checked/02:scale-100
+                      peer-checked/02:[&>label]:pointer-events-none
+                      peer-checked/03:-translate-x-20
+                      peer-checked/03:scale-[83.75%]
+                      peer-checked/03:z-40
+                      peer-checked/04:-translate-x-40
+                      peer-checked/04:z-30
+                      peer-checked/05:-translate-x-40 
+                      peer-checked/05:opacity-0
+                  ">
+                      <label class="absolute inset-0" for="article-02"><span class="sr-only">Focus on the big picture</span></label>
+                      <article class="bg-white p-6 rounded-lg shadow-2xl">
+                          <header class="mb-2">
+                              <img class="inline-flex rounded-full shadow mb-3" src="./images/human-resources_1150597.png" width="44" height="44" alt="Icon" />
+                               <!-- Add audio element here -->
+                      <audio controls class="w-full mt-4">
+                          <source src="your-audio-file.mp3" type="audio/mp3">
+                          Your browser does not support the audio element.
+                      </audio>
+                              <h1 class="text-xl font-bold text-slate-900">Focus on the big picture</h1>
+                          </header>
+                          <div class="text-sm leading-relaxed text-slate-500 space-y-4 mb-2">
+                              <p>
+                                  Many desktop publishing packages and web page editors now use Pinky as their default model text, and a search for more variants will uncover many web sites still in their infancy.
+                              </p>
+                              <p>
+                                  All the generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                              </p>
+                          </div>
+                          <footer class="text-right">
+                              <a class="text-sm font-medium text-indigo-500 hover:underline" href="#0">Read more -></a>
+                          </footer>
+                      </article>
+                  </div>
+  
+                  <div class="
+                      absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                      peer-focus-visible/03:[&_article]:ring
+                      peer-focus-visible/03:[&_article]:ring-indigo-300                          
+                      peer-checked/01:translate-x-40
+                      peer-checked/01:z-30
+                      peer-checked/02:translate-x-20
+                      peer-checked/02:scale-[83.75%]
+                      peer-checked/02:z-40
+                      peer-checked/03:relative
+                      peer-checked/03:z-50
+                      peer-checked/03:translate-x-0
+                      peer-checked/03:scale-100
+                      peer-checked/03:[&>label]:pointer-events-none
+                      peer-checked/04:-translate-x-20
+                      peer-checked/04:scale-[83.75%]
+                      peer-checked/04:z-40
+                      peer-checked/05:-translate-x-40
+                      peer-checked/05:z-30                  
+                  ">
+                      <label class="absolute inset-0" for="article-03"><span class="sr-only">Focus on the big picture</span></label>
+                      <article class="bg-white p-6 rounded-lg shadow-2xl">
+                          <header class="mb-2">
+                              <img class="inline-flex rounded-full shadow mb-3" src="./images/sale_10473945.png" width="44" height="44" alt="Icon" />
+                               <!-- Add audio element here -->
+                      <audio controls class="w-full mt-4">
+                          <source src="your-audio-file.mp3" type="audio/mp3">
+                          Your browser does not support the audio element.
+                      </audio>
+                              <h1 class="text-xl font-bold text-slate-900">Focus on the big picture</h1>
+                          </header>
+                          <div class="text-sm leading-relaxed text-slate-500 space-y-4 mb-2">
+                              <p>
+                                  Many desktop publishing packages and web page editors now use Pinky as their default model text, and a search for more variants will uncover many web sites still in their infancy.
+                              </p>
+                              <p>
+                                  All the generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                              </p>
+                          </div>
+                          <footer class="text-right">
+                              <a class="text-sm font-medium text-indigo-500 hover:underline" href="#0">Read more -></a>
+                          </footer>
+                      </article>
+                  </div>
+  
+                  <div class="
+                      absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                      peer-focus-visible/04:[&_article]:ring
+                      peer-focus-visible/04:[&_article]:ring-indigo-300                          
+  
+                      peer-checked/01:translate-x-40 
+                      peer-checked/01:opacity-0
+                      
+                      peer-checked/02:translate-x-40
+                      peer-checked/02:z-30
+                      
+                      peer-checked/03:translate-x-20
+                      peer-checked/03:scale-[83.75%]
+                      peer-checked/03:z-40
+  
+                      peer-checked/04:relative
+                      peer-checked/04:z-50
+                      peer-checked/04:translate-x-0
+                      peer-checked/04:scale-100
+                      peer-checked/04:[&>label]:pointer-events-none
+                      
+                      peer-checked/05:-translate-x-20
+                      peer-checked/05:scale-[83.75%]
+                      peer-checked/05:z-40
+                  ">
+                      <label class="absolute inset-0" for="article-04"><span class="sr-only">Focus on the big picture</span></label>
+                      <article class="bg-white p-6 rounded-lg shadow-2xl">
+                          <header class="mb-2">
+                              <img class="inline-flex rounded-full shadow mb-3" src="./images/support_1067566.png" width="44" height="44" alt="Icon" />
+                               <!-- Add audio element here -->
+                      <audio controls class="w-full mt-4">
+                          <source src="your-audio-file.mp3" type="audio/mp3">
+                          Your browser does not support the audio element.
+                      </audio>
+                              <h1 class="text-xl font-bold text-slate-900">Focus on the big picture</h1>
+                          </header>
+                          <div class="text-sm leading-relaxed text-slate-500 space-y-4 mb-2">
+                              <p>
+                                  Many desktop publishing packages and web page editors now use Pinky as their default model text, and a search for more variants will uncover many web sites still in their infancy.
+                              </p>
+                              <p>
+                                  All the generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                              </p>
+                          </div>
+                          <footer class="text-right">
+                              <a class="text-sm font-medium text-indigo-500 hover:underline" href="#0">Read more -></a>
+                          </footer>
+                      </article>
+                  </div>  
+                  
+                  <div class="
+                      absolute inset-0 scale-[67.5%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
+                      peer-focus-visible/05:[&_article]:ring
+                      peer-focus-visible/05:[&_article]:ring-indigo-300                          
+                      peer-checked/01:translate-x-40 
+                      peer-checked/02:translate-x-40 
+                      peer-checked/02:opacity-0
+                      peer-checked/03:translate-x-40
+                      peer-checked/03:z-30
+                      peer-checked/04:translate-x-20
+                      peer-checked/04:scale-[83.75%]
+                      peer-checked/04:z-40
+                      peer-checked/05:relative
+                      peer-checked/05:z-50
+                      peer-checked/05:translate-x-0
+                      peer-checked/05:scale-100
+                      peer-checked/05:[&>label]:pointer-events-none
+                  ">
+                      <label class="absolute inset-0" for="article-05"><span class="sr-only">Focus on the big picture</span></label>
+                      <article class="bg-white p-6 rounded-lg shadow-2xl">
+                          <header class="mb-2">
+                              <img class="inline-flex rounded-full shadow mb-3" src="./images/survey_2222151.png" width="44" height="44" alt="Icon" />
+                               <!-- Add audio element here -->
+                      <audio controls class="w-full mt-4">
+                          <source src="your-audio-file.mp3" type="audio/mp3">
+                          Your browser does not support the audio element.
+                      </audio>
+                              <h1 class="text-xl font-bold text-slate-900">Focus on the big picture</h1>
+                          </header>
+                          <div class="text-sm leading-relaxed text-slate-500 space-y-4 mb-2">
+                              <p>
+                                  Many desktop publishing packages and web page editors now use Pinky as their default model text, and a search for more variants will uncover many web sites still in their infancy.
+                              </p>
+                              <p>
+                                  All the generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                              </p>
+                          </div>
+                          <footer class="text-right">
+                              <a class="text-sm font-medium text-indigo-500 hover:underline" href="#0">Read more -></a>
+                          </footer>
+                         
+                      </article>
+                  </div>                  
+              </div>
+          </section>
+          <!-- End: Card slider -->
+
       </div>
-            
-      <br>
-      <ul class="nav-pills mt-10" role="tablist">
-        <li class="nav-item mx-auto">
-          <a class="nav-link active " href="javascript:void(0)" onclick="showTab('home')">US Voices</a>
-        </li>
-        <li class="nav-item mx-auto">
-          <a class="nav-link" href="javascript:void(0)" onclick="showTab('menu1')">UK Voices</a>
-        </li>
-        <li class="nav-item mx-auto">
-          <a class="nav-link" href="javascript:void(0)" onclick="showTab('menu2')">AU Voices</a>
-        </li>
-        <li class="nav-item mx-auto">
-          <a class="nav-link" href="javascript:void(0)" onclick="showTab('menu3')">IN Voices</a>
-        </li>
-      </ul>
+  </main>
 
-      <div class="tab-content">
-        <div id="home" class="container tab-pane active">
-          <br>
-          <h3 class="mb-4">Text to Speech US Voices</h3>
-          <!-- Your content for US Voices here -->
-          <div class="table-responsive"p-4>
-            Available 7 Female, 5 Male, and 2 Children voices.
-              <table class="table ">
-                <tbody>
-                  <tr>
-                    <td class="py-10"> David - English(US) - Male </td>
-                      <td class="py-10 px-10"><audio controls controlsList="nodownload" preload="none" style="width: 250px;">
-                        <source src="https://storage.googleapis.com/notevibes.com/David.mp3">
-                        </audio></td>
-                  </tr>
-                  <tr>
-                    <td class="py-10"> Rick - English(US) - Male</td>
-                    <td class="py-10 px-10"> <audio controls controlsList="nodownload" preload="none" style="width: 250px;">
-                    <source src="https://storage.googleapis.com/notevibes.com/Rick.mp3">
-                    </audio></td>
-                  </tr>
-                </tbody>
-            </table></div>
-        </div>
-        <div id="menu1" class="container tab-pane fade">
-          <br>
-          <h3>Text to Speech British Voices</h3>
-          <!-- Your content for UK Voices here -->
-          Available 3 Female, 3 Male with british accent voices.
-          <div class="table-responsive">
-            <table class="table ">
-              <tbody>
-              <tr>
-                <td class="py-10"> Donald - English(UK) - Male </td>
-                <td class="py-10 px-10"><audio controls controlsList="nodownload" preload="none" style="width: 250px;">
-                  <source src="https://storage.googleapis.com/notevibes.com/Donald.mp3">
-                  </audio></td>
-                  </tr>
-                  <tr>
-                  <td class="py-10"> Daniel- English(UK) - Male</td>
-                  <td class="py-10 px-10"> <audio controls controlsList="nodownload" preload="none" style="width: 250px;">
-                  <source src="https://storage.googleapis.com/notevibes.com/Daniel.mp3">
-                  </audio></td>
-              </tr>
-              </tbody>
-            </table></div>
-          </div>
-        <div id="menu2" class="container tab-pane fade">
-          <br>
-          <h3>Text to Speech Voices with Australian accents</h3>
-          <!-- Your content for AU Voices here -->
-          <div class="table-responsive">
-            <table class="table ">
-            <tbody>
-            <tr>
-            <td class="py-10"> William - English(AU) - Male </td>
-            <td class="py-10 px-10"><audio controls controlsList="nodownload" preload="none">
-            <source src="https://storage.googleapis.com/notevibes.com/William.mp3">
-            </audio></td>
-            </tr>
-            <tr>
-            <td class="py-10"> Noah - English(AU) - Male</td>
-            <td class="py-10 px-10"> <audio controls controlsList="nodownload" preload="none">
-            <source src="https://storage.googleapis.com/notevibes.com/Noah.mp3">
-            </audio></td>
-            </tr>
-            </tbody>
-            </table></div>
-        </div>
-        <div id="menu3" class="container tab-pane fade">
-          <br>
-          <h3>Text to Speech Indian English Voices</h3>
-          <!-- Your content for IN Voices here -->
-          <div class="table-responsive">
-            <table class="table ">
-              <tbody>
-              <tr>
-                <td class="py-10"> Pari - English(IN) - Female </td>
-                  <td class="py-10 px-10"><audio controls controlsList="nodownload" preload="none">
-                    <source src="https://storage.googleapis.com/notevibes.com/Pari.mp3">
-                      </audio></td>
-                    </tr>
-                    <tr>
-                      <td class="py-10"> Ansh - English(IN) - Male</td>
-                      <td class="py-10 px-10"> <audio controls controlsList="nodownload" preload="none">
-                    <source src="https://storage.googleapis.com/notevibes.com/Ansh.mp3">
-                    </audio></td>
-              </tr>
-              </tbody>
-            </table></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  function showTab(tabId) {
-    // Hide all tabs
-    var tabs = document.querySelectorAll('.tab-pane');
-    tabs.forEach(function (tab) {
-      tab.classList.remove('active');
-    });
-
-    // Show the selected tab
-    var selectedTab = document.getElementById(tabId);
-    selectedTab.classList.add('active');
-  }
-</script>
 
 
 <!--code show part-->
@@ -458,7 +584,7 @@ and have real human conversations at scale-->
           </svg>         
           
       </div>
-    <h2 class="text-5xl px-5 mt-1">
+    <h2 class="text-4xl font-medium px-5 mt-2">
       Customize
     </h2>
     <p class="text-gray-600 text-lg px-5 mt-2">
