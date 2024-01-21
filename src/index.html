@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Bolna
+    </title>
+    <meta name="description" content="Simple landind page" />
+
+    <link rel="stylesheet" href="/src/output.css"/>
+    <!--icon-->
+    <link rel="icon" type="image/svg+xml" href="/src/images/favicon.svg">
+    <link rel="icon" type="image/png" href="/src/images/favicon.png">
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+
+    <!-- Include Splide CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/themes/splide-default.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
+    <!--audio part-->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="/src/main.js"></script>
+  </head>
+<body>
+    <!-- component -->
+    <header class="header sticky top-0 bg-white px-4 py-01 shadow-xl">
+      <div class="navbar bg-white sticky">
+        <!-- logo and navigation -->
+        <div class="navbar flex items-center justify-between w-full">
+          <!-- logo -->
+          <h1 class="w-1/6">
+            <a href="" class="flex items-center space-x-3">
+              <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
+              <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-black">Bolna</span>
+            </a>
+          </h1>
+    
+          <!-- navigation -->
+          <nav class="nav font-semibold text-lg mx-2 bg-white">
+            <ul class="flex items-center justify-end">
+              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                <a href="#home">Home</a>
+              </li>
+              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                <a href="#product">Product</a>
+              </li>
+              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                <a href="#docs">Docs</a>
+              </li>
+              <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                <a href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <!--blob-->    
+    <section class=" flex-col items-center justify-center h-screen mt-10 top-right-blob-container">
+      <div>
+        <h1 class="text-2xl font-bold text-white text-center py-10 mt-20">
+          Tap to get started
+        </h1>
+      </div>
+      <div class="box mx-auto flex items-center justify-center">
+        <!-- Additional content goes here -->
+      </div>
+    </section>
+    <!--hero waves-->
+    <section class="hero ">
+      <div class="wave-container py-58">
+        <h3 class="text-5xl font-bold  text-black text-left px-10 py-20">
+          Create Voice based AI agents
+        </h3>
+        <h3 class="text-4xl font-regular  text-black text-left px-10 ">
+          An end to end
+          <br>platform to build, monitor and deploy<br>voice-based AI agents
+        </h3>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+  
+                <path id="gentle-wave" d="M-160 44c30 0 50-18 88-18s 50 18 88 18 50-18 88-18 50 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+               
+                <use xlink:href="#gentle-wave" x="48" y="10" fill="rgba(177, 156, 217,0.9)" />
+                <use xlink:href="#gentle-wave" x="40" y="11" fill="rgba(177, 156, 217,0.7)" />
+                <use xlink:href="#gentle-wave" x="60" y="13" fill="rgba(177, 156, 217,0.5)" />
+                <use xlink:href="#gentle-wave" x="50" y="11" fill="rgba(204,174,219,0.3)" />
+                <use xlink:href="#gentle-wave" x="78" y="15" fill="rgba(177, 156, 217,0.2)" />
+                <use xlink:href="#gentle-wave" x="8" y="17" fill="rgba(231,208,245,0.1)" />
+                <use xlink:href="#gentle-wave" x="48" y="1" fill="#fff" />
+               
+            </g>
+        </svg>
+      </div>
+    </section>  
+
+   
+
+<section class="main px-10">
+  <div class="container mx-auto main-content py-20">
+    <h3 class="text-4xl font-bold  text-black text-center">Send or receive millions of<br> phone calls per day, using <br>programmable voice agents <br>that sound and feel human.</h3> 
+  </div>
+</section>
+
+<!--logos-->
+<section class="bg-white dark:bg-violet-100 mt-1">
+  <div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+        <li>
+            <img src="./logos/airblack (1).png" alt="airblack" />
+        </li>
+        <li>
+            <img src="./logos/wishlink.png" alt="wishlink" />
+        </li>
+        <li>
+            <img src="./logos/microsoft.png" alt="microsoft" />
+        </li>
+        <li>
+            <img src="./logos/intract.png" alt="intract" />
+        </li>
+        <li>
+            <img src="./logos/xartup.png" alt="xartup" />
+        </li>
+        <li>
+            <img src="./logos/hero.png" alt="hero" />
+        </li>
+    </ul>
+    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+      <li>
+        <img src="./logos/airblack (1).png" alt="airblack" />
+    </li>
+    <li>
+        <img src="./logos/wishlink.png" alt="wishlink" />
+    </li>
+    <li>
+        <img src="./logos/microsoft.png" alt="microsoft" />
+    </li>
+    <li>
+        <img src="./logos/intract.png" alt="intract" />
+    </li>
+    <li>
+        <img src="./logos/xartup.png" alt="xartup" />
+    </li>
+    <li>
+        <img src="./logos/hero.png" alt="hero" />
+    </li>
+    </ul>
+</div>
+</section>
+
+<!--cards-->
+
+<section class="relative  bg-white">
+  <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75 bg-white">
+    <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
+      <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+        <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </div>
+  <section class="pb-10 bg-blueGray-200 -mt-24">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap">
+        <!-- Card 1 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg min-h-screen-75">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-l font-bold">INFINITE MEMORY</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Our agent remembers conversations and builds personas to create deep relations with customers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
+                <i class="fas fa-retweet"></i>
+              </div>
+              <h6 class="text-l font-bold">MULTI-LINGUAL</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Choose your preferred communication language (incl. Hinglish)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
+                <i class="fas fa-fingerprint"></i>
+              </div>
+              <h6 class="text-l font-bold">CHOICE OF MODEL</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Experiment between multiple best- in-class proprietary and open source models
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Awarded Agency</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Divide details about your product or agency work into parts.
+                A paragraph describing a feature will be enough.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Awarded Agency</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Divide details about your product or agency work into parts.
+                A paragraph describing a feature will be enough.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="lg:pt-12 pt-6 w-full md:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
+          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-xl font-semibold">Awarded Agency</h6>
+              <p class="mt-2 mb-4 text-blueGray-500">
+                Divide details about your product or agency work into parts.
+                A paragraph describing a feature will be enough.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<!--use cases part-->
+<!--Send automated phone calls
+and have real human conversations at scale-->
+
+<div class="button-container">
+  
+  <div class="segmented-control text-m font-semibold">
+    <input type="radio" name="sc-1-1" id="sc-1-1-1">
+    <input type="radio" name="sc-1-1" id="sc-1-1-2">
+    <input type="radio" name="sc-1-1" id="sc-1-1-3" checked>
+ 
+    <label for="sc-1-1-1" data-value="Hindi">Hindi</label>
+    <label for="sc-1-1-2" data-value="English">English</label>
+    <label for="sc-1-1-3" data-value="Hinglish">Hinglish</label>
+  </div>
+</div>
+
+<!--audio carousel-->
+<div id="formList">
+  <div id="list">
+      <div class="item bg-lightBlue-200">
+          <img src="images/certificate_3135763.png" class="avatar">
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                  <tr>
+                    <td> title</td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="nameGroup">description</td>
+                  </tr>
+              </table>
+          </div>
+      </div>
+      <div class="item bg-orange-200">
+          <img src="Brook.png" class="avatar">
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td> title</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">description</td>
+                </tr>
+              </table>
+          </div>
+      </div>
+      <div class="item bg-emerald-200">
+          <img src="Sanji.png" class="avatar">
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td> title</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">description</td>
+                </tr>
+              </table>
+          </div>
+      </div>
+      <div class="item bg-pink-200">
+          <img src="Usopp.png" class="avatar">
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td> title</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">description</td>
+                </tr>
+              </table>
+          </div>
+      </div>
+      <div class="item bg-gray-200">
+          <img src="Nami.png" class="avatar">
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td> title</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">description</td>
+                </tr>
+              </table>
+          </div>
+      </div>
+      <div class="item bg-blue-200">
+          <img src="Robin.png" class="avatar">
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td> title</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">description</td>
+                </tr>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="direction">
+  <button id="prev"> < </button>
+  <button id="next"> > </button>
+</div>
+<script src="script.js"></script>
+
+
+
+<!--code show part-->
+<section class="relative py-4 mt- bg-white sticky">
+  <div class="container mx-auto px-10">
+    <div class="rounded-xl shadow-2xl border flex divide-x bg-white">
+      <div class="py-8 flex-1">
+          <div class="flex px-5">
+              <svg xmlns="http://www.w3.org/2000/svg"
+               fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+               class="w-12 h-12 mr-4">
+                <path stroke-linecap="round" 
+                stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+              </svg>
+          </div>
+        <h2 class="text-4xl font-medium px-5 mt-2">
+          Explain code
+        </h2>
+        <p class="text-gray-600 text-lg px-5 mt-2">
+          Based on API choosed
+        </p>
+        <h3 class="mt-6 text-lg font-bold px-5">
+          Paste your code below:
+        </h3>
+        <div class="bg-gray-100 p-4 rounded-md mt-2 h-44 text-1xl">
+          <code>
+            function HelloWorld(text){
+              echo || "Hello World"
+              echo || "Welcome to"
+              echo || "Bolna"
+            }
+          </code>
+        </div>
+        
+      </div> 
+      <div class="py-8 flex-1">
+        <div class="flex px-5">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+          class="w-12 h-12">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+          </svg>         
+          
+      </div>
+    <h2 class="text-4xl font-medium px-5 mt-2">
+      Customize
+    </h2>
+    <p class="text-gray-600 text-lg px-5 mt-2">
+      Without any code
+    </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--grow business-->
+<section class="flex items-center justify-center mt-10 py-10">
+  <div class="container mx-auto main-content text-center">
+    <h1 class="text-4xl font-semibold text-black px-10 mt-4">Are you ready to grow your business with us?</h1>
+    <h1 class="text-2xl font-medium text-gray-900 mt-4">Set up a call, we will take care of the rest</h1>
+    <button class="bg-violet-500 hover:bg-violet-300 active:bg-violet-600 focus:outline-none focus:ring focus:ring-violet-300 text-white font-semibold px-4 py-2 rounded-full mt-2">
+      Contact Us
+    </button>
+  </div>
+</section>
+
+
+<!--footer-->
+<footer class="bg-blue-500 dark:bg-gray-900 mt-20">
+  <div class="mx-4 w-full max-w-screen-xl p-4 py-4 lg:py-58">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+            <a href="#" class="flex items-center">
+              <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Bolna</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Bolna</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Tailwind CSS</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline ">Github</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Discord</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Bolna</a>. All Rights Reserved.
+        </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
