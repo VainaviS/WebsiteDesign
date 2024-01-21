@@ -1390,9 +1390,21 @@ a.navbar-brand:hover {
   display: block;
 }
 
+/* Add your existing styles here */
+
+.top-right-blob-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 50px; /* Adjust the margin as needed */
+  margin-right: 80px; /* Adjust the margin as needed */
+  z-index: 2;
+}
+
+/* Add any other styles for the top-right container */
 
 
-     .wave-container {
+.wave-container {
      position: relative;
      background-color: #8f72ca;
      overflow: hidden;
@@ -1514,185 +1526,303 @@ a.navbar-brand:hover {
 }
 
 /* Card slider */
-.peer-checked:not(:checked) ~ div {
-  transform: translateX(100%);
-  opacity: 0;
-  z-index: -1;
+.direction{
+  text-align: center;
+}
+.direction button{
+  font-family: cursive;
+  font-weight: bold;
+  background-color: #ffffff44;
+  border:none;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  transition: 0.5s;
+  margin:0 10px;
+}
+.direction button:hover{
+  background-color: #ffffff;
+}
+.item{
+  border-radius: 15px;
+  width:300px;
+  height:500px;
+  overflow: hidden;
+  transition: 0.5s;
+  margin:10px;
+  scroll-snap-align: start;
+}
+.item .avatar{
+  display: block;
+  margin:50px auto 10px;
+  width:100px;
+  height:150px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px #19191a;
+}
+.item .content{
+  padding:30px;
+  font-family: monospace;
+}
+.item .content table td{
+  padding:10px 0;
+  border-bottom: 1px solid #e6c8ff;
+}
+.item .content table td:nth-child(2){
+  text-align: right;
+}
+.item .nameGroup{
+  text-align: center;
+  border-bottom:none!important;
+}
+#list{
+  display: flex;
+  width:max-content;
+}
+#formList{
+  width:1280px;
+  max-width: 100%;
+  overflow: auto;
+  margin:100px auto 50px;
+  scroll-behavior: smooth;
+  scroll-snap-type: both;
+}
+#formList::-webkit-scrollbar{
+  display: none;
+}
+@media screen and (max-width: 1024px){
+  .item{
+      width: calc(33.3vw - 20px);
+  }
+  .direction{
+      display: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .item{
+      width: calc(50vw - 20px);
+  }
+  .direction{
+      display: none;
+  }
 }
 
-.peer-checked:not(:checked) ~ div:nth-child(2) {
-  transform: translateX(0);
-  opacity: 1;
-  z-index: 1;
+
+.button-container {
+  margin: auto;
+  max-width: 500px;
+  min-width: 200px;
+  text-align: center;
+  padding: 0 6em;
 }
-
-.peer-checked:nth-child(2):checked ~ div {
-  transform: translateX(-100%);
-  opacity: 0;
-  z-index: -1;
+.segmented-control {
+  position: relative;
+  display: inline-block;
+  border-radius: 25px solid currentColor;
+  text-decoration: none;
+  overflow: hidden;
+  margin: .8em auto;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -moz-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -o-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-tap-highlight-color: transparent;
 }
-
-.peer-checked:nth-child(2):checked ~ div:nth-child(3) {
-  transform: translateX(0);
-  opacity: 1;
-  z-index: 1;
+.segmented-control:nth-child(1) {
+  width: 100%;
+  color: #9b5cb8;
 }
-
-.peer-checked:nth-child(3):checked ~ div {
-  transform: translateX(-200%);
-  opacity: 0;
-  z-index: -1;
+.segmented-control:nth-child(2) {
+  width: 100%;
+  color: #ff3838;
 }
-
-.peer-checked:nth-child(3):checked ~ div:nth-child(4) {
-  transform: translateX(0);
-  opacity: 1;
-  z-index: 1;
-}
-
-.peer-checked:nth-child(4):checked ~ div {
-  transform: translateX(-300%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(4):checked ~ div:nth-child(5) {
-  transform: translateX(0);
-  opacity: 1;
-  z-index: 1;
-}
-
-.peer-checked:nth-child(5):checked ~ div {
-  transform: translateX(-400%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(5):checked ~ div:nth-child(1) {
-  transform: translateX(0);
-  opacity: 1;
-  z-index: 1;
-}
-
-.peer-checked:nth-child(1):checked ~ div {
-  transform: translateX(0);
-  opacity: 1;
-  z-index: 1;
-}
-
-.peer-checked:nth-child(1):checked ~ div:nth-child(2) {
-  transform: translateX(100%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(2):checked ~ div:nth-child(1) {
-  transform: translateX(-100%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(3):checked ~ div:nth-child(1) {
-  transform: translateX(-200%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(4):checked ~ div:nth-child(1) {
-  transform: translateX(-300%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(5):checked ~ div:nth-child(1) {
-  transform: translateX(-400%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(1):checked ~ div:nth-child(3) {
-  transform: translateX(-100%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(2):checked ~ div:nth-child(4) {
-  transform: translateX(-100%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(3):checked ~ div:nth-child(5) {
-  transform: translateX(-100%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(4):checked ~ div:nth-child(1) {
-  transform: translateX(100%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(5):checked ~ div:nth-child(2) {
-  transform: translateX(100%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(1):checked ~ div:nth-child(4) {
-  transform: translateX(-200%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(2):checked ~ div:nth-child(5) {
-  transform: translateX(-200%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(3):checked ~ div:nth-child(1) {
-  transform: translateX(200%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(4):checked ~ div:nth-child(2) {
-  transform: translateX(100%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(5):checked ~ div:nth-child(3) {
-  transform: translateX(100%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(1):checked ~ div:nth-child(5) {
-  transform: translateX(-300%);
-  opacity: 0;
-  z-index: -1;
-}
-
-.peer-checked:nth-child(2):checked ~ div:nth-child(1) {
-  transform: translateX(300%);
-  opacity: 0;
-  z-index: -1;
-}
-
-/* Add your existing styles here */
-
-.top-right-blob-container {
+.segmented-control > input {
   position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 50px; /* Adjust the margin as needed */
-  margin-right: 80px; /* Adjust the margin as needed */
-  z-index: 2;
+  left: -10000px;
+  opacity: 0;
 }
-
-/* Add any other styles for the top-right container */
-
-    
+.segmented-control > input[type='checkbox'] ~ label {
+  -moz-transition-duration: 0;
+  -o-transition-duration: 0;
+  -webkit-transition-duration: 0;
+  transition-duration: 0;
+}
+.segmented-control > input[type='checkbox'] ~ label:before {
+  opacity: 0;
+}
+.segmented-control > input:disabled:nth-child(1) ~ label:nth-of-type(1) {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.segmented-control > input:nth-child(1):checked ~ label:nth-of-type(1):after, .segmented-control > input:nth-child(1):checked ~ label:nth-of-type(1):before {
+  opacity: 1;
+}
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(1):after, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(1):before, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(1) ~ label:after, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(1) ~ label:before {
+  left: 0%;
+}
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(2):after, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(2):before, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(2) ~ label:after, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(2) ~ label:before {
+  left: 0%;
+}
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(3):after, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(3):before, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(3) ~ label:after, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(3) ~ label:before {
+  left: 0%;
+}
+.segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(4):after, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(4):before, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(4) ~ label:after, .segmented-control > input:nth-child(1):checked ~ label:first-of-type:nth-last-of-type(4) ~ label:before {
+  left: 0%;
+}
+.segmented-control > input:disabled:nth-child(2) ~ label:nth-of-type(2) {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.segmented-control > input:nth-child(2):checked ~ label:nth-of-type(2):after, .segmented-control > input:nth-child(2):checked ~ label:nth-of-type(2):before {
+  opacity: 1;
+}
+.segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(2):after, .segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(2):before, .segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(2) ~ label:after, .segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(2) ~ label:before {
+  left: 50%;
+}
+.segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(3):after, .segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(3):before, .segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(3) ~ label:after, .segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(3) ~ label:before {
+  left: 33.33333%;
+}
+.segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(4):after, .segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(4):before, .segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(4) ~ label:after, .segmented-control > input:nth-child(2):checked ~ label:first-of-type:nth-last-of-type(4) ~ label:before {
+  left: 25%;
+}
+.segmented-control > input:disabled:nth-child(3) ~ label:nth-of-type(3) {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.segmented-control > input:nth-child(3):checked ~ label:nth-of-type(3):after, .segmented-control > input:nth-child(3):checked ~ label:nth-of-type(3):before {
+  opacity: 1;
+}
+.segmented-control > input:nth-child(3):checked ~ label:first-of-type:nth-last-of-type(3):after, .segmented-control > input:nth-child(3):checked ~ label:first-of-type:nth-last-of-type(3):before, .segmented-control > input:nth-child(3):checked ~ label:first-of-type:nth-last-of-type(3) ~ label:after, .segmented-control > input:nth-child(3):checked ~ label:first-of-type:nth-last-of-type(3) ~ label:before {
+  left: 66.66667%;
+}
+.segmented-control > input:nth-child(3):checked ~ label:first-of-type:nth-last-of-type(4):after, .segmented-control > input:nth-child(3):checked ~ label:first-of-type:nth-last-of-type(4):before, .segmented-control > input:nth-child(3):checked ~ label:first-of-type:nth-last-of-type(4) ~ label:after, .segmented-control > input:nth-child(3):checked ~ label:first-of-type:nth-last-of-type(4) ~ label:before {
+  left: 50%;
+}
+.segmented-control > input:disabled:nth-child(4) ~ label:nth-of-type(4) {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.segmented-control > input:nth-child(4):checked ~ label:nth-of-type(4):after, .segmented-control > input:nth-child(4):checked ~ label:nth-of-type(4):before {
+  opacity: 1;
+}
+.segmented-control > input:nth-child(4):checked ~ label:first-of-type:nth-last-of-type(4):after, .segmented-control > input:nth-child(4):checked ~ label:first-of-type:nth-last-of-type(4):before, .segmented-control > input:nth-child(4):checked ~ label:first-of-type:nth-last-of-type(4) ~ label:after, .segmented-control > input:nth-child(4):checked ~ label:first-of-type:nth-last-of-type(4) ~ label:before {
+  left: 75%;
+}
+.segmented-control > label {
+  display: inline-block;
+  padding: 0 .71em;
+  cursor: pointer;
+  float: left;
+  line-height: 3em;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  -webkit-transition-property: none;
+  transition-property: none;
+  -moz-transition-duration: inherit;
+  -o-transition-duration: inherit;
+  -webkit-transition-duration: inherit;
+  transition-duration: inherit;
+  -moz-transition-timing-function: inherit;
+  -o-transition-timing-function: inherit;
+  -webkit-transition-timing-function: inherit;
+  transition-timing-function: inherit;
+}
+.segmented-control > label:before, .segmented-control > label:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.segmented-control > label:after {
+  color: white;
+  content: attr(data-value);
+  text-align: center;
+  padding: inherit;
+  z-index: 10;
+  font-style: inherit;
+  text-decoration: inherit;
+  font-weight: inherit;
+  opacity: 0;
+  -moz-transition-property: opacity, left;
+  -o-transition-property: opacity, left;
+  -webkit-transition-property: opacity, left;
+  transition-property: opacity, left;
+  -moz-transition-duration: inherit;
+  -o-transition-duration: inherit;
+  -webkit-transition-duration: inherit;
+  transition-duration: inherit;
+  -moz-transition-timing-function: inherit;
+  -o-transition-timing-function: inherit;
+  -webkit-transition-timing-function: inherit;
+  transition-timing-function: inherit;
+}
+.segmented-control > label:after, .segmented-control > label {
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.segmented-control > label:before {
+  content: '';
+  color: inherit;
+  background: currentColor;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -moz-transition-duration: inherit;
+  -o-transition-duration: inherit;
+  -webkit-transition-duration: inherit;
+  transition-duration: inherit;
+  -moz-transition-timing-function: inherit;
+  -o-transition-timing-function: inherit;
+  -webkit-transition-timing-function: inherit;
+  transition-timing-function: inherit;
+}
+.segmented-control > label:first-of-type:nth-last-of-type(1), .segmented-control > label:first-of-type:nth-last-of-type(1):after, .segmented-control > label:first-of-type:nth-last-of-type(1):before, .segmented-control > label:first-of-type:nth-last-of-type(1) ~ label, .segmented-control > label:first-of-type:nth-last-of-type(1) ~ label:after, .segmented-control > label:first-of-type:nth-last-of-type(1) ~ label:before {
+  width: 100%;
+}
+.segmented-control > label:first-of-type:nth-last-of-type(2), .segmented-control > label:first-of-type:nth-last-of-type(2):after, .segmented-control > label:first-of-type:nth-last-of-type(2):before, .segmented-control > label:first-of-type:nth-last-of-type(2) ~ label, .segmented-control > label:first-of-type:nth-last-of-type(2) ~ label:after, .segmented-control > label:first-of-type:nth-last-of-type(2) ~ label:before {
+  width: 50%;
+}
+.segmented-control > label:first-of-type:nth-last-of-type(3), .segmented-control > label:first-of-type:nth-last-of-type(3):after, .segmented-control > label:first-of-type:nth-last-of-type(3):before, .segmented-control > label:first-of-type:nth-last-of-type(3) ~ label, .segmented-control > label:first-of-type:nth-last-of-type(3) ~ label:after, .segmented-control > label:first-of-type:nth-last-of-type(3) ~ label:before {
+  width: 33.33333%;
+}
+.segmented-control > label:first-of-type:nth-last-of-type(4), .segmented-control > label:first-of-type:nth-last-of-type(4):after, .segmented-control > label:first-of-type:nth-last-of-type(4):before, .segmented-control > label:first-of-type:nth-last-of-type(4) ~ label, .segmented-control > label:first-of-type:nth-last-of-type(4) ~ label:after, .segmented-control > label:first-of-type:nth-last-of-type(4) ~ label:before {
+  width: 25%;
+}
+.segmented-control.italic, .segmented-control .italic {
+  font-style: italic;
+}
+.segmented-control.bold, .segmented-control .bold {
+  font-weight: bold;
+}
+.segmented-control.underline, .segmented-control .underline {
+  text-decoration: underline;
+}
+.segmented-control.line-through, .segmented-control .line-through {
+  text-decoration: line-through;
+}
