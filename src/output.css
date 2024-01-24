@@ -1559,22 +1559,35 @@ a.navbar-brand:hover {
 }
 .item{
   border-radius: 15px;
-  width:300px;
+  width:280px;
   height:500px;
   overflow: hidden;
   transition: 0.5s;
-  margin:10px;
+  margin:20px;
   scroll-snap-align: start;
+  align-items: center;
+  
 }
-.item .avatar{
-  display: block;
-  margin:50px auto 10px;
-  width:100px;
-  height:150px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 10px 15px #19191a;
+
+.avatar {
+  position: relative;
+  border-radius: 4px;
+  margin-right: 16px;
+  align-self: center;
 }
+
+.content {
+  flex: 1;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 4px;
+}
+
 .item .content{
   padding:30px;
   font-family: monospace;
