@@ -552,6 +552,7 @@ video {
   width: 100%;
   padding-right: 2rem;
   padding-left: 2rem;
+  
 }
 
 @media (min-width: 640px) {
@@ -874,7 +875,7 @@ video {
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
-.border-violet-500 {
+.border-purple-500 {
   --tw-border-opacity: 1;
   border-color: rgb(139 92 246 / var(--tw-border-opacity));
 }
@@ -908,7 +909,7 @@ video {
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
 
-.bg-violet-500 {
+.bg-purple-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(139 92 246 / var(--tw-bg-opacity));
 }
@@ -1128,12 +1129,12 @@ video {
   --tw-border-opacity: 1;
 }
 
-.hover\:bg-violet-300:hover {
+.hover\:bg-purple-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(196 181 253 / var(--tw-bg-opacity));
 }
 
-.hover\:text-violet-500:hover {
+.hover\:text-purple-500:hover {
   --tw-text-opacity: 1;
   color: rgb(139 92 246 / var(--tw-text-opacity));
 }
@@ -1153,12 +1154,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.focus\:ring-violet-300:focus {
+.focus\:ring-purple-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(196 181 253 / var(--tw-ring-opacity));
 }
 
-.active\:bg-violet-600:active {
+.active\:bg-purple-600:active {
   --tw-bg-opacity: 1;
   background-color: rgb(124 58 237 / var(--tw-bg-opacity));
 }
@@ -1238,7 +1239,7 @@ video {
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
 
-  .dark\:bg-violet-300 {
+  .dark\:bg-purple-300 {
     --tw-bg-opacity: 1;
     background-color: rgb(196 181 253 / var(--tw-bg-opacity));
   }
@@ -1342,7 +1343,7 @@ a.navbar-brand {
 
 a.navbar-brand:hover {
   text-decoration: none;
-  color: #c97de5; /* Set the desired hover text color */
+  color: #8b5cf6; /* Set the desired hover text color */
 }
 .container {
   background-color: unset;
@@ -1372,7 +1373,7 @@ a.navbar-brand:hover {
   color: black;
   text-decoration: none;
   padding: 10px;
-  background-color: #db98f6;
+  background-color: #8b5cf6;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -1413,7 +1414,7 @@ a.navbar-brand:hover {
 
 .wave-container {
      position: relative;
-     background-color: #8f72ca;
+     background-color: #d2aafc;
      overflow: hidden;
      }
      .waves {
@@ -1478,21 +1479,22 @@ a.navbar-brand:hover {
 @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 
 
+
+
+.bg-lightPurple {
+  background-color: #e097ff; /* Replace with your desired color */
+  opacity: 30%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 320px;
+}
+
 :root {
 	--br-blobby: 50%;
 	--br-blobby-before: 50%;
 	--br-blobby-after: 50%;
 }
-
-.bg-lightViolet {
-  background-color: rgb(233, 202, 254); /* Replace with your desired color */
-  opacity: 30%;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 300px;
-}
-
 .box {
 	animation: rotate 5s linear infinite;
 	background-color: #000;
@@ -1529,6 +1531,17 @@ a.navbar-brand:hover {
 	transition: 0.3s linear;
 }
 
+@media (max-width: 768px) {
+  .top-right-blob-container {
+      height: auto; /* Adjust for smaller screens */
+  }
+
+  .hero {
+      margin-top: 0; /* Adjust for smaller screens */
+  }
+}
+
+
 @keyframes rotate {
 	0% {
 		transform: rotate(0deg);
@@ -1540,23 +1553,36 @@ a.navbar-brand:hover {
 }
 
 /* Card slider */
-.direction{
-  text-align: center;
+.direction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Set the height of the container */
 }
-.direction button{
+
+.direction button {
   font-family: cursive;
   font-weight: bold;
   background-color: #ffffff44;
-  border:none;
-  width:50px;
-  height:50px;
+  border: none;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   transition: 0.5s;
-  margin:0 10px;
+  outline: none; /* Add this to remove the default button outline on focus */
 }
-.direction button:hover{
-  background-color: #ffffff;
+
+.direction button:hover {
+  background-color: #ffffff; /* Change the background color on hover if desired */
 }
+
+@media (max-width: 600px) {
+  .direction button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .item{
   border-radius: 15px;
   width:280px;
@@ -1672,7 +1698,7 @@ td {
 }
 .segmented-control:nth-child(1) {
   width: 100%;
-  color: #9b5cb8;
+  color: #c084fc;
   border-radius: 25px
 }
 
@@ -1850,4 +1876,45 @@ td {
 }
 .segmented-control.line-through, .segmented-control .line-through {
   text-decoration: line-through;
+}
+
+.code-container {
+  width: 50%; /* Set to 50% to make it half of the page width */
+  max-width: 800px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.language-selector {
+  padding: 16px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.language-selector button {
+  padding: 8px 16px;
+  margin-right: 8px; /* Add margin to create a gap */
+  border: none;
+  background-color: #c084fc;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.language-selector button:last-child {
+  margin-right: 0; /* Remove margin from the last button to avoid extra space */
+}
+
+.language-selector button:hover {
+  background-color: #8857b9;
+}
+
+.code-box {
+  padding: 20px;
+  white-space: pre-wrap;
+  background-color: #f0f0f0; /* Light gray background color */
 }
