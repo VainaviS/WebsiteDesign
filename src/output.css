@@ -1271,16 +1271,34 @@ video {
 .hero {
   position: relative;
   z-index: 1;
+  margin-top: 0px;
+}
+.main {
+  position: relative;
+  z-index: 1;
+  margin-top: -150px;
+}
+.useCases{
+  position: relative;
+  margin-top: -150px;
+}
+
+.grow{
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 3; /* Ensure text is on top */
-  margin-top: -200px; /* Adjust this value to move the content up */
+  margin-top: 0px; /* Adjust this value to move the content up */
 }
 
 .main-content {
   text-align: center;
+  margin-top: 50px; /* Adjust the top margin as needed */
+  margin-bottom: 50px; /* Adjust the bottom margin as needed */
+  z-index: 9;
 }
   /* Add custom styles here if needed */
   .scroll-container {
@@ -1304,11 +1322,11 @@ transform: translateY(-50%);
 }
 
 .splide__arrow--prev {
-left: 2px; /* Adjust the left distance */
+left: 10px; /* Adjust the left distance */
 }
 
 .splide__arrow--next {
-right: 4px; /* Adjust the right distance */
+right: 20px; /* Adjust the right distance */
 }
 
 .scroll-container {
@@ -1348,7 +1366,6 @@ a.navbar-brand:hover {
 .container {
   background-color: unset;
 }
-
 .pricing-header {
   background-color: unset;
   margin-top: 10px;
@@ -1415,15 +1432,19 @@ a.navbar-brand:hover {
 .wave-container {
      position: relative;
      background-color: #d2aafc;
-     overflow: hidden;
+     height: 580px;
+     margin-top: 0px;
+     z-index: 1;
      }
+
+
      .waves {
-       position:relative;
        width: 100%;
        height:50%;
        margin-bottom:-7px; /*Fix for safari gap*/
-       min-height:200px;
-       max-height:500px;
+       min-height:100px;
+       max-height:250px;
+       z-index: 1;
        }
        .parallax > use {
          animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
@@ -1478,18 +1499,6 @@ a.navbar-brand:hover {
     @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 
-
-
-
-.bg-lightPurple {
-  background-color: #e097ff; /* Replace with your desired color */
-  opacity: 30%;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 320px;
-}
-
 :root {
 	--br-blobby: 50%;
 	--br-blobby-before: 50%;
@@ -1533,13 +1542,33 @@ a.navbar-brand:hover {
 
 @media (max-width: 768px) {
   .top-right-blob-container {
-      height: auto; /* Adjust for smaller screens */
+    height: auto; /* Allow the first section to take its natural height on smaller screens */
   }
 
   .hero {
-      margin-top: 0; /* Adjust for smaller screens */
+    margin-top: 20px; /* Add some space between the sections on smaller screens */
+  }
+
+  .box {
+    height: 200px; /* Adjust the height of the rotating box for better fit on smaller screens */
+    width: 200px; /* Adjust the width of the rotating box accordingly */
+  }
+
+  .box::after,
+  .box::before {
+    height: 108%; /* Adjust the height of the pseudo-elements */
+    width: 108%; /* Adjust the width of the pseudo-elements */
+  }
+
+  .text-5xl {
+    font-size: 3rem; /* Adjust the font size for better readability on smaller screens */
+  }
+
+  .text-4xl {
+    font-size: 2.5rem; /* Adjust the font size for better readability on smaller screens */
   }
 }
+
 
 
 @keyframes rotate {
@@ -1557,6 +1586,7 @@ a.navbar-brand:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 0;
   height: 50px; /* Set the height of the container */
 }
 
@@ -1565,12 +1595,15 @@ a.navbar-brand:hover {
   font-weight: bold;
   background-color: #ffffff44;
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 8vw; /* Use relative units for responsiveness */
+  height: 8vw; /* Use relative units for responsiveness */
+  max-width: 50px; /* Set a maximum width if needed */
+  max-height: 100px; /* Set a maximum height if needed */
   border-radius: 50%;
   transition: 0.5s;
   outline: none; /* Add this to remove the default button outline on focus */
 }
+
 
 .direction button:hover {
   background-color: #ffffff; /* Change the background color on hover if desired */
@@ -1637,7 +1670,7 @@ td {
   width:1280px;
   max-width: 100%;
   overflow: auto;
-  margin:100px auto 50px;
+  margin:20px auto 10px;
   scroll-behavior: smooth;
   scroll-snap-type: both;
 }
@@ -1646,28 +1679,22 @@ td {
 }
 @media screen and (max-width: 1024px){
   .item{
-      width: calc(33.3vw - 20px);
+      width: calc(33.3vw - 10px);
   }
-  .direction{
-      display: none;
-  }
+
 }
 @media screen and (max-width: 768px){
   .item{
-      width: calc(50vw - 20px);
+      width: calc(50vw - 10px);
   }
-  .direction{
-      display: none;
-  }
-}
 
+}
 
 .button-container {
   margin: auto;
   max-width: 500px;
   min-width: 200px;
   text-align: center;
-  padding: 0 6em;
 }
 .segmented-control {
   position: relative;
@@ -1889,15 +1916,13 @@ td {
 }
 
 .language-selector {
-  padding: 16px;
   display: flex;
   justify-content: space-around;
-
 }
 
 .language-selector button {
-  padding: 8px 16px;
-  margin-right: 8px; /* Add margin to create a gap */
+  padding: 0.5rem 1rem; /* Use relative units for padding */
+  margin-right: 0.5rem; /* Use relative units for margin */
   border: none;
   background-color: #c084fc;
   color: white;
@@ -1914,7 +1939,10 @@ td {
 }
 
 .code-box {
-  padding: 20px;
   white-space: pre-wrap;
   background-color: #f0f0f0; /* Light gray background color */
+  margin: 20px;
+  border-radius: 10px; /* Adjust the value to control the amount of rounding */
 }
+
+
