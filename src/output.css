@@ -1226,6 +1226,11 @@ video {
   .lg\:pt-12 {
     padding-top: 3rem;
   }
+  .box {
+    height: 450px; /* Adjust the height of the rotating box for better fit on smaller screens */
+    width: 150px; /* Adjust the width of the rotating box accordingly */
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1539,33 +1544,55 @@ a.navbar-brand:hover {
 	width: 108%;
 	transition: 0.3s linear;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 746px) {
   .top-right-blob-container {
     height: auto; /* Allow the first section to take its natural height on smaller screens */
   }
-
-  .hero {
-    margin-top: 20px; /* Add some space between the sections on smaller screens */
+  .box {
+    height: 50px; /* Adjust the height of the rotating box for better fit on smaller screens */
+    width: 50px; /* Adjust the width of the rotating box accordingly */
+    margin-top: 350px;
+    margin-right:200px;
+  }
+  .main-content{
+    margin-top: 200px;
+  }
+  .text-overlay{
+    margin-top: 300px;
+    margin-right: 300px;
   }
 
+  .box::after,
+  .box::before {
+    height: 20%; /* Adjust the height of the pseudo-elements */
+    width: 20%; /* Adjust the width of the pseudo-elements */
+  }
+
+}
+
+
+@media (max-width: 1048px) {
+  .top-right-blob-container {
+    height: auto; /* Allow the first section to take its natural height on smaller screens */
+  }
   .box {
-    height: 200px; /* Adjust the height of the rotating box for better fit on smaller screens */
-    width: 200px; /* Adjust the width of the rotating box accordingly */
+    height: 250px; /* Adjust the height of the rotating box for better fit on smaller screens */
+    width: 250px; /* Adjust the width of the rotating box accordingly */
+    margin-top: 300px;
+    margin-right:300px;
+  }
+  .main-content{
+    margin-top: 200px;
+  }
+  .text-overlay{
+    margin-top: 300px;
+    margin-right: 300px;
   }
 
   .box::after,
   .box::before {
     height: 108%; /* Adjust the height of the pseudo-elements */
     width: 108%; /* Adjust the width of the pseudo-elements */
-  }
-
-  .text-5xl {
-    font-size: 3rem; /* Adjust the font size for better readability on smaller screens */
-  }
-
-  .text-4xl {
-    font-size: 2.5rem; /* Adjust the font size for better readability on smaller screens */
   }
 }
 
