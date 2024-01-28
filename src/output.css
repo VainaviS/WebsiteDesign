@@ -1327,7 +1327,7 @@ transform: translateY(-50%);
 }
 
 .splide__arrow--prev {
-left: 10px; /* Adjust the left distance */
+left: 20px; /* Adjust the left distance */
 }
 
 .splide__arrow--next {
@@ -1544,49 +1544,23 @@ a.navbar-brand:hover {
 	width: 108%;
 	transition: 0.3s linear;
 }
-@media (max-width: 746px) {
-  .top-right-blob-container {
-    height: auto; /* Allow the first section to take its natural height on smaller screens */
-  }
-  .box {
-    height: 50px; /* Adjust the height of the rotating box for better fit on smaller screens */
-    width: 50px; /* Adjust the width of the rotating box accordingly */
-    margin-top: 350px;
-    margin-right:200px;
-  }
-  .main-content{
-    margin-top: 200px;
-  }
-  .text-overlay{
-    margin-top: 300px;
-    margin-right: 300px;
-  }
-
-  .box::after,
-  .box::before {
-    height: 20%; /* Adjust the height of the pseudo-elements */
-    width: 20%; /* Adjust the width of the pseudo-elements */
-  }
-
-}
-
-
-@media (max-width: 1048px) {
+@media (max-width: 1024px) {
   .top-right-blob-container {
     height: auto; /* Allow the first section to take its natural height on smaller screens */
   }
   .box {
     height: 250px; /* Adjust the height of the rotating box for better fit on smaller screens */
     width: 250px; /* Adjust the width of the rotating box accordingly */
-    margin-top: 300px;
-    margin-right:300px;
+    margin-top: 400px;
+    margin-left: 300px;
+
   }
   .main-content{
-    margin-top: 200px;
+    margin-top: 300px;
   }
   .text-overlay{
-    margin-top: 300px;
-    margin-right: 300px;
+    margin-top: 400px;
+    margin-left: 300px;
   }
 
   .box::after,
@@ -1596,7 +1570,27 @@ a.navbar-brand:hover {
   }
 }
 
+.clickable-container {
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
 
+.clickable-container:hover {
+  background-color: #3c3c3c;
+  border-radius: 50%;
+}
+
+.clickable-container h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.clickable-container svg {
+  margin-left: 10px;
+}
 
 @keyframes rotate {
 	0% {
@@ -1618,27 +1612,26 @@ a.navbar-brand:hover {
 }
 
 .direction button {
-  font-family: cursive;
-  font-weight: bold;
   background-color: #ffffff44;
   border: none;
-  width: 8vw; /* Use relative units for responsiveness */
-  height: 8vw; /* Use relative units for responsiveness */
-  max-width: 50px; /* Set a maximum width if needed */
-  max-height: 100px; /* Set a maximum height if needed */
-  border-radius: 50%;
+  width: 10vw; /* Use relative units for responsiveness */
+  height: 10vw; /* Use relative units for responsiveness */
+  max-width: 40px; /* Set a maximum width if needed */
+  max-height: 50px; /* Set a maximum height if needed */
+  border-radius: 30%;
   transition: 0.5s;
   outline: none; /* Add this to remove the default button outline on focus */
 }
 
 
 .direction button:hover {
-  background-color: #ffffff; /* Change the background color on hover if desired */
+  background-color: #fcb0ff; /* Change the background color on hover if desired */
+  opacity: 50%;
 }
 
 @media (max-width: 600px) {
   .direction button {
-    width: 40px;
+    width: 50px;
     height: 40px;
   }
 }
