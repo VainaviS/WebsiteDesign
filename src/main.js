@@ -34,6 +34,21 @@
 
 setInterval(setBorderRadius, 300);
 
+window.addEventListener('scroll', () => {
+  const section = document.getElementById('animated-section');
+  const div = document.getElementById('animated-div');
+  const sectionPosition = section.getBoundingClientRect().top;
+  const divPosition = div.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if (sectionPosition < screenHeight / 2) {
+    section.style.animation = 'slide-up 1s ease forwards';
+  }
+  if (divPosition < screenHeight / 2) {
+    div.style.animation = 'slide-up 1s ease forwards';
+  }
+});
+
 function setBorderRadius() {
 	box.style.setProperty('--br-blobby', generateBorderRadiusValue());
 	box.style.setProperty('--br-blobby-after', generateBorderRadiusValue());
@@ -56,3 +71,4 @@ document.getElementById('prev').onclick = function(){
   const widthItem = document.querySelector('.item').offsetWidth;
   document.getElementById('formList').scrollLeft -= widthItem;
 }
+

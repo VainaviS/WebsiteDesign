@@ -16,6 +16,8 @@
     <link rel="icon" type="image/png" href="/src/images/favicon.png">
     <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <!--blob-->
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
 
     <!-- Include Splide CSS and JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/themes/splide-default.min.css">
@@ -25,6 +27,10 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!--for code-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,35 +39,39 @@
   </head>
 <body>
     <!-- component -->
-    <header class="header sticky top-0 bg-white px-4 py-01 shadow-xl">
-      <div class="navbar bg-white sticky">
+    <header class="header sticky top-0 px-4 py-01 shadow-lg">
+      <div class="navbar sticky">
         <!-- logo and navigation -->
         <div class="navbar flex items-center justify-between w-full">
           <!-- logo -->
           <h1 class="w-1/6">
             <a href="" class="flex items-center space-x-3">
               <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
-              <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-black">Bolna</span>
+              <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Bolna</span>
             </a>
           </h1>
     
           <!-- navigation -->
-          <nav class="nav font-semibold text-lg mx-2 bg-white">
+          <nav class="navbar font-semibold text-lg mx-2">
             <ul class="flex items-center justify-end">
-              <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                <a href="#">Home</a>
-              </li>
-              <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                <a href="#product">Product</a>
-              </li>
-              <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                <a href="https://docs.bolna.dev/introduction">Docs</a>
-              </li>
-              <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                <a href="#contact">Contact Us</a>
-              </li>
+                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                    <a href="#" class="text-white">Home</a>
+                </li>
+                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                    <a href="#product" class="text-white">Product</a>
+                </li>
+                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                    <a href="#pricing" class="text-white">Pricing</a>
+                </li>
+                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                    <a href="https://docs.bolna.dev/introduction" class="text-white">Docs</a>
+                </li>
+                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                    <a href="#contact" class="text-white">Contact Us</a>
+                </li>
             </ul>
-          </nav>
+        </nav>
+        
         </div>
       </div>
     </header>
@@ -93,10 +103,10 @@
     <!--hero waves-->
     <section class="hero">
       <div class="wave-container py-58">
-        <h3 class="text-5xl font-bold  text-black text-left px-10 py-20 mb-1">
+        <h3 class="text-5xl font-bold  text-white text-left px-10 py-20 mb-1">
           Create Voice based AI agents
         </h3>
-        <h3 class="text-4xl font-regular  text-black text-left px-10 ">
+        <h3 class="text-4xl font-regular  text-white text-left px-10 ">
           An end to end
           <br>platform to build, deploy and monitor 
           <br>voice-based AI agents
@@ -108,31 +118,36 @@
               <path id="gentle-wave" d="M-160 44c30 0 50-18 88-18s 50 18 88 18 50-18 88-18 50 18 88 18 v44h-352z" />
           </defs>
           <g class="parallax">
-             
-              <use xlink:href="#gentle-wave" x="48" y="4" fill="rgba(168, 85, 247,0.9)" />
-              <use xlink:href="#gentle-wave" x="40" y="0.5" fill="rgba(168, 85, 247,0.7)" />
-              <use xlink:href="#gentle-wave" x="60" y="1" fill="rgba(168, 85, 247,0.5)" />
-              <use xlink:href="#gentle-wave" x="50" y="0.5" fill="rgba(168, 85, 247,0.3)" />
-              <use xlink:href="#gentle-wave" x="78" y="3" fill="rgba(168, 85, 247,0.2)" />
-              <use xlink:href="#gentle-wave" x="8" y="3" fill="rgba(231,208,245,0.1)" />
+              <!-- Define the wave shape somewhere in your SVG -->
+              <path id="gentle-wave" d="M0,192L48,181.3C96,171,192,149,288,128C384,107,480,85,576,85.3C672,85,768,107,864,117.3C960,128,1056,128,1152,144C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#fff"></path>
+              <!-- Use the wave shape multiple times, adjusting position and fill color -->
+              <use xlink:href="#gentle-wave" x="48" y="4" fill="rgba(60, 7, 83, 0.9)" />
+              <use xlink:href="#gentle-wave" x="40" y="0.5" fill="rgba(60, 7, 83, 0.7)" />
+              <use xlink:href="#gentle-wave" x="60" y="1" fill="rgba(60, 7, 83, 0.5)" />
+              <use xlink:href="#gentle-wave" x="50" y="0.5" fill="rgba(60, 7, 83, 0.3)" />
+              <use xlink:href="#gentle-wave" x="78" y="3" fill="rgba(60, 7, 83, 0.2)" />
+              <use xlink:href="#gentle-wave" x="8" y="3" fill="rgba(60, 7, 83, 0.1)" />
               <use xlink:href="#gentle-wave" x="48" y="1" fill="#fff" />
+            
           </g>
       </svg>
     </div>
     <section class="main px-10">
       <div class="container mx-auto main-content">
-        <h3 class="text-4xl font-bold  text-black text-center mt-20">
+        <h3 id="animated-text" class="text-4xl font-bold text-black text-center mt-20">
           Automate calls and tasks <br> with truly conversational <br> 
-          human-like voice AI agents <br>built within 10 minutes</h3> 
+          human-like voice AI agents <br>built within 10 minutes
+        </h3> 
       </div>
-      </section>
+    </section>
+    
   </section>  
 
 
 
 
 <!--logos-->
-<section class="bg-white  py-10 ">
+<section class="py-10 ">
   <div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
     <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
         <li>
@@ -181,7 +196,7 @@
   <section class=" relative mt-10">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap ">
-        <div class="absolute inset-x-0 bottom-0 h-1/2 w-full bg-purple-300"></div>
+        <div class="absolute inset-x-0 bottom-0 h-1/2 w-full"></div>
         <!-- Card 1 -->
         <div class="pt-6 w-full lg:w-1/6 px-4 text-center transition-transform transform hover:scale-105"style="margin-top: -50px">
           <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg min-h-screen-75">
@@ -268,12 +283,12 @@
 <!--use cases part-->
 <!--Send automated phone calls
 and have real human conversations at scale-->
-<section class="main px-10 mt-4">
+<section class="main px-10 mt-4" id="animated-section">
   <div class="container mx-auto main-content">
-    <h3 class="text-4xl font-bold  text-black text-center">Send automated phone calls<br>and have real human conversations at scale</h3> 
+    <h3 class="text-4xl font-bold text-black text-center">Send automated phone calls<br>and have real human conversations at scale</h3> 
   </div>
 </section>
-<div class="button-container mb-4">
+<div class="button-container mb-4" id="animated-div">
   <div class="segmented-control text-m font-semibold">
     <input type="radio" name="sc-1-1" id="sc-1-1-1">
     <input type="radio" name="sc-1-1" id="sc-1-1-2">
@@ -284,6 +299,7 @@ and have real human conversations at scale-->
     <label for="sc-1-1-3" data-value="Hinglish">Hinglish</label>
   </div>
 </div>
+
 
 <!--audio carousel-->
 <div id="formList">
@@ -452,87 +468,96 @@ and have real human conversations at scale-->
 
 
 <!--code show part-->
-<section class="relative py-8 bg-gray-100 sticky mb-20">
+<section class="relative py-8 bg-gray-100 sticky mb-20">  
+  <div class="flex items-center justify-center px-5 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mr-4 text-darkviolet">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+    </svg>
+    <h2 class="text-3xl font-semibold mr-4">
+      Explain Code
+    </h2>
+    <div class="language-selector">
+      <button onclick="changeLanguage('c')">
+        <i class="fab fa-cuttlefish"></i>
+      </button>
+      <button onclick="changeLanguage('cpp')">
+        <i class="fab fa-cuttlefish"></i>
+      </button>
+      <button onclick="changeLanguage('java')">
+        <i class="fab fa-java"></i>
+      </button>
+      <button onclick="changeLanguage('python')">
+        <i class="fab fa-python"></i>
+      </button>
+    </div>
+  </div>
+
   <div class="container mx-auto px-8">
-    <div class="rounded-xl shadow-2xl border flex flex-wrap divide-x bg-white">
-      <!-- Section 1 -->
-      <div class="lg:w-1/2 py-8">
-        <div class="flex items-center px-5 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mr-4 text-purple-500">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-          </svg>
-        
-          <h2 class="text-3xl font-semibold mr-4">
-            Explain Code
-          </h2>
-          <div class="language-selector">
-            <button onclick="changeLanguage('c')">
-              <i class="fab fa-cuttlefish"></i>
-            </button>
-            <button onclick="changeLanguage('cpp')">
-              <i class="fab fa-cuttlefish"></i>
-            </button>
-            <button onclick="changeLanguage('java')">
-              <i class="fab fa-java"></i>
-            </button>
-            <button onclick="changeLanguage('python')">
-              <i class="fab fa-python"></i>
-            </button>
+    <div class="rounded-xl shadow-2xl border">
+      <div class="flex flex-wrap">
+        <div class="lg:w-full py-8">
+          <div class="code-box" id="code-box">
+            <code class="language-c">
+              // Default code (can be replaced with initial code snippet)
+              void main() {
+                printf("Hello, World!");
+              }
+            </code>
           </div>
         </div>
-        <p class="text-gray-600 text-lg px-4">
-          Based on the chosen API
-        </p>
-        <h3 class="mt-6 text-lg font-bold px-5">
-          Paste your code below:
-        </h3>
-        <div class="code-box" id="code-box">
-          // Default code (can be replaced with initial code snippet)
-          void main() {
-            printf("Hello, World!");
-          }
-        </div>
-      </div>
-
-      <!-- Section 2 -->
-      <div class="lg:w-1/2 py-8">
-        <div class="flex items-center px-5">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-purple-500">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
-          </svg>
-          <h2 class="text-3xl font-semibold">
-            Customize
-          </h2>
-        </div>
-        <p class="text-gray-600 text-lg px-5">
-          Without any code
-        </p>
       </div>
     </div>
   </div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 
+  
 <script>
   function changeLanguage(language) {
-    // You can add more languages and their respective code snippets
+    var codeBox = document.getElementById('code-box');
+    var code = codeBox.querySelector('code');
     switch (language) {
       case 'c':
-        document.getElementById('code-box').innerText = "// Code in C\nvoid main() {\n  printf(\"Hello, World!\");\n}";
+        code.className = 'language-c';
+        code.textContent = "// Code in C\nvoid main() {\n  printf(\"Hello, World!\");\n}";
         break;
       case 'cpp':
-        document.getElementById('code-box').innerText = "// Code in C++\n#include <iostream>\nint main() {\n  std::cout << \"Hello, World!\";\n  return 0;\n}";
+        code.className = 'language-cpp';
+        code.textContent = "// Code in C++\n#include <iostream>\nint main() {\n  std::cout << \"Hello, World!\";\n  return 0;\n}";
         break;
       case 'java':
-        document.getElementById('code-box').innerText = "// Code in Java\npublic class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println(\"Hello, World!\");\n  }\n}";
+        code.className = 'language-java';
+        code.textContent = "<Doctype>";
         break;
       case 'python':
-        document.getElementById('code-box').innerText = "# Code in Python\nprint('Hello, World!')";
+        code.className = 'language-python';
+        code.textContent = "# Code in Python\nprint('Hello, World!')";
         break;
       default:
         break;
     }
   }
 </script>
+<section class="relative bg-white py-8 sticky mb-20">  
+  <div class="flex items-center justify-center px-5 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mr-4 text-darkviolet">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+    </svg>
+    <div>
+      <h2 class="text-3xl font-semibold mr-4">Dashboard</h2>
+      <p class="text-xl font-semibold">Your Subheading Text Goes Here</p>
+    </div>
+  </div>
+  <div class="flex justify-center items-center">
+    <div class="video-box rounded-md overflow-hidden">
+      <!-- Replace the iframe with your YouTube video embed code -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/LENr0b3wLfI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -541,7 +566,7 @@ and have real human conversations at scale-->
   <div class="container mx-auto grow text-center">
     <h1 class="text-4xl font-bold text-black px-10">Are you ready to grow your business with us?</h1>
     <h1 class="text-2xl font-medium text-gray-900 mt-4">Set up a call, we will take care of the rest</h1>
-    <button class="bg-purple-500 hover:bg-purple-300 active:bg-purple-500 focus:outline-none focus:ring focus:ring-purple-300 text-white font-semibold px-4 py-2 rounded-full mt-4">
+    <button class="bg-violet-800 hover:bg-violet-700 active:bg- focus:outline-none focus:ring focus:ring-violet-500 text-white font-semibold px-4 py-2 rounded-full mt-4">
       Contact Us
     </button>
   </div>
@@ -549,7 +574,7 @@ and have real human conversations at scale-->
 
 
 <!--footer-->
-<footer class="bg-blue-500 dark:bg-gray-900 mt-10">
+<footer class="bg-gradient-to-r from-blue-500 to-gray-900 dark:from-gray-900 dark:to-black mt-10">
   <div class="mx-4 w-full max-w-screen-xl p-4 py-4 lg:py-58">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
