@@ -34,6 +34,9 @@
 6. Use the user's configured `sans` font-variation-settings by default.
 7. Disable tap highlights on iOS
 */
+/* Import Oswald font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 
 html,
 :host {
@@ -66,6 +69,7 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
+  font-family: 'Catamaran', sans-serif;
 }
 
 /*
@@ -1357,13 +1361,13 @@ right: 20px; /* Adjust the right distance */
 }
 
 .navbar {
-  background-color: #150050;
+  background: transparent; /* Sideways gradient from #150050 to #4B0082 */
   position: sticky; 
   top: 0;
   z-index: 10;
 }
 .header {
-  background-color: #150050;
+  background: linear-gradient(to right, #06001e, #20283E); /* Sideways gradient from #150050 to #4B0082 */
   position: sticky;
   top: 0;
   z-index: 10;
@@ -1412,7 +1416,7 @@ a.navbar-brand:hover {
 }
 
 .nav-link:hover {
-  background-color: #161616;
+  background-color: #06001e;
   color: #ebcaf2; /* Change text color on hover */
 }
 
@@ -1450,7 +1454,7 @@ a.navbar-brand:hover {
 
 .wave-container {
   position: relative;
-  background: linear-gradient(to right, #150050, #120030); /* Sideways gradient from #150050 to #4B0082 */
+  background: linear-gradient(to right, #06001e, #20283E); /* Sideways gradient from #150050 to #4B0082 */
   height: 580px;
   margin-top: 0px;
   z-index: 1;
@@ -1991,6 +1995,6 @@ td {
 
 
 .bg-gradient-to-r {
-  background: linear-gradient(to right, #150050, #120030);
+  background: linear-gradient(to right, #06001e, #20283E); /* Sideways gradient from #150050 to #4B0082 */
 }
 
