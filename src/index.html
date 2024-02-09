@@ -27,6 +27,10 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css">
     <!--audio part-->
+  
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+    
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -36,14 +40,12 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="/src/main.js"></script>
   </head>
   
 <body class="bg-gradient">
     <!-- component -->
-    <header class="header sticky top-0 px-4 py-5">
+    <header class="header sticky top-0 px-4">
       <div class="navbar sticky ">
         <!-- logo and navigation -->
         <div class="navbar flex items-center justify-between w-60%">
@@ -56,7 +58,7 @@
           </h1>
     
           <!-- navigation -->
-          <nav class="navbar font-semibold text-lg mx-2">
+          <nav class="navbar font-semibold text-lg mx-2" style="padding-bottom: 10px;">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
                     <div class="block lg:hidden">
@@ -68,7 +70,7 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="hidden lg:flex items-center">
+                    <ul class="hidden lg:flex items-center" style="padding-bottom: 2px;">
                         <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
                             <a href="#" class="text-white">Home</a>
                         </li>
@@ -409,156 +411,75 @@ and have real human conversations at scale-->
 
 
 <!--audio carousel-->
-<div id="formList">
-  <div id="list">
-      <div class="item bg-zinc-800">
-        <div class="flex flex-col items-center justify-center">
-        <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
+<section class="game-section">
+  <div class="owl-carousel custom-carousel owl-theme">
+    <div class="item active bg-zinc-800">
+      <div class="item-desc">
+        <h3>User Acquisition</h3>
+        <audio controls class="w-full mt-4 mb-6">
+          <source src="your-audio-file.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Engage and convert potential customers with personalized, AI-driven conversations that outperform traditional marketing channels.</p>
       </div>
-        <div class="content text-white">
-          <audio controls class="w-full mt-4">
-            <source src="your-audio-file.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-          </audio>
-          <table width="100%" cellspacing="0">
-            <tr>
-              <td>User Acquisition </td>
-            </tr>
-            <tr>
-              <td colspan="2" class="nameGroup text-white">Engage and convert potential customers with personalized, AI-driven conversations that outperform traditional marketing channels.</td>
-            </tr>
-          </table>
-          </div>
+    </div>
+    <div class="item bg-zinc-800">
+      <div class="item-desc">
+        <h3>Lead Qualification</h3>
+        <audio controls class="w-full mt-4 mb-6">
+          <source src="your-audio-file.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Qualify leads through interactive dialogue, gauging interest and intent efficiently to streamline the sales funnel.</p>
       </div>
-      <div class="item bg-zinc-800">
-        <div class="flex flex-col items-center justify-center">
-          <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
-        </div>
-          <div class="content text-white">
-            <audio controls class="w-full mt-4">
-              <source src="your-audio-file.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-          </audio>
-              <table width="100%" cellspacing="0" >
-                <tr>
-                  <td> Lead Qualification </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="nameGroup text-white">Qualify leads through interactive dialogue, gauging interest and intent efficiently to streamline the sales funnel.</td>
-                </tr>
-              </table>
-          </div>
+    </div>
+    <div class="item bg-zinc-800">
+      <div class="item-desc">
+        <h3>Customer Service</h3>
+        <audio controls class="w-full mt-4 mb-6">
+          <source src="your-audio-file.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Transform customer support with AI agents capable of handling inquiries, troubleshooting, and support.</p>
       </div>
-      <div class="item bg-zinc-800">
-        <div class="flex flex-col items-center justify-center">
-          <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
-        </div>
-          <div class="content text-white">
-            <audio controls class="w-full mt-4">
-              <source src="your-audio-file.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-          </audio>
-              <table width="100%" cellspacing="0">
-                <tr>
-                  <td> Customer Service </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="nameGroup">Transform customer support with AI agents capable of handling inquiries, troubleshooting, and support</td>
-                </tr>
-              </table>
-          </div>
+    </div>
+    <div class="item bg-zinc-800">
+      <div class="item-desc">
+        <h3>Recruitment</h3>
+        <audio controls class="w-full mt-4 mb-6">
+          <source src="your-audio-file.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Automate initial interview processes, candidate screening, and onboarding through engaging, conversational interfaces.</p>
       </div>
-      <div class="item bg-zinc-800">
-        <div class="flex flex-col items-center justify-center">
-          <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
-        </div>
-          <div class="content text-white">
-            <audio controls class="w-full mt-4">
-              <source src="your-audio-file.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-          </audio>
-              <table width="100%" cellspacing="0">
-                <tr>
-                  <td> Recruitment </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="nameGroup text-white">Automate initial interview processes, candidate screening, and onboarding through engaging, conversational interfaces.</td>
-                </tr>
-              </table>
-          </div>
+    </div>
+    <div class="item bg-zinc-800">
+      <div class="item-desc">
+        <h3>Collections</h3>
+        <audio controls class="w-full mt-4 mb-6">
+          <source src="your-audio-file.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Automated customer conversations for EMI collections, defaulter management etc. for insurance and lending purposes.</p>
       </div>
-      <div class="item bg-zinc-800">
-        <div class="flex flex-col items-center justify-center">
-          <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
-        </div>
-          <div class="content text-white">
-            <audio controls class="w-full mt-4">
-              <source src="your-audio-file.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-          </audio>
-              <table width="100%" cellspacing="0">
-                <tr>
-                  <td> Collections </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="nameGroup text-white">Automated customer conversations for EMI collections, defaulter management etc. for insurance and lending purposes</td>
-                </tr>
-              </table>
-          </div>
+    </div>
+    <div class="item bg-zinc-800">
+      <div class="item-desc">
+        <h3>Surveys</h3>
+        <audio controls class="w-full mt-4 mb-6">
+          <source src="your-audio-file.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <p>Collect valuable user feedback and conduct surveys with the ease of conversation, yielding higher response rates and richer data.</p>
       </div>
-      <div class="item bg-zinc-800">
-        <div class="flex flex-col items-center justify-center">
-          <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
-        </div>
-          <div class="content text-white">
-            <audio controls class="w-full mt-4">
-              <source src="your-audio-file.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-          </audio>
-              <table width="100%" cellspacing="0">
-                <tr>
-                  <td> Surveys </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="nameGroup text-white">Collect valuable user feedback and conduct surveys with the ease of conversation, yielding higher response rates and richer data.</td>
-                </tr>
-              </table>
-          </div>
-      </div>
+    </div>
   </div>
-</div>
+  </div>
+</section>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script><script  src="./script.js"></script>
 
-<div class="direction mt-6">
-  <button id="prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
-    <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
-  </svg>
-  </button>
-  <button id="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
-    <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
-  </svg>
-  </button>
-</div>
-<script src="main.js"></script>
-<script>
-  // jQuery document ready function
-  $(document).ready(function() {
-    // Change audio source based on selected radio button
-    $(".segmented-control input[type='radio']").change(function() {
-      // Get the value attribute of the selected radio button
-      var selectedValue = $(".segmented-control input[type='radio']:checked").data("value");
-      
-      // Update the audio source for each card based on the selected value
-      $(".card-container .audioPlayer source").each(function() {
-        $(this).attr("src", getAudioSource(selectedValue));
-      });
-      
-      // Reload all audio players to apply changes
-      $(".card-container .audioPlayer").each(function() {
-        $(this)[0].load();
-      });
-    });
-  });
-</script>
 
 
 
@@ -580,49 +501,76 @@ and have real human conversations at scale-->
   </div>
 </section>
 
-<!-- partial:index.partial.html -->
-<div class="body-container mt-10 px-10">
-  <section>
-    <div class="row align-center px-10">
-      <div class="large-10 medium-12 small-12 columns align-center">
-        <div class="content infinity">
-          <div class="row grid-container">
-            <div class="large-3 medium-6 small-6 columns">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="large-3 medium-6 small-6 columns">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="large-3 medium-6 small-6 columns">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="large-3 medium-6 small-6 columns">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="large-3 medium-6 small-6 columns">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="large-3 medium-6 small-6 columns">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="large-3 medium-6 small-6 columns">
-              <img src="http://placehold.it/350x150">
-            </div>
-            <div class="large-3 medium-6 small-6 columns">
-              <img src="http://placehold.it/350x150">
-            </div>
+<!--alumni-->
+<div class="sponsors">
+  <ul>
+    <li>
+        <div id="box1">
+          <div id="overlay">
+            <span id="name">Atlassian</span>
           </div>
         </div>
+    </li>
+    <li>
+        <div id="box2">
+          <div id="overlay">
+            <span id="name">Atlassian</span>
+          </div>
+        </div>
+    </li>
+    <li>
+        <div id="box3">
+          <div id="overlay">
+            <span id="name">Atlassian</span>
+          </div>
+        </div>
+    </li>
+    <li>
+        <div id="box4">
+          <div id="overlay">
+            <span id="name">Atlassian</span>
+          </div>
+        </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+        <div id="box5">
+          <div id="overlay">
+            <span id="name">Atlassian</span>
+          </div>
+        </div>
+    </li>
+    <li>
+        <div id="box6">
+          <div id="overlay">
+            <span id="name">Atlassian</span>
+          </div>
+        </div>
+    </li>
+    <li>
+        <div id="box7">
+          <div id="overlay">
+            <span id="name">Atlassian</span>
+          </div>
+        </div>
+    </li>
+    <li>
+      <div id="box8">
+        <div id="overlay">
+          <span id="name">Atlassian</span>
+        </div>
       </div>
-    </div>
-  </section>
+    </li>
+  </ul>
+</div>
 </div>
 
   
 
 <!--grow business-->
 <section class="flex items-center justify-center mx-auto text-center">
-  <div class="container mx-auto grow text-center">
+  <div class="container mx-auto grow text-center mt-6">
     <h1 class="text-4xl font-bold text-white px-10">Are you ready to grow your business with us?</h1>
     <h1 class="text-2xl font-medium text-gray-900 mt-4">Set up a call, we will take care of the rest</h1>
     <button class="bg-violet-800 hover:bg-violet-700 active:bg- focus:outline-none focus:ring focus:ring-violet-500 text-white font-semibold px-4 py-2 rounded-full mt-4">

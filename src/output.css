@@ -1370,8 +1370,9 @@ right: 20px; /* Adjust the right distance */
   background: transparent; /* Sideways gradient from #150050 to #4B0082 */
   position: sticky; 
   top: 0;
-  z-index: 10;
+  z-index: 1; /* You missed the value for the z-index property */
 }
+
 
 /* CSS for the dropdown menu */
 #menu-dropdown {
@@ -1417,6 +1418,7 @@ right: 20px; /* Adjust the right distance */
   position: sticky;
   top: 0;
   z-index: 10;
+  height: 60px;
 }
 
 /* Remove link underline and set custom color */
@@ -1695,6 +1697,7 @@ a.navbar-brand:hover {
   backdrop-filter: blur(5px);
   cursor: pointer;
 }
+
 .card svg {
   width: 30px; /* Adjust width of SVG as needed */
   height: 30px; /* Adjust height of SVG as needed */
@@ -1789,48 +1792,193 @@ td {
   padding: 4px;
 }
 
-.item .content{
-  padding:30px;
-  font-family: monospace;
+.game-section {
+  padding: 60px 50px;
 }
-.item .content table td{
-  padding:10px 0;
-  border-bottom: 1px solid #e6c8ff;
-}
-.item .content table td:nth-child(2){
-  text-align: right;
-}
-.item .nameGroup{
-  text-align: center;
-  border-bottom:none!important;
-}
-#list{
+.game-section .owl-stage {
+  margin: 15px 0;
   display: flex;
-  width:max-content;
+  display: -webkit-flex;
 }
-#formList{
-  width:1280px;
-  max-width: 100%;
-  overflow: auto;
-  margin:20px auto 10px;
-  scroll-behavior: smooth;
-  scroll-snap-type: both;
+.game-section .item {
+  margin: 0 15px 60px;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
-#formList::-webkit-scrollbar{
-  display: none;
+.game-section .item.active {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
 }
-@media screen and (max-width: 1024px){
-  .item{
-      width: calc(33.3vw - 10px);
+.game-section .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.game-section .item-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.game-section .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.game-section .item-desc p {
+  opacity: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+.game-section .item.active .item-desc p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.game-section .owl-theme.custom-carousel .owl-dots {
+  margin-top: -20px;
+  position: relative;
+  z-index: 5;
+}
+/******** Middle section CSS End *******/
+
+/***** responsive css Start ******/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 260px;
+    height: 360px;
+  }
+  .game-section .item.active {
+    width: 400px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 46px));
+    -webkit-transform: translateY(calc(100% - 46px));
+  }
 }
-@media screen and (max-width: 768px){
-  .item{
-      width: calc(50vw - 10px);
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .line-title {
+    width: 330px;
   }
 
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px 40px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 240px;
+    height: 330px;
+  }
+  .game-section .item.active {
+    width: 360px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
 }
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .line-title {
+    width: 250px;
+  }
+
+  /* -audio- */
+  .game-section {
+    padding: 30px 15px 20px;
+  }
+  .game-section .item {
+    margin: 0 10px 40px;
+    width: 200px;
+    height: 280px;
+  }
+  .game-section .item.active {
+    width: 270px;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  .game-section .item-desc {
+    padding: 0 14px 5px;
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #666;
+  color: #fff;
+  border-radius: 5px;
+  /* Add more styles as needed */
+}
+audio::-webkit-media-controls-timeline {
+  background-color: #c2c2c2;
+  border-radius: 10px;
+  /* Add more styles as needed */
+}
+audio::-webkit-media-controls-volume-slider {
+  background-color: #999;
+  /* Add more styles as needed */
+}
+
 .bg-darkviolet{
   background-color: #3C0753;
 
@@ -2054,6 +2202,8 @@ td {
   text-decoration: line-through;
 }*/
 
+
+
 .code-box {
   padding: 1.5rem; /* Adjust padding as needed */
   width: 100%;
@@ -2158,3 +2308,168 @@ td {
   background: linear-gradient(to right, #06001e, #20283E); /* Sideways gradient from #150050 to #4B0082 */
 }
 
+/*Sponsors List*/
+
+.sponsorstitle {
+  font-size: 20px;
+  position: relative;
+  font-weight: lighter;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+  left: 0px;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.sponsorstitle h1 {
+  color:black;
+  font-weight: lighter;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.sponsors {
+  position: relative;
+  text-align: center;
+}
+
+.sponsors ul {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+.sponsors ul li {
+  display: inline-block;
+}
+
+#box1 {
+  width: 125px;
+  height: 125px;
+  background: url(http://www.applitrack.com/sau25/onlineapp/images/districtLogo.gif);
+  background-size: cover;
+  overflow: hidden;
+  margin: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+#box2 {
+  width: 125px;
+  height: 125px;
+  background: url(http://dyn.com/wp-content/themes/dynamic/images/dyn-orb-share.png);
+  background-color: white;
+  background-size: 125px 125px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+#box3 {
+  width: 125px;
+  height: 125px;
+  background: url(https://documents.clubexpress.com/clubs/634084/graphics/160_BMC_Color1.jpg);
+  background-size: cover;
+  overflow: hidden;
+  margin: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+#box4 {
+  width: 125px;
+  height: 125px;
+  background: url(https://evbdn.eventbrite.com/s3-s3/eventlogos/55840291/anagnostlogocos.jpg);
+  background-color: white;
+  background-size: 125px 75px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 5px;
+  background-position: 0px 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+#box5 {
+  width: 125px;
+  height: 125px;
+  background: url(http://pizzabellaemory.com/wp-content/uploads/2012/09/cropped-pizza-bella-web.jpg);
+  background-color: white;
+  background-size: 125px 75px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 5px;
+  background-position: 0px 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+#box6 {
+  width: 125px;
+  height: 125px;
+  background: url(http://physicianemployerdirectory.com/wp-content/uploads/2014/08/Elliot-Health-System-logo.png);
+  background-color: white;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 5px;
+  background-size:150px 100px;
+  background-position: -10px 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+#box7 {
+  width: 125px;
+  height: 125px;
+  background-size:150px 100px;
+ background: url(https://www.catholicmedicalcenter.org/library/images/common/logo-new.gif);
+  background-color: white;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size:115px 70px;
+  margin: 5px;
+  background-position: 5px 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+#box8 {
+  width: 125px;
+  height: 125px;
+  background-size:150px 100px;
+ background: url(https://www.catholicmedicalcenter.org/library/images/common/logo-new.gif);
+  background-color: white;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size:115px 70px;
+  overflow: hidden;
+  background-size:115px 70px;
+  margin: 5px;
+  background-position: 5px 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+#overlay {
+  background: rgba(0, 0, 0, .75);
+  text-align: center;
+  padding: 60px 0 60px 0;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+}
+
+.sponsors a {
+  text-decoration: none;
+}
+
+#name {
+  font-weight: lighter;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: rgba(255, 255, 255, .85);
+  font-size: 10px;
+}
+
+#box1:hover #overlay,
+#box2:hover #overlay,
+#box3:hover #overlay,
+#box4:hover #overlay,
+#box5:hover #overlay,
+#box6:hover #overlay,
+#box7:hover #overlay,
+#box8:hover #overlay{
+  opacity: 1;
+}

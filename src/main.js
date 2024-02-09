@@ -1,4 +1,4 @@
-        tailwind.config = {
+tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
@@ -18,6 +18,21 @@
         };
 
         // JavaScript to handle menu toggle and dropdown
+
+        $(".custom-carousel").owlCarousel({
+          autoWidth: true,
+          loop: true
+        });
+        $(document).ready(function () {
+          $(".custom-carousel .item").click(function () {
+            $(".custom-carousel .item").not($(this)).removeClass("active");
+            $(this).toggleClass("active");
+          });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+          new GreenAudioPlayer('.example');
+        });
+        
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.getElementById('menu-toggle');
   const menuClose = document.getElementById('menu-close');
