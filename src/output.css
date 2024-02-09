@@ -72,6 +72,7 @@ body {
   font-family: 'Catamaran', sans-serif;
 }
 
+
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
@@ -1308,6 +1309,11 @@ video {
   z-index: 1;
 }
 
+.bg-gradient{
+  background: linear-gradient(to right, #06001e, #20283E)
+}
+
+
 .hero-content {
   position: relative;
   z-index: 3; /* Ensure text is on top */
@@ -1366,6 +1372,46 @@ right: 20px; /* Adjust the right distance */
   top: 0;
   z-index: 10;
 }
+
+/* CSS for the dropdown menu */
+#menu-dropdown {
+  width: 200px; /* Adjust the width as needed */
+  max-height: 300px; /* Adjust the maximum height as needed */
+  background-color: #04020c; /* Set background color with full opacity */
+  position: fixed; /* Position the dropdown menu */
+  top: 0; /* Align to the top */
+  right: 0; /* Align to the right */
+  margin-right: 200px; /* Adjust the margin as needed */
+  overflow-y: auto;
+  z-index: 1000; /* Set a high z-index to ensure it appears above other content */
+  /* Add other styling properties as needed */
+}
+
+#menu-dropdown ul {
+  /* Add styling for the list items */
+  padding: 0; /* Remove default padding */
+}
+
+#menu-dropdown li {
+  /* Add styling for individual list items */
+  list-style: none; /* Remove default list style */
+}
+
+#menu-dropdown a {
+  /* Add styling for anchor links */
+  display: block; /* Make links block-level for full clickable area */
+  padding: 10px; /* Add padding to increase clickable area */
+  color: #fff; /* Set text color */
+  text-decoration: none; /* Remove underline */
+}
+
+#menu-dropdown a:hover {
+  /* Add styling for hover state */
+  background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
+  border-radius: 20px;
+}
+
+
 .header {
   background: linear-gradient(to right, #06001e, #20283E); /* Sideways gradient from #150050 to #4B0082 */
   position: sticky;
@@ -1430,14 +1476,14 @@ a.navbar-brand:hover {
 
 /* Add your existing styles here */
 
-.top-right-blob-container {
+/*.top-right-blob-container {
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 50px; /* Adjust the margin as needed */
-  margin-right: 80px; /* Adjust the margin as needed */
+  margin-top: 50px; 
+  margin-right: 80px;
   z-index: 2;
-}
+}*/
 .text-overlay {
   color: #fcf8fd;
   position: absolute;
@@ -1448,7 +1494,7 @@ a.navbar-brand:hover {
 }
 /* Add any other styles for the top-right container */
 .absolute{
-  background-color: #3C0753;
+  background-color: #eaeaea;
   
 }
 
@@ -1462,7 +1508,7 @@ a.navbar-brand:hover {
 
 
 
-     .waves {
+.waves {
        width: 100%;
        height:50%;
        margin-bottom:-7px; /*Fix for safari gap*/
@@ -1523,7 +1569,7 @@ a.navbar-brand:hover {
     @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 
-:root {
+/*:root {
 	--br-blobby: 50%;
 	--br-blobby-before: 50%;
 	--br-blobby-after: 50%;
@@ -1565,11 +1611,11 @@ a.navbar-brand:hover {
 }
 @media (max-width: 1024px) {
   .top-right-blob-container {
-    height: auto; /* Allow the first section to take its natural height on smaller screens */
+    height: auto; 
   }
   .box {
-    height: 250px; /* Adjust the height of the rotating box for better fit on smaller screens */
-    width: 250px; /* Adjust the width of the rotating box accordingly */
+    height: 250px; 
+    width: 250px;
     margin-top: 400px;
     margin-left: 300px;
 
@@ -1584,8 +1630,8 @@ a.navbar-brand:hover {
 
   .box::after,
   .box::before {
-    height: 108%; /* Adjust the height of the pseudo-elements */
-    width: 108%; /* Adjust the width of the pseudo-elements */
+    height: 108%; 
+    width: 108%; 
   }
 }
 
@@ -1619,6 +1665,60 @@ a.navbar-brand:hover {
 	100% {
 		transform: rotate(360deg);
 	}
+}*/
+.cardcontainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container horizontally */
+  z-index: 1;
+}
+
+.cardcontainer .card {
+  position: relative;
+  width: calc(16.666% - 20px); /* Adjusted width for six cards */
+  height: 300px; /* Adjusted height for smaller cards */
+  margin: 5px; /* Adjusted margin for six cards */
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
+
+.cardcontainer .card .content a {
+  position: relative;
+  text-align: center; /* Center-align text inside the card */
+  padding: 20px; /* Add padding around the text */
+  margin-top: 20px;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  transition: transform .2s;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .cardcontainer .card {
+      margin: 5px 10px; /* Adjusted margin for six cards on larger screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .cardcontainer .card {
+      width: calc(50% - 20px); /* Adjusted width for two cards per row on smaller screens */
+      margin: 5px; /* Adjusted margin for two cards per row on smaller screens */
+  }
 }
 
 /* Card slider */
@@ -1631,7 +1731,7 @@ a.navbar-brand:hover {
 }
 
 .direction button {
-  background-color: #ffffff44;
+  background-color: transparent;
   border: none;
   width: 10vw; /* Use relative units for responsiveness */
   height: 10vw; /* Use relative units for responsiveness */
@@ -1642,11 +1742,6 @@ a.navbar-brand:hover {
   outline: none; /* Add this to remove the default button outline on focus */
 }
 
-
-.direction button:hover {
-  background-color: #fcb0ff; /* Change the background color on hover if desired */
-  opacity: 50%;
-}
 
 @media (max-width: 600px) {
   .direction button {
@@ -1736,7 +1831,7 @@ td {
   border-radius: 20px; /* Adjust as needed */
 }
 
-.button-container {
+/*.button-container {
   margin: auto;
   max-width: 500px;
   min-width: 200px;
@@ -1949,17 +2044,37 @@ td {
 }
 .segmented-control.line-through, .segmented-control .line-through {
   text-decoration: line-through;
+}*/
+
+.code-box {
+  padding: 1.5rem; /* Adjust padding as needed */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: transparent;
 }
 
-.code-container {
-  width: 50%; /* Set to 50% to make it half of the page width */
-  max-width: 800px;
-  background-color: #0a001d;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.code-box code {
+  color: #fff; /* Set the text color to white or any desired color */
 }
+
+.box {
+  padding: 1.5rem;
+  height: 150px;
+  width: 150px;
+  background: #2c2c2c;
+  border-radius: 15px;
+  margin: 20px;
+  transition: all ease 0.2s;
+  border: 1px solid #333;
+  overflow: auto;          
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(94, 1, 123, 0.5);
+}
+
 
 .language-selector {
   display: flex;
@@ -1985,14 +2100,51 @@ td {
   background-color: #8729af;
 }
 
-.code-box {
-  padding: 1.5rem; /* Adjust padding as needed */
+
+
+.body-container {
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: transparent;
+  position: relative;
 }
 
+.columns img {
+  display: block; /* Change to block to remove extra space below images */
+  margin-bottom: 1.875rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-gap: 20px; /* Gap between grid items */
+  margin: 0 auto; /* Center the grid container */
+}
+
+.grid-container .columns {
+  margin-bottom: 0; /* Remove default bottom margin */
+}
+
+
+.align-center {
+  justify-content: center;
+}
+
+@media screen and (min-width: 64.0625em) {
+  .large-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+
+  /* Adjust the size of columns for medium and small screens */
+  .medium-6 {
+    flex: 0 0 50%; /* 2 columns */
+    max-width: 50%;
+  }
+
+  .small-6 {
+    flex: 0 0 50%; /* 2 columns */
+    max-width: 50%;
+  }
+}
 
 .bg-gradient-to-r {
   background: linear-gradient(to right, #06001e, #20283E); /* Sideways gradient from #150050 to #4B0082 */

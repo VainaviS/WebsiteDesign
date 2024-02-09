@@ -17,6 +17,30 @@
             },
         };
 
+        // JavaScript to handle menu toggle and dropdown
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const menuDropdown = document.getElementById('menu-dropdown');
+
+  menuToggle.addEventListener('click', function () {
+      menuDropdown.classList.toggle('hidden');
+  });
+
+  menuClose.addEventListener('click', function () {
+      menuDropdown.classList.add('hidden');
+  });
+});
+
+
+VanillaTilt.init(document.querySelectorAll(".card"), {
+  max: 25,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.5
+});
+
+
         document.addEventListener('DOMContentLoaded', function () {
     new Splide('#audio-carousel', {
       type       : 'fade',
@@ -31,6 +55,7 @@
     }).mount();
   });
   const box = document.querySelector('.box');
+  
 
 setInterval(setBorderRadius, 300);
 

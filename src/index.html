@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,15 +40,16 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="/src/main.js"></script>
   </head>
-<body>
+  
+<body class="bg-gradient">
     <!-- component -->
-    <header class="header sticky top-0 px-4 py-01 shadow-lg">
-      <div class="navbar sticky">
+    <header class="header sticky top-0 px-4 py-5">
+      <div class="navbar sticky ">
         <!-- logo and navigation -->
-        <div class="navbar flex items-center justify-between w-full">
+        <div class="navbar flex items-center justify-between w-60%">
           <!-- logo -->
           <h1 class="w-1/6">
-            <a href="" class="flex items-center space-x-3">
+            <a href="" class="flex items-center space-x-3 px-20">
               <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
               <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Bolna</span>
             </a>
@@ -55,33 +57,79 @@
     
           <!-- navigation -->
           <nav class="navbar font-semibold text-lg mx-2">
-            <ul class="flex items-center justify-end">
-                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                    <a href="#" class="text-white">Home</a>
-                </li>
-                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                    <a href="#product" class="text-white">Product</a>
-                </li>
-                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                    <a href="#pricing" class="text-white">Pricing</a>
-                </li>
-                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                    <a href="https://docs.bolna.dev/introduction" class="text-white">Docs</a>
-                </li>
-                <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                    <a href="#contact" class="text-white">Contact Us</a>
-                </li>
-            </ul>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="block lg:hidden">
+                        <button id="menu-toggle" class="text-white focus:outline-none">
+                            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M3 6h18a1 1 0 110 2H3a1 1 0 110-2zm0 5h18a1 1 0 110 2H3a1 1 0 110-2zm0 5h18a1 1 0 110 2H3a1 1 0 110-2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="hidden lg:flex items-center">
+                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                            <a href="#" class="text-white">Home</a>
+                        </li>
+                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                            <a href="#product" class="text-white">Product</a>
+                        </li>
+                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                            <a href="#pricing" class="text-white">Pricing</a>
+                        </li>
+                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                            <a href="https://docs.bolna.dev/introduction" class="text-white">Docs</a>
+                        </li>
+                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                            <a href="#contact" class="text-white">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Dropdown menu for smaller screens -->
+            <div id="menu-dropdown"
+                class="lg:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 overflow-auto z-50 hidden">
+                <div class="flex justify-end p-4">
+                    <button id="menu-close" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M19.354 4.646a.5.5 0 01.708.707l-15 15a.5.5 0 01-.708-.707l15-15z"
+                                clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M4.646 4.646a.5.5 0 00-.708.707l15 15a.5.5 0 00.708-.707l-15-15z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="text-center">
+                    <li class="p-4 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                        <a href="#" class="text-white">Home</a>
+                    </li>
+                    <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                        <a href="#product" class="text-white">Product</a>
+                    </li>
+                    <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                        <a href="#pricing" class="text-white">Pricing</a>
+                    </li>
+                    <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                        <a href="https://docs.bolna.dev/introduction" class="text-white">Docs</a>
+                    </li>
+                    <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
+                        <a href="#contact" class="text-white">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         
         </div>
       </div>
     </header>
-    
+
     <!--blob-->    
-    <section class="flex-col items-center justify-center h-screen mt-10 top-right-blob-container py-20">
+    <!--<section class="flex-col items-center justify-center h-screen mt-10 top-right-blob-container py-20">
       <div class="box mx-auto flex items-center justify-center">
-        <!-- Additional content goes here -->
       </div>
       
       <div class="text-overlay">
@@ -101,7 +149,7 @@
         // Handle click event, e.g., navigate to another page or perform an action
         alert("Start clicked!");
       }
-    </script>
+    </script>-->
     <!--hero waves-->
     <section class="hero">
       <div class="wave-container py-58">
@@ -112,17 +160,14 @@
           An end to end
           <br>platform to build, deploy and monitor 
           <br>voice-based AI agents
-        </h3>
-        
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        </h3>        
+        <!--<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
           <defs>
 
               <path id="gentle-wave" d="M-160 44c30 0 50-18 88-18s 50 18 88 18 50-18 88-18 50 18 88 18 v44h-352z" />
           </defs>
           <g class="parallax">
-              <!-- Define the wave shape somewhere in your SVG -->
               <path id="gentle-wave" d="M0,192L48,181.3C96,171,192,149,288,128C384,107,480,85,576,85.3C672,85,768,107,864,117.3C960,128,1056,128,1152,144C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#fff"></path>
-              <!-- Use the wave shape multiple times, adjusting position and fill color -->
               <use xlink:href="#gentle-wave" x="48" y="4" fill="rgba(60, 7, 83, 0.9)" />
               <use xlink:href="#gentle-wave" x="40" y="0.5" fill="rgba(60, 7, 83, 0.7)" />
               <use xlink:href="#gentle-wave" x="60" y="1" fill="rgba(60, 7, 83, 0.5)" />
@@ -132,11 +177,11 @@
               <use xlink:href="#gentle-wave" x="48" y="1" fill="#fff" />
             
           </g>
-      </svg>
+      </svg>-->
     </div>
     <section class="main px-10">
       <div class="container mx-auto main-content">
-        <h3 id="animated-text" class="text-4xl font-bold text-black text-center mt-20">
+        <h3 id="animated-text" class="text-4xl font-bold text-white text-center mt-20">
           Automate calls and tasks <br> with truly conversational <br> 
           human-like voice AI agents <br>built within 10 minutes
         </h3> 
@@ -144,9 +189,75 @@
     </section>
     
   </section>  
+<section class="relative py-8 sticky mb-20">  
+  <div class="flex items-center justify-center px-5 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-12 h-12 mr-4 text-darkviolet">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+    </svg>
+    <h2 class="text-3xl text-white font-semibold mr-4">
+      Explain Code
+    </h2>
+    <div class="language-selector">
+      <button onclick="changeLanguage('c')">
+        <i class="fab fa-cuttlefish"></i>
+      </button>
+      <button onclick="changeLanguage('cpp')">
+        <i class="fab fa-cuttlefish"></i>
+      </button>
+      <button onclick="changeLanguage('java')">
+        <i class="fab fa-java"></i>
+      </button>
+      <button onclick="changeLanguage('python')">
+        <i class="fab fa-python"></i>
+      </button>
+    </div>
+  </div>
 
+  <div class="container mx-auto px-8">
+      <div class="flex flex-wrap">
+        <div class="box lg:w-full py-8">
+          <div class="code-box" id="code-box">
+            <code class="language-c">
+              // Default code (can be replaced with initial code snippet)
+              void main() {
+                printf("Hello, World!");
+              }
+            </code>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 
-
+  
+<script>
+  function changeLanguage(language) {
+    var codeBox = document.getElementById('code-box');
+    var code = codeBox.querySelector('code');
+    switch (language) {
+      case 'c':
+        code.className = 'language-c';
+        code.textContent = "// Code in C\nvoid main() {\n  printf(\"Hello, World!\");\n}";
+        break;
+      case 'cpp':
+        code.className = 'language-cpp';
+        code.textContent = "// Code in C++\n#include <iostream>\nint main() {\n  std::cout << \"Hello, World!\";\n  return 0;\n}";
+        break;
+      case 'java':
+        code.className = 'language-java';
+        code.textContent = "<Doctype>";
+        break;
+      case 'python':
+        code.className = 'language-python';
+        code.textContent = "# Code in Python\nprint('Hello, World!')";
+        break;
+      default:
+        break;
+    }
+  }
+</script>
 
 <!--logos-->
 <section class="py-10 ">
@@ -195,90 +306,61 @@
 </section>
 
 <!--cards-->
-  <section class=" relative mt-10">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-wrap ">
-        <div class="absolute inset-x-0 bottom-0 h-1/2 w-full"></div>
-        <!-- Card 1 -->
-        <div class="pt-6 w-full lg:w-1/6 px-4 text-center transition-transform transform hover:scale-105"style="margin-top: -50px">
-          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg min-h-screen-75">
-            <div class="px-4 py-5 flex-auto">
-              <img src="./images/cards/Features1.svg" class="inline-flex items-center justify-center w-12 h-12 object-cover rounded-full shadow-lg">
-              <h6 class="text-l font-bold">TRULY CONVERSATIONAL </h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
-                Our agents can hold lengthy high-quality intent driven conversations 
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="pt-6 w-full lg:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
-          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-              <img src="./images/cards/Features2.svg" class="inline-flex items-center justify-center w-12 h-12 object-cover rounded-full shadow-lg">
-              <h6 class="text-l font-bold mt-6">CHOICE OF<br> MODEL</h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
-                Experiment between multiple best-in-class proprietary and open source models
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="pt-6 w-full lg:w-1/6 px-4 text-center transition-transform transform hover:scale-105"style="margin-top: -50px">
-          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-              <img src="./images/cards/Features3.svg" class="inline-flex items-center justify-center w-12 h-12 object-cover rounded-full shadow-lg">
-              <h6 class="text-l font-bold mt-4">MULTI-LINGUAL</h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
-                Our agent is fluent in multiple languages, including Hinglish 
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class=" pt-6 w-full lg:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
-          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-              <img src="./images/cards/Features1.svg" class="inline-flex items-center justify-center w-12 h-12 object-cover rounded-full shadow-lg">
-              <h6 class="text-l font-bold mt-4">NUANCED CONVERSATIONS</h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
-                Our agent is equipped to deal with conversation nuances like pauses and interruptions 
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="pt-6 w-full lg:w-1/6 px-4 text-center transition-transform transform hover:scale-105"style="margin-top: -50px;">
-          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-              <img src="./images/cards/Features2.svg" class="inline-flex items-center justify-center w-12 h-12 object-cover rounded-full shadow-lg">
-              <h6 class="text-l font-bold mt-4">INFINITE MEMORY</h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
-                RAG to remember conversations and personas for greater personalisation
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="pt-6 w-full lg:w-1/6 px-4 text-center transition-transform transform hover:scale-105">
-          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-            <img src="./images/cards/Features3.svg" class="inline-flex items-center justify-center w-12 h-12 object-cover rounded-full shadow-lg">
-              <h6 class="text-l font-bold mt-4">HUMAN-LIKE</h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
-                Use our natural emotive voices or clone your own voice to build a truly human-like agent
-              </p>
-            </div>
-          </div>
-        </div>
+<div class="cardcontainer">
+  <div class="card">
+      <div class="content">
+          <h6 class="text-l text-white text-center font-bold">TRULY CONVERSATIONAL </h6>
+        <p class="mt-2 mb-4 text-white text-center">
+          Our agents can hold lengthy high-quality intent driven conversations 
+        </p>
       </div>
-    </div>
-  </section>
+  </div>
+  <div class="card">
+
+      <div class="content">
+        <h6 class="text-l text-white font-bold text-center mt-6">CHOICE OF<br> MODEL</h6>
+        <p class="mt-2 mb-4 text-white text-center">
+          Experiment between multiple best-in-class proprietary and open source models
+        </p>
+      </div>
+  </div>
+  <div class="card">
+      <div class="content">
+        <h6 class="text-l text-white font-bold text-center mt-4">MULTI-LINGUAL</h6>
+        <p class="mt-2 mb-4 text-white text-center">
+          Our agent is fluent in multiple languages, including Hinglish 
+        </p>
+      </div>
+  </div>
+  <div class="card">
+      <div class="content">
+        <h6 class="text-l text-white font-bold text-center mt-4">NUANCED CONVERSATIONS</h6>
+        <p class="mt-2 mb-4 text-white text-center">
+          Our agent is equipped to deal with conversation nuances like pauses and interruptions 
+        </p>
+      </div>
+  </div>
+  <div class="card">
+      <div class="content">
+        <h6 class="text-l text-white font-bold text-center mt-4">INFINITE MEMORY</h6>
+        <p class="mt-2 mb-4 text-white text-center">
+          RAG to remember conversations and personas for greater personalisation
+        </p>
+      </div>
+  </div>
+  
+  <div class="card">
+      <div class="content">
+        <h6 class="text-l text-white text-center font-bold mt-4 ">HUMAN-LIKE</h6>
+        <p class="mt-2 mb-4 text-white text-center">
+          Use our natural emotive voices or clone your own voice to build a truly human-like agent
+        </p>
+      </div>
+  </div>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js'></script><script  src="./script.js"></script>
+
   
 
 
@@ -287,10 +369,10 @@
 and have real human conversations at scale-->
 <section class="main px-10 mt-4" id="animated-section">
   <div class="container mx-auto main-content">
-    <h3 class="text-4xl font-bold text-black text-center">Send automated phone calls<br>and have real human conversations at scale</h3> 
+    <h3 class="text-4xl font-bold text-white text-center">Send automated phone calls<br>and have real human conversations at scale</h3> 
   </div>
 </section>
-<div class="button-container mb-4" id="animated-div">
+<!--<div class="button-container mb-4" id="animated-div">
   <div class="segmented-control text-m font-semibold">
     <input type="radio" name="sc-1-1" id="sc-1-1-1">
     <input type="radio" name="sc-1-1" id="sc-1-1-2">
@@ -300,13 +382,13 @@ and have real human conversations at scale-->
     <label for="sc-1-1-2" data-value="English">English</label>
     <label for="sc-1-1-3" data-value="Hinglish">Hinglish</label>
   </div>
-</div>
+</div>-->
 
 
 <!--audio carousel-->
 <div id="formList">
   <div id="list">
-      <div class="item bg-teal-100">
+      <div class="item bg-zinc-800">
         <div class="flex flex-col items-center justify-center">
         <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
       </div>
@@ -325,7 +407,7 @@ and have real human conversations at scale-->
           </table>
           </div>
       </div>
-      <div class="item bg-orange-100">
+      <div class="item bg-zinc-800">
         <div class="flex flex-col items-center justify-center">
           <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
         </div>
@@ -344,7 +426,7 @@ and have real human conversations at scale-->
               </table>
           </div>
       </div>
-      <div class="item bg-blue-200">
+      <div class="item bg-zinc-800">
         <div class="flex flex-col items-center justify-center">
           <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
         </div>
@@ -363,7 +445,7 @@ and have real human conversations at scale-->
               </table>
           </div>
       </div>
-      <div class="item bg-rose-100">
+      <div class="item bg-zinc-800">
         <div class="flex flex-col items-center justify-center">
           <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
         </div>
@@ -382,7 +464,7 @@ and have real human conversations at scale-->
               </table>
           </div>
       </div>
-      <div class="item bg-yellow-100">
+      <div class="item bg-zinc-800">
         <div class="flex flex-col items-center justify-center">
           <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
         </div>
@@ -401,7 +483,7 @@ and have real human conversations at scale-->
               </table>
           </div>
       </div>
-      <div class="item bg-green-200">
+      <div class="item bg-zinc-800">
         <div class="flex flex-col items-center justify-center">
           <img src="/src/images/useCases/UseCase1.svg" style="width: 100px; height: 150px;" class="avatar">
         </div>
@@ -424,11 +506,11 @@ and have real human conversations at scale-->
 </div>
 
 <div class="direction mt-6">
-  <button id="prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+  <button id="prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
     <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
   </svg>
   </button>
-  <button id="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+  <button id="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
     <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
   </svg>
   </button>
@@ -469,81 +551,10 @@ and have real human conversations at scale-->
 </script>
 
 
-<!--code show part-->
-<section class="relative py-8 bg-gray-100 sticky mb-20">  
-  <div class="flex items-center justify-center px-5 mb-4">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mr-4 text-darkviolet">
-      <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-    </svg>
-    <h2 class="text-3xl font-semibold mr-4">
-      Explain Code
-    </h2>
-    <div class="language-selector">
-      <button onclick="changeLanguage('c')">
-        <i class="fab fa-cuttlefish"></i>
-      </button>
-      <button onclick="changeLanguage('cpp')">
-        <i class="fab fa-cuttlefish"></i>
-      </button>
-      <button onclick="changeLanguage('java')">
-        <i class="fab fa-java"></i>
-      </button>
-      <button onclick="changeLanguage('python')">
-        <i class="fab fa-python"></i>
-      </button>
-    </div>
-  </div>
 
-  <div class="container mx-auto px-8">
-    <div class="rounded-xl shadow-2xl border">
-      <div class="flex flex-wrap">
-        <div class="lg:w-full py-8">
-          <div class="code-box" id="code-box">
-            <code class="language-c">
-              // Default code (can be replaced with initial code snippet)
-              void main() {
-                printf("Hello, World!");
-              }
-            </code>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-
-  
-<script>
-  function changeLanguage(language) {
-    var codeBox = document.getElementById('code-box');
-    var code = codeBox.querySelector('code');
-    switch (language) {
-      case 'c':
-        code.className = 'language-c';
-        code.textContent = "// Code in C\nvoid main() {\n  printf(\"Hello, World!\");\n}";
-        break;
-      case 'cpp':
-        code.className = 'language-cpp';
-        code.textContent = "// Code in C++\n#include <iostream>\nint main() {\n  std::cout << \"Hello, World!\";\n  return 0;\n}";
-        break;
-      case 'java':
-        code.className = 'language-java';
-        code.textContent = "<Doctype>";
-        break;
-      case 'python':
-        code.className = 'language-python';
-        code.textContent = "# Code in Python\nprint('Hello, World!')";
-        break;
-      default:
-        break;
-    }
-  }
-</script>
-<section class="relative bg-white py-8 sticky mb-20">  
+<section class="relative bg-zinc-800 py-8 sticky mb-20">  
   <div class="flex items-center justify-center px-5 mb-4">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mr-4 text-darkviolet">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-12 h-12 mr-4 text-darkviolet">
       <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
     </svg>
     <div>
@@ -559,14 +570,50 @@ and have real human conversations at scale-->
   </div>
 </section>
 
+<!-- partial:index.partial.html -->
+<div class="body-container mt-10 px-10">
+  <section>
+    <div class="row align-center px-10">
+      <div class="large-10 medium-12 small-12 columns align-center">
+        <div class="content infinity">
+          <div class="row grid-container">
+            <div class="large-3 medium-6 small-6 columns">
+              <img src="http://placehold.it/350x150">
+            </div>
+            <div class="large-3 medium-6 small-6 columns">
+              <img src="http://placehold.it/350x150">
+            </div>
+            <div class="large-3 medium-6 small-6 columns">
+              <img src="http://placehold.it/350x150">
+            </div>
+            <div class="large-3 medium-6 small-6 columns">
+              <img src="http://placehold.it/350x150">
+            </div>
+            <div class="large-3 medium-6 small-6 columns">
+              <img src="http://placehold.it/350x150">
+            </div>
+            <div class="large-3 medium-6 small-6 columns">
+              <img src="http://placehold.it/350x150">
+            </div>
+            <div class="large-3 medium-6 small-6 columns">
+              <img src="http://placehold.it/350x150">
+            </div>
+            <div class="large-3 medium-6 small-6 columns">
+              <img src="http://placehold.it/350x150">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
-
-
+  
 
 <!--grow business-->
 <section class="flex items-center justify-center mx-auto text-center">
   <div class="container mx-auto grow text-center">
-    <h1 class="text-4xl font-bold text-black px-10">Are you ready to grow your business with us?</h1>
+    <h1 class="text-4xl font-bold text-white px-10">Are you ready to grow your business with us?</h1>
     <h1 class="text-2xl font-medium text-gray-900 mt-4">Set up a call, we will take care of the rest</h1>
     <button class="bg-violet-800 hover:bg-violet-700 active:bg- focus:outline-none focus:ring focus:ring-violet-500 text-white font-semibold px-4 py-2 rounded-full mt-4">
       Contact Us
