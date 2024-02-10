@@ -15,6 +15,12 @@
     <!--icon-->
     <link rel="icon" type="image/svg+xml" href="/src/images/favicon.svg">
     <link rel="icon" type="image/png" href="/src/images/favicon.png">
+    <!--navbar-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kanit&display=swap" rel="stylesheet">
     <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
@@ -45,89 +51,42 @@
   
 <body class="bg-gradient">
     <!-- component -->
-    <header class="header sticky top-0 px-4">
-      <div class="navbar sticky ">
-        <!-- logo and navigation -->
-        <div class="navbar flex items-center justify-between w-60%">
-          <!-- logo -->
-          <h1 class="w-1/6">
-            <a href="" class="flex items-center space-x-3 px-20">
-              <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
-              <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Bolna</span>
-            </a>
-          </h1>
-    
-          <!-- navigation -->
-          <nav class="navbar font-semibold text-lg mx-2" style="padding-bottom: 10px;">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <div class="block lg:hidden">
-                        <button id="menu-toggle" class="text-white focus:outline-none">
-                            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M3 6h18a1 1 0 110 2H3a1 1 0 110-2zm0 5h18a1 1 0 110 2H3a1 1 0 110-2zm0 5h18a1 1 0 110 2H3a1 1 0 110-2z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <ul class="hidden lg:flex items-center" style="padding-bottom: 2px;">
-                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                            <a href="#" class="text-white">Home</a>
-                        </li>
-                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                            <a href="#product" class="text-white">Product</a>
-                        </li>
-                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                            <a href="#pricing" class="text-white">Pricing</a>
-                        </li>
-                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                            <a href="https://docs.bolna.dev/introduction" class="text-white">Docs</a>
-                        </li>
-                        <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                            <a href="#contact" class="text-white">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        
-            <!-- Dropdown menu for smaller screens -->
-            <div id="menu-dropdown"
-                class="lg:hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 overflow-auto z-50 hidden">
-                <div class="flex justify-end p-4">
-                    <button id="menu-close" class="text-white focus:outline-none">
-                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd"
-                                d="M19.354 4.646a.5.5 0 01.708.707l-15 15a.5.5 0 01-.708-.707l15-15z"
-                                clip-rule="evenodd"></path>
-                            <path fill-rule="evenodd"
-                                d="M4.646 4.646a.5.5 0 00-.708.707l15 15a.5.5 0 00.708-.707l-15-15z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                <ul class="text-center">
-                    <li class="p-4 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                        <a href="#" class="text-white">Home</a>
-                    </li>
-                    <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                        <a href="#product" class="text-white">Product</a>
-                    </li>
-                    <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                        <a href="#pricing" class="text-white">Pricing</a>
-                    </li>
-                    <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                        <a href="https://docs.bolna.dev/introduction" class="text-white">Docs</a>
-                    </li>
-                    <li class="p-4 border-b-2 border-purple-500 border-opacity-0 hover:border-opacity-100 hover:text-purple-500 duration-200 cursor-pointer">
-                        <a href="#contact" class="text-white">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        
-        </div>
+    <header>
+      <div class="navbar text-white">
+          <div class="logo">
+              <a href="" class="flex items-center space-x-3 px-20">
+                  <img src="./logo.svg" class="h-8" alt="Bolna Logo" />
+                  <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Bolna</span>
+              </a>
+          </div>
+          <div class="nav">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Product</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Docs</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+              <div class="menu"><i class="fa-solid fa-bars"></i></div>
+          </div>
+          <div class="social-icons">
+              <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="dropdown-menu">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Product</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Docs</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
       </div>
-    </header>
+  </header>
+  
+  
+  <script defer src="/src/main.js"></script>
 
     <!--blob-->    
     <!--<section class="flex-col items-center justify-center h-screen mt-10 top-right-blob-container py-20">
@@ -154,16 +113,17 @@
     </script>-->
     <!--hero waves-->
     <section class="hero">
-      <div class="wave-container py-58">
-        <h3 class="text-5xl font-bold  text-white text-left px-10 py-20 mb-1">
-          Create Voice based AI agents
-        </h3>
-        <h3 class="text-4xl font-regular  text-white text-left px-10 ">
-          An end to end
-          <br>platform to build, deploy and monitor 
-          <br>voice-based AI agents
-        </h3>        
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <h3 class="text-5xl font-bold text-white text-left px-20 py-20 mb-1">
+              Create Voice based AI agents
+          </h3>
+          <h3 class="text-4xl font-regular text-white text-left px-20">
+              An end to end
+              <br>platform to build, deploy and monitor
+              <br>voice-based AI agents
+          </h3>
+      </div>
+      <div class="wave-container">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
           <defs>
               <path id="gentle-wave" d="M-160 44c30 0 50-18 88-18s 50 18 88 18 50-18 88-18 50 18 88 18 v44h-352z" />
           </defs>
@@ -178,19 +138,17 @@
               <use xlink:href="#gentle-wave" x="48" y="1" stroke="rgba(60, 7, 83, 0.1)" stroke-width="2" />
           </g>
       </svg>
-      
-    </div>
-    <section class="main px-10">
-      <div class="container mx-auto main-content">
-        <h3 id="animated-text" class="text-4xl font-bold text-white text-center mt-20">
-          Automate calls and tasks <br> with truly conversational <br> 
-          human-like voice AI agents <br>built within 10 minutes
-        </h3> 
-      </div>
-    </section>
-    
-  </section>  
-<section class="relative py-8 sticky mb-20">  
+      <section class="main px-10">
+          <div class="container mx-auto main-content">
+              <h3 class="text-4xl font-bold text-white text-center">
+                  Automate calls and tasks <br> with truly conversational <br>
+                  human-like voice AI agents <br> built within 10 minutes
+              </h3>
+          </div>
+      </section>
+  </section>
+  
+<section class="code-part sticky">  
   <div class="flex items-center justify-center px-5 mb-4">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-12 h-12 mr-4 text-darkviolet">
       <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
@@ -213,24 +171,7 @@
       </button>
     </div>
   </div>
-
-  <div class="container mx-auto px-8">
-      <div class="flex flex-wrap">
-        <div class="box lg:w-full py-8">
-          <div class="code-box" id="code-box">
-            <code class="language-c">
-              // Default code (can be replaced with initial code snippet)
-              void main() {
-                printf("Hello, World!");
-              }
-            </code>
-          </div>
-        </div>
-    </div>
-  </div>
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
 
   
 <script>
@@ -392,10 +333,8 @@
 <!--use cases part-->
 <!--Send automated phone calls
 and have real human conversations at scale-->
-<section class="main px-10 mt-4" id="animated-section">
-  <div class="container mx-auto main-content">
+<section class="main px-10 mt-4 py-8" id="animated-section">
     <h3 class="text-4xl font-bold text-white text-center">Send automated phone calls<br>and have real human conversations at scale</h3> 
-  </div>
 </section>
 <!--<div class="button-container mb-4" id="animated-div">
   <div class="segmented-control text-m font-semibold">
@@ -411,7 +350,7 @@ and have real human conversations at scale-->
 
 
 <!--audio carousel-->
-<section class="game-section">
+<section class="card-section">
   <div class="owl-carousel custom-carousel owl-theme">
     <div class="item active bg-zinc-800">
       <div class="item-desc">
@@ -507,14 +446,14 @@ and have real human conversations at scale-->
     <li>
         <div id="box1">
           <div id="overlay">
-            <span id="name">Atlassian</span>
+            <span id="name">Amazon</span>
           </div>
         </div>
     </li>
     <li>
         <div id="box2">
           <div id="overlay">
-            <span id="name">Atlassian</span>
+            <span id="name">Bain and Co.</span>
           </div>
         </div>
     </li>
@@ -528,7 +467,7 @@ and have real human conversations at scale-->
     <li>
         <div id="box4">
           <div id="overlay">
-            <span id="name">Atlassian</span>
+            <span id="name">Zomato</span>
           </div>
         </div>
     </li>
@@ -537,7 +476,7 @@ and have real human conversations at scale-->
     <li>
         <div id="box5">
           <div id="overlay">
-            <span id="name">Atlassian</span>
+            <span id="name">NEU</span>
           </div>
         </div>
     </li>
@@ -551,7 +490,7 @@ and have real human conversations at scale-->
     <li>
         <div id="box7">
           <div id="overlay">
-            <span id="name">Atlassian</span>
+            <span id="name">IIT Delhi</span>
           </div>
         </div>
     </li>
@@ -569,8 +508,8 @@ and have real human conversations at scale-->
   
 
 <!--grow business-->
-<section class="flex items-center justify-center mx-auto text-center">
-  <div class="container mx-auto grow text-center mt-6">
+<section class="flex items-center justify-center mx-auto text-center grow text-center mt-6">
+  <div class=" mx-auto grow text-center mt-6">
     <h1 class="text-4xl font-bold text-white px-10">Are you ready to grow your business with us?</h1>
     <h1 class="text-2xl font-medium text-gray-900 mt-4">Set up a call, we will take care of the rest</h1>
     <button class="bg-violet-800 hover:bg-violet-700 active:bg- focus:outline-none focus:ring focus:ring-violet-500 text-white font-semibold px-4 py-2 rounded-full mt-4">

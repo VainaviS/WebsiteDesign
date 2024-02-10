@@ -554,11 +554,13 @@ video {
 }
 
 .container {
-  width: 100%;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  background-color: #0a001d;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+  top: 0px;
+
 }
+
 
 @media (min-width: 640px) {
   .container {
@@ -1279,14 +1281,15 @@ video {
   margin-right: 2rem;
 }
 .hero {
-  position: relative;
   z-index: 1;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
+
 .main {
-  position: relative;
-  z-index: 1;
-  margin-top: -150px;
+  justify-content: flex-start; /* Align the items to the top of the container */
+  z-index: 5;
+  margin-top:-350px;
 }
 @keyframes slide-up {
   from {
@@ -1317,14 +1320,11 @@ video {
 .hero-content {
   position: relative;
   z-index: 3; /* Ensure text is on top */
-  margin-top: 0px; /* Adjust this value to move the content up */
+  margin-top:-50px; /* Adjust this value to move the content up */
 }
 
 .main-content {
-  text-align: center;
-  margin-top: 50px; /* Adjust the top margin as needed */
-  margin-bottom: 50px; /* Adjust the bottom margin as needed */
-  z-index: 9;
+  top: 0px;
 }
   /* Add custom styles here if needed */
   .scroll-container {
@@ -1366,114 +1366,161 @@ right: 20px; /* Adjust the right distance */
   animation: scroll 30s linear infinite; /* Adjust the duration as needed */
 }
 
+.social-icons {
+  margin-right: 10px; /* Add some space between icons */
+}
+
+.icon {
+  font-size: 24px; /* Increase the size of icons */
+  margin-right: 10px; /* Add some space between icons */
+}
+
 .navbar {
-  background: transparent; /* Sideways gradient from #150050 to #4B0082 */
-  position: sticky; 
-  top: 0;
-  z-index: 1; /* You missed the value for the z-index property */
-}
-
-
-/* CSS for the dropdown menu */
-#menu-dropdown {
-  width: 200px; /* Adjust the width as needed */
-  max-height: 300px; /* Adjust the maximum height as needed */
-  background-color: #04020c; /* Set background color with full opacity */
-  position: fixed; /* Position the dropdown menu */
-  top: 0; /* Align to the top */
-  right: 0; /* Align to the right */
-  margin-right: 200px; /* Adjust the margin as needed */
-  overflow-y: auto;
-  z-index: 1000; /* Set a high z-index to ensure it appears above other content */
-  /* Add other styling properties as needed */
-}
-
-#menu-dropdown ul {
-  /* Add styling for the list items */
-  padding: 0; /* Remove default padding */
-}
-
-#menu-dropdown li {
-  /* Add styling for individual list items */
-  list-style: none; /* Remove default list style */
-}
-
-#menu-dropdown a {
-  /* Add styling for anchor links */
-  display: block; /* Make links block-level for full clickable area */
-  padding: 10px; /* Add padding to increase clickable area */
-  color: #fff; /* Set text color */
-  text-decoration: none; /* Remove underline */
-}
-
-#menu-dropdown a:hover {
-  /* Add styling for hover state */
-  background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
-  border-radius: 20px;
-}
-
-
-.header {
-  background: linear-gradient(to right, #06001e, #20283E); /* Sideways gradient from #150050 to #4B0082 */
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  width: 100%;
   height: 60px;
-}
-
-/* Remove link underline and set custom color */
-a.navbar-brand {
-  text-decoration: none;
-  color: #333; /* Set the desired text color */
-}
-
-a.navbar-brand:hover {
-  text-decoration: none;
-  color: #8b5cf6; /* Set the desired hover text color */
-}
-.container {
-  background-color: unset;
-}
-.pricing-header {
-  background-color: unset;
-  margin-top: 10px;
-}
-
-.tab-content {
-  padding: 20px;
-}
-
-.nav-pills {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  list-style: none;
-  padding: 0;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nav-item {
-  margin-right: 10px;
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
-.nav-link {
-  color: black;
-  text-decoration: none;
-  padding: 10px;
-  background-color: #8b5cf6;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+.navbar .nav ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 0;
+}
+.icon:hover {
+  transform: scale(1.2); /* Scale up the icon on hover */
+  transition: transform 0.2s ease; /* Smooth transition effect */
+  color: rgb(233, 147, 255);
 }
 
-.nav-link:hover {
-  background-color: #06001e;
-  color: #ebcaf2; /* Change text color on hover */
+.navbar .nav ul li a:hover {
+  color: #e284ff; /* Change text color on hover */
 }
 
-.tab-pane {
+
+.navbar .menu {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
   display: none;
 }
 
-.tab-pane.active {
+.navbar .highlight {
   display: block;
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+.highlight {
+  background-color: #0ef;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.highlight:hover {
+  transform: scale(1.05);
+  color: #000;
+}
+
+.highlight:active {
+  transform: scale(0.95);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  width: 250px;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+}
+
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu .highlight {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-menu.open {
+  height: 325px;
+  width: 100%;
+  max-width: 100%;
+  left: 0; 
+  right: 0;
+  z-index: 100;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+height: 100vh;
+background-color: transparent;
+}
+
+/* Nav Bar Ends */
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .navbar .nav ul {
+      display: none;
+  }
+  
+  .navbar .menu {
+      display: flex;
+  }
+  
+  .navbar .menu i {
+      display: inline-block;
+  }
+  
+  .navbar .highlight {
+      display: none;
+  }
+  
+  .dropdown-menu {
+      display: block;
+  }
+  
+  .dropdown-menu .highlight {
+      display: block;
+      margin-top: 1rem;
+  }
 }
 
 /* Add your existing styles here */
@@ -1502,9 +1549,9 @@ a.navbar-brand:hover {
 
 .wave-container {
   position: relative;
-  background: linear-gradient(to right, #06001e, #20283E); /* Sideways gradient from #150050 to #4B0082 */
-  height: 580px;
-  margin-top: 0px;
+  background: transparent; /* Sideways gradient from #150050 to #4B0082 */
+  height: 500px;
+  margin-top:0px;
   z-index: 1;
 }
 
@@ -1792,15 +1839,15 @@ td {
   padding: 4px;
 }
 
-.game-section {
+.card-section {
   padding: 60px 50px;
 }
-.game-section .owl-stage {
+.card-section .owl-stage {
   margin: 15px 0;
   display: flex;
   display: -webkit-flex;
 }
-.game-section .item {
+.card-section .item {
   margin: 0 15px 60px;
   width: 320px;
   height: 400px;
@@ -1816,12 +1863,12 @@ td {
   -webkit-transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
-.game-section .item.active {
+.card-section .item.active {
   width: 500px;
   box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
 }
-.game-section .item:after {
+.card-section .item:after {
   content: "";
   display: block;
   position: absolute;
@@ -1829,9 +1876,9 @@ td {
   width: 100%;
   left: 0;
   top: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  background-image: #121212;
 }
-.game-section .item-desc {
+.card-section .item-desc {
   padding: 0 24px 12px;
   color: #fff;
   position: relative;
@@ -1842,23 +1889,23 @@ td {
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
 }
-.game-section .item.active .item-desc {
+.card-section .item.active .item-desc {
   transform: none;
   -webkit-transform: none;
 }
-.game-section .item-desc p {
+.card-section .item-desc p {
   opacity: 0;
   -webkit-transform: translateY(32px);
   transform: translateY(32px);
   transition: all 0.4s ease-in-out 0.2s;
   -webkit-transition: all 0.4s ease-in-out 0.2s;
 }
-.game-section .item.active .item-desc p {
+.card-section .item.active .item-desc p {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
-.game-section .owl-theme.custom-carousel .owl-dots {
+.card-section .owl-theme.custom-carousel .owl-dots {
   margin-top: -20px;
   position: relative;
   z-index: 5;
@@ -1878,18 +1925,18 @@ td {
   }
 
   /* -------- Landing page ------- */
-  .game-section {
+  .card-section {
     padding: 50px 30px;
   }
-  .game-section .item {
+  .card-section .item {
     margin: 0 12px 60px;
     width: 260px;
     height: 360px;
   }
-  .game-section .item.active {
+  .card-section .item.active {
     width: 400px;
   }
-  .game-section .item-desc {
+  .card-section .item-desc {
     transform: translateY(calc(100% - 46px));
     -webkit-transform: translateY(calc(100% - 46px));
   }
@@ -1909,18 +1956,18 @@ td {
   }
 
   /* -------- Landing page ------- */
-  .game-section {
+  .card-section {
     padding: 50px 30px 40px;
   }
-  .game-section .item {
+  .card-section .item {
     margin: 0 12px 60px;
     width: 240px;
     height: 330px;
   }
-  .game-section .item.active {
+  .card-section .item.active {
     width: 360px;
   }
-  .game-section .item-desc {
+  .card-section .item-desc {
     transform: translateY(calc(100% - 42px));
     -webkit-transform: translateY(calc(100% - 42px));
   }
@@ -1942,21 +1989,20 @@ td {
     width: 250px;
   }
 
-  /* -audio- */
-  .game-section {
+  .card-section {
     padding: 30px 15px 20px;
   }
-  .game-section .item {
+  .card-section .item {
     margin: 0 10px 40px;
     width: 200px;
     height: 280px;
   }
-  .game-section .item.active {
+  .card-section .item.active {
     width: 270px;
     box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
   }
-  .game-section .item-desc {
+  .card-section .item-desc {
     padding: 0 14px 5px;
     transform: translateY(calc(100% - 42px));
     -webkit-transform: translateY(calc(100% - 42px));
@@ -2201,38 +2247,10 @@ audio::-webkit-media-controls-volume-slider {
 .segmented-control.line-through, .segmented-control .line-through {
   text-decoration: line-through;
 }*/
-
-
-
-.code-box {
-  padding: 1.5rem; /* Adjust padding as needed */
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: transparent;
+.code-part{
+    position: relative;
+    top: -50px;
 }
-
-.code-box code {
-  color: #fff; /* Set the text color to white or any desired color */
-}
-
-.box {
-  padding: 1.5rem;
-  height: 150px;
-  width: 150px;
-  background: #2c2c2c;
-  border-radius: 15px;
-  margin: 20px;
-  transition: all ease 0.2s;
-  border: 1px solid #333;
-  overflow: auto;          
-}
-
-.box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px 2px rgba(94, 1, 123, 0.5);
-}
-
 
 .language-selector {
   display: flex;
@@ -2345,8 +2363,9 @@ audio::-webkit-media-controls-volume-slider {
 #box1 {
   width: 125px;
   height: 125px;
-  background: url(http://www.applitrack.com/sau25/onlineapp/images/districtLogo.gif);
+  background: white url(https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg);
   background-size: cover;
+  background-position: center;
   overflow: hidden;
   margin: 5px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
@@ -2355,10 +2374,10 @@ audio::-webkit-media-controls-volume-slider {
 #box2 {
   width: 125px;
   height: 125px;
-  background: url(http://dyn.com/wp-content/themes/dynamic/images/dyn-orb-share.png);
-  background-color: white;
-  background-size: 125px 125px;
+  background: white url(https://upload.wikimedia.org/wikipedia/commons/8/86/Bain_and_Company_Logo_1.svg);
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
   margin: 5px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
@@ -2367,30 +2386,33 @@ audio::-webkit-media-controls-volume-slider {
 #box3 {
   width: 125px;
   height: 125px;
-  background: url(https://documents.clubexpress.com/clubs/634084/graphics/160_BMC_Color1.jpg);
-  background-size: cover;
+  background: white url(https://upload.wikimedia.org/wikipedia/commons/b/b2/Cib-atlassian_%28CoreUI_Icons_v1.0.0%29.svg);
+  background-size: contain;
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  background-position: center; /* Center the background image */
   overflow: hidden;
   margin: 5px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
 }
+
 
 #box4 {
   width: 125px;
   height: 125px;
-  background: url(https://evbdn.eventbrite.com/s3-s3/eventlogos/55840291/anagnostlogocos.jpg);
-  background-color: white;
-  background-size: 125px 75px;
+  background: white url(https://upload.wikimedia.org/wikipedia/commons/9/92/Zomato.svg);
+  background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
   margin: 5px;
-  background-position: 0px 25px;
+  background-position: center center; /* Center the background image horizontally and vertically */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
 }
+
 
 #box5 {
   width: 125px;
   height: 125px;
-  background: url(http://pizzabellaemory.com/wp-content/uploads/2012/09/cropped-pizza-bella-web.jpg);
+  background: url(https://upload.wikimedia.org/wikipedia/commons/0/02/Northeastern_Wordmark.svg);
   background-color: white;
   background-size: 125px 75px;
   background-repeat: no-repeat;
@@ -2403,7 +2425,7 @@ audio::-webkit-media-controls-volume-slider {
 #box6 {
   width: 125px;
   height: 125px;
-  background: url(http://physicianemployerdirectory.com/wp-content/uploads/2014/08/Elliot-Health-System-logo.png);
+  background: url('src/images/alumni/IITD.svg');
   background-color: white;
   background-repeat: no-repeat;
   overflow: hidden;
