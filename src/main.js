@@ -33,7 +33,6 @@ tailwind.config = {
           new GreenAudioPlayer('.example');
         });
 
-
 // Nav Bar
 
 const toggleBtn = document.querySelector('.menu');
@@ -73,6 +72,7 @@ VanillaTilt.init(document.querySelectorAll(".card"), {
 
 
         document.addEventListener('DOMContentLoaded', function () {
+          
     new Splide('#audio-carousel', {
       type       : 'fade',
       heightRatio: 0.5,
@@ -128,3 +128,42 @@ document.getElementById('prev').onclick = function(){
   document.getElementById('formList').scrollLeft -= widthItem;
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  hljs.initHighlightingOnLoad();
+
+  const codeBlock = document.getElementById('code');
+  const copyButton = document.getElementById('copy-button');
+  const copySuccess = document.getElementById('copy-success');
+
+  const copyTextHandler = () => {
+    const text = codeBlock.innerText;
+
+    // first version - document.execCommand('copy');
+    // var element = document.createElement('textarea');
+    // document.body.appendChild(element);
+    // element.value = text;
+    // element.select();
+    // document.execCommand('copy');
+    // document.body.removeChild(element);
+
+    // copySuccess.classList.add('show-message');
+    // setTimeout(() => {
+    //   copySuccess.classList.remove('show-message');
+    // }, 2500);
+
+    //   second version - Clipboard API
+    navigator.clipboard.writeText(text).then(
+      () => {
+        copySuccess.classList.add('show-message');
+        setTimeout(() => {
+          copySuccess.classList.remove('show-message');
+        }, 2500);
+      },
+      () => {
+        console.log('Error writing to the clipboard');
+      }
+    );
+  };
+
+  copyButton.addEventListener('click', copyTextHandler);
+});
