@@ -488,56 +488,9 @@ copyButton.addEventListener('click', copyTextHandler);
 });
 </script>
 
-
-
-<!--logos-->
-<section class="py-10 ">
-  <div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-        <li>
-            <img src="./logos/airblack (1).png" alt="airblack" />
-        </li>
-        <li>
-            <img src="./logos/wishlink.png" alt="wishlink" />
-        </li>
-        <li>
-            <img src="./logos/microsoft.png" alt="microsoft" />
-        </li>
-        <li>
-            <img src="./logos/intract.png" alt="intract" />
-        </li>
-        <li>
-            <img src="./logos/xartup.png" alt="xartup" />
-        </li>
-        <li>
-            <img src="./logos/hero.png" alt="hero" />
-        </li>
-    </ul>
-    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
-      <li>
-        <img src="./logos/airblack (1).png" alt="airblack" />
-    </li>
-    <li>
-        <img src="./logos/wishlink.png" alt="wishlink" />
-    </li>
-    <li>
-        <img src="./logos/microsoft.png" alt="microsoft" />
-    </li>
-    <li>
-        <img src="./logos/intract.png" alt="intract" />
-    </li>
-    <li>
-        <img src="./logos/xartup.png" alt="xartup" />
-    </li>
-    <li>
-        <img src="./logos/hero.png" alt="hero" />
-    </li>
-    </ul>
-</div>
-</section>
-
 <!--cards-->
-<div class="cardcontainer">
+
+<div class="cardcontainer mt-6">
   <div class="card">
       <div class="content">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
@@ -615,8 +568,60 @@ copyButton.addEventListener('click', copyTextHandler);
 </div>
 <!-- partial -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js'></script><script  src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script><script  src="./script.js"></script>
 
+  <!--logos-->
   
+<section class="flex flex-col items-center justify-center mx-auto text-center mt-6">
+  <div class="mx-auto text-center mt-6">
+    <h1 class="text-2xl md:text-2xl lg:text-2xl font-semibold text-white px-4 md:px-10">Trusted by:</h1>
+  </div>
+</section>
+<section class="py-10 ">
+  <div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+        <li>
+            <img src="./logos/airblack (1).png" alt="airblack" />
+        </li>
+        <li>
+            <img src="./logos/wishlink.png" alt="wishlink" />
+        </li>
+        <li>
+            <img src="./logos/microsoft.png" alt="microsoft" />
+        </li>
+        <li>
+            <img src="./logos/intract.png" alt="intract" />
+        </li>
+        <li>
+            <img src="./logos/xartup.png" alt="xartup" />
+        </li>
+        <li>
+            <img src="./logos/hero.png" alt="hero" />
+        </li>
+    </ul>
+    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+      <li>
+        <img src="./logos/airblack (1).png" alt="airblack" />
+    </li>
+    <li>
+        <img src="./logos/wishlink.png" alt="wishlink" />
+    </li>
+    <li>
+        <img src="./logos/microsoft.png" alt="microsoft" />
+    </li>
+    <li>
+        <img src="./logos/intract.png" alt="intract" />
+    </li>
+    <li>
+        <img src="./logos/xartup.png" alt="xartup" />
+    </li>
+    <li>
+        <img src="./logos/hero.png" alt="hero" />
+    </li>
+    </ul>
+</div>
+</section>
 
 
 <!--use cases part-->
@@ -637,81 +642,146 @@ and have real human conversations at scale-->
   </div>
 </div>-->
 
-
 <!--audio carousel-->
-<section class="card-section">
-  <div class="owl-carousel custom-carousel owl-theme">
-    <div class="item active bg-zinc-800">
-      <div class="item-desc">
-        <h3>User Acquisition</h3>
-        <audio controls class="w-full mt-4 mb-6">
-          <source src="your-audio-file.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-        <p>Engage and convert potential customers with personalized, AI-driven conversations that outperform traditional marketing channels.</p>
-      </div>
-    </div>
-    <div class="item bg-zinc-800">
-      <div class="item-desc">
-        <h3>Lead Qualification</h3>
-        <audio controls class="w-full mt-4 mb-6">
-          <source src="your-audio-file.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-        <p>Qualify leads through interactive dialogue, gauging interest and intent efficiently to streamline the sales funnel.</p>
-      </div>
-    </div>
-    <div class="item bg-zinc-800">
-      <div class="item-desc">
-        <h3>Customer Service</h3>
-        <audio controls class="w-full mt-4 mb-6">
-          <source src="your-audio-file.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-        <p>Transform customer support with AI agents capable of handling inquiries, troubleshooting, and support.</p>
-      </div>
-    </div>
-    <div class="item bg-zinc-800">
-      <div class="item-desc">
-        <h3>Recruitment</h3>
-        <audio controls class="w-full mt-4 mb-6">
-          <source src="your-audio-file.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-        <p>Automate initial interview processes, candidate screening, and onboarding through engaging, conversational interfaces.</p>
-      </div>
-    </div>
-    <div class="item bg-zinc-800">
-      <div class="item-desc">
-        <h3>Collections</h3>
-        <audio controls class="w-full mt-4 mb-6">
-          <source src="your-audio-file.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-        <p>Automated customer conversations for EMI collections, defaulter management etc. for insurance and lending purposes.</p>
-      </div>
-    </div>
-    <div class="item bg-zinc-800">
-      <div class="item-desc">
-        <h3>Surveys</h3>
-        <audio controls class="w-full mt-4 mb-6">
-          <source src="your-audio-file.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-        <p>Collect valuable user feedback and conduct surveys with the ease of conversation, yielding higher response rates and richer data.</p>
-      </div>
-    </div>
+<div class="audio-carousel-container">
+  <div class="direction prev">
+    <button id="prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+      <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+    </svg>
+    </button>
   </div>
+<div id="formList">
+  <div id="list">
+    <div class="item bg-zinc-800 text-white hover:bg-zinc-900 shadow-md transition duration-300 ease-in-out">
+        <div class="flex flex-col items-center justify-center mt-8">
+        <img src="/src/images/useCases/acquisition.png" style="width: 100px; height: 100px;" class="avatar">
+      </div>
+        <div class="content">
+          <audio controls class="w-full mt-4">
+            <source src="your-audio-file.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+          <table width="100%" cellspacing="0">
+            <tr>
+              <td>User Acquisition </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="nameGroup">Engage and convert potential customers with personalized, AI-driven conversations that outperform traditional marketing channels.</td>
+            </tr>
+          </table>
+          </div>
+      </div>
+      <div class="item bg-zinc-800 text-white hover:bg-zinc-900 shadow-md transition duration-300 ease-in-out">
+        <div class="flex flex-col items-center justify-center">
+          <img src="/src/images/useCases/leads.png" style="width: 150px; height: 150px;" class="avatar">
+        </div>
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0" >
+                <tr>
+                  <td> Lead Qualification </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">Qualify leads through interactive dialogue, gauging interest and intent efficiently to streamline the sales funnel.</td>
+                </tr>
+              </table>
+          </div>
+      </div>
+      <div class="item bg-zinc-800 text-white hover:bg-zinc-900 shadow-md transition duration-300 ease-in-out">
+        <div class="flex flex-col items-center justify-center mt-8">
+          <img src="/src/images/useCases/support.png" style="width: 100px; height: 100px;" class="avatar">
+        </div>
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td> Customer Service </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">Transform customer support with AI agents capable of handling inquiries, troubleshooting, and support</td>
+                </tr>
+              </table>
+          </div>
+      </div>
+      <div class="item bg-zinc-800 text-white hover:bg-zinc-900 shadow-md transition duration-300 ease-in-out">
+        <div class="flex flex-col items-center justify-center mt-8">
+          <img src="/src/images/useCases/recruitment.png" style="width: 100px; height: 100px;" class="avatar">
+        </div>
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td> Recruitment </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">Automate initial interview processes, candidate screening, and onboarding through engaging, conversational interfaces.</td>
+                </tr>
+              </table>
+          </div>
+      </div>
+      <div class="item bg-zinc-800 text-white hover:bg-zinc-900 shadow-md transition duration-300 ease-in-out">
+        <div class="flex flex-col items-center justify-center mt-8">
+          <img src="/src/images/useCases/loan.png" style="width: 100px; height: 100px;" class="avatar">
+        </div>
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td> Collections </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">Automated customer conversations for EMI collections, defaulter management etc. for insurance and lending purposes</td>
+                </tr>
+              </table>
+          </div>
+      </div>
+      <div class="item bg-zinc-800 text-white hover:bg-zinc-900 shadow-md transition duration-300 ease-in-out">
+        <div class="flex flex-col items-center justify-center mt-8">
+          <img src="/src/images/useCases/checklist.png" style="width: 100px; height: 100px;" class="avatar">
+        </div>
+          <div class="content">
+            <audio controls class="w-full mt-4">
+              <source src="your-audio-file.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+              <table width="100%" cellspacing="0">
+                <tr>
+                  <td> Surveys </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="nameGroup">Collect valuable user feedback and conduct surveys with the ease of conversation, yielding higher response rates and richer data.</td>
+                </tr>
+              </table>
+          </div>
+      </div>
   </div>
-</section>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script><script  src="./script.js"></script>
+</div>
+
+<div class="direction next">
+  <button id="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+    <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+  </svg>
+  </button>
+</div>
+</div>
+<script src="main.js"></script>
 
 
 
 
-<section class="relative bg-zinc-800 py-8 sticky mb-20">  
+<section class="relative py-8 sticky mb-20">  
   <div class="flex items-center justify-center px-5 mb-4">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-12 h-12 mr-4 text-darkviolet">
       <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
@@ -722,7 +792,7 @@ and have real human conversations at scale-->
     </div>
   </div>
   <div class="flex justify-center items-center">
-    <div class="video-box rounded-md overflow-hidden">
+    <div class="video-box rounded-lg overflow-hidden">
       <!-- Replace the iframe with your YouTube video embed code -->
       <iframe width="560" height="315" src="https://www.youtube.com/embed/LENr0b3wLfI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
@@ -730,86 +800,29 @@ and have real human conversations at scale-->
 </section>
 
 <!--alumni-->
-<div class="sponsors">
-  <ul>
-    <li>
-        <div id="box1">
-          <div id="overlay">
-            <span id="name">Amazon</span>
-          </div>
-        </div>
-    </li>
-    <li>
-        <div id="box2">
-          <div id="overlay">
-            <span id="name">Bain and Co.</span>
-          </div>
-        </div>
-    </li>
-    <li>
-        <div id="box3">
-          <div id="overlay">
-            <span id="name">Atlassian</span>
-          </div>
-        </div>
-    </li>
-    <li>
-        <div id="box4">
-          <div id="overlay">
-            <span id="name">Zomato</span>
-          </div>
-        </div>
-    </li>
-  </ul>
-  <ul>
-    <li>
-        <div id="box5">
-          <div id="overlay">
-            <span id="name">NEU</span>
-          </div>
-        </div>
-    </li>
-    <li>
-        <div id="box6">
-          <div id="overlay">
-            <span id="name">Atlassian</span>
-          </div>
-        </div>
-    </li>
-    <li>
-        <div id="box7">
-          <div id="overlay">
-            <span id="name">IIT Delhi</span>
-          </div>
-        </div>
-    </li>
-    <li>
-      <div id="box8">
-        <div id="overlay">
-          <span id="name">Atlassian</span>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-</div>
+<section class="flex flex-col items-center justify-center mx-auto text-center mt-6">
+  <div class="mx-auto text-center mt-6">
+    <h1 class="text-2xl md:text-2xl lg:text-3xl font-bold text-white px-4 md:px-10">Built by Alumni from:</h1>
+  </div>
+</section>
 
   
 
 <!--grow business-->
-<section class="flex items-center justify-center mx-auto text-center grow text-center mt-6">
-  <div class=" mx-auto grow text-center mt-6">
-    <h1 class="text-4xl font-bold text-white px-10">Are you ready to grow your business with us?</h1>
-    <h1 class="text-2xl font-medium text-gray-900 mt-4">Set up a call, we will take care of the rest</h1>
-    <button class="bg-violet-800 hover:bg-violet-700 active:bg- focus:outline-none focus:ring focus:ring-violet-500 text-white font-semibold px-4 py-2 rounded-full mt-4">
+<section class="flex flex-col items-center justify-center mx-auto text-center mt-6">
+  <div class="mx-auto text-center mt-6">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white px-4 md:px-10">Are you ready to grow your business with us?</h1>
+    <h1 class="text-lg md:text-xl lg:text-2xl font-medium text-white mt-4">Set up a call,<br>we will take care of the rest</h1>
+    <button class="bg-violet-800 hover:bg-violet-700 active:bg-violet-600 focus:outline-none focus:ring focus:ring-violet-500 text-white font-semibold px-4 py-2 rounded-full mt-4">
       Contact Us
     </button>
   </div>
 </section>
 
 
+
 <!--footer-->
-<footer class="bg-gradient-to-r from-blue-500 to-gray-900 dark:from-gray-900 dark:to-black mt-10">
+<footer class="bg-zinc-900 mt-10">
   <div class="mx-4 w-full max-w-screen-xl p-4 py-4 lg:py-58">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
